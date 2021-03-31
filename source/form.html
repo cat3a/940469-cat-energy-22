@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Кэт энерджи</title>
+</head>
+<body class="page__body">
+<header class="page-header">
+  <a href="index.html" class="page-header__logo">
+    <!-- // TODO: Потом здесь, будет тег <picture>, <img src="img/logo-medium.svg" width="174" height="52" alt="Логотип «Cat energy» с Котом-Бэтменом"> <img src="img/logo-max.svg" width="202" height="59" alt="Логотип «Cat energy» с Котом-Бэтменом"> -->
+    <img src="img/logo-mini.svg" width="191" height="38" alt="Логотип «Cat energy» c Котом-Бэтменом">
+  </a>
+  <nav class="main-nav">
+    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a href="index.html">
+            Главная
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a href="catalog.html">
+            Каталог продукции
+          </a>
+        </li>
+        <li class="site-list__item site-list__item--current">
+          <a>
+            Подбор программы
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<main class="page-main">
+  <h1>Подбор программы</h1>
+  <p>Заполните анкету, и мы подберем
+    программу питания для вашего кота</p>
+  <form action="https://echo.htmlacademy.ru" method="get">
+    <fieldset>
+      <legend>Общие сведениея</legend>
+      <input type="text" name="name" id="name" required>
+    </fieldset>
+  </form>
+</main>
+</body>
+</html>
