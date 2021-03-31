@@ -7,7 +7,7 @@
 <body class="page__body">
 <header class="page-header">
   <a href="index.html" class="page-header__logo">
-    <!-- // TODO: Потом здесь, будет тег <picture>, <img src="img/logo-medium.svg" width="174" height="52" alt="Логотип «Cat energy» с Котом-Бэтменом"> <img src="img/logo-max.svg" width="202" height="59" alt="Логотип «Cat energy» с Котом-Бэтменом"> -->
+    <!-- // TODO: Потом здесь будет тег <picture>, <img src="img/logo-medium.svg" width="174" height="52" alt="Логотип «Cat energy» с Котом-Бэтменом"> <img src="img/logo-max.svg" width="202" height="59" alt="Логотип «Cat energy» с Котом-Бэтменом"> -->
     <img src="img/logo-mini.svg" width="191" height="38" alt="Логотип «Cat energy» c Котом-Бэтменом">
   </a>
   <nav class="main-nav">
@@ -37,10 +37,54 @@
   <h1>Подбор программы</h1>
   <p>Заполните анкету, и мы подберем
     программу питания для вашего кота</p>
-  <form action="https://echo.htmlacademy.ru" method="get">
+  <form action="https://echo.htmlacademy.ru" method="get" target="_blank">
     <fieldset>
-      <legend>Общие сведениея</legend>
-      <input type="text" name="name" id="name" required>
+      <legend class="visually-hidden">Общие сведения о питомце</legend>
+      <p>
+        <label for="name">Имя:&ast;</label>
+        <input type="text" name="name" id="name" placeholder="Барсик" required>
+      </p>
+      <p>
+        <label for="weight">Вес &#40;кг&#41;:&ast;</label>
+        <input type="number" name="weight" id="weight" placeholder="7" required>
+      </p>
+      <p>
+        <label for="age">Возраст &#40;лет&#41;:</label>
+        <input type="number" name="age" id="age" placeholder="7">
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend class="visually-hidden">Выбор программы</legend>
+      <p>
+        <label for="slimming">Похудение</label>
+        <input type="radio" name="program" id="slimming" checked>
+      </p>
+      <p>
+        <label for="gain">Набор массы</label>
+        <input type="radio" name="program" id="gain">
+      </p>
+      <p>
+        <label for="unknown">Не знаю &#40;Нужен ваш совет&#41;</label>
+        <input type="radio" name="program" id="unknown">
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Контактные данные &#40;владельца кота&#41;</legend>
+      <p>
+        <label for="email">E-mail:&ast;</label>
+        <input type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
+        <!-- // TODO: Потом здесь будет декор в виде svg -->
+        <img src="img/rename-email-icon.svg" width="20" height="15" alt="Иконка в виде конверта">
+      </p>
+      <p>
+        <label for="phone">Телефон:&ast;</label>
+        <input type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+        <!-- // TODO: Потом здесь будет декор в виде svg -->
+        <img src="img/rename-phone-icon.svg" width="20" height="21" alt="Иконка в виде телефонной трубки">
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend></legend>
     </fieldset>
   </form>
 </main>
