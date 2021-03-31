@@ -34,59 +34,129 @@
   </nav>
 </header>
 <main class="page-main">
-  <h1>Подбор программы</h1>
-  <p>Заполните анкету, и мы подберем
-    программу питания для вашего кота</p>
-  <form action="https://echo.htmlacademy.ru" method="get" target="_blank">
-    <fieldset>
-      <legend class="visually-hidden">Общие сведения о питомце</legend>
-      <p>
-        <label for="name">Имя:&ast;</label>
-        <input type="text" name="name" id="name" placeholder="Барсик" required>
-      </p>
-      <p>
-        <label for="weight">Вес &#40;кг&#41;:&ast;</label>
-        <input type="number" name="weight" id="weight" placeholder="7" required>
-      </p>
-      <p>
-        <label for="age">Возраст &#40;лет&#41;:</label>
-        <input type="number" name="age" id="age" placeholder="7">
-      </p>
-    </fieldset>
-    <fieldset>
-      <legend class="visually-hidden">Выбор программы</legend>
-      <p>
-        <label for="slimming">Похудение</label>
-        <input type="radio" name="program" id="slimming" checked>
-      </p>
-      <p>
-        <label for="gain">Набор массы</label>
-        <input type="radio" name="program" id="gain">
-      </p>
-      <p>
-        <label for="unknown">Не знаю &#40;Нужен ваш совет&#41;</label>
-        <input type="radio" name="program" id="unknown">
-      </p>
-    </fieldset>
-    <fieldset>
-      <legend>Контактные данные &#40;владельца кота&#41;</legend>
-      <p>
-        <label for="email">E-mail:&ast;</label>
-        <input type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
-        <!-- // TODO: Потом здесь будет декор в виде svg -->
-        <img src="img/rename-email-icon.svg" width="20" height="15" alt="Иконка в виде конверта">
-      </p>
-      <p>
-        <label for="phone">Телефон:&ast;</label>
-        <input type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
-        <!-- // TODO: Потом здесь будет декор в виде svg -->
-        <img src="img/rename-phone-icon.svg" width="20" height="21" alt="Иконка в виде телефонной трубки">
-      </p>
-    </fieldset>
-    <fieldset>
-      <legend></legend>
-    </fieldset>
-  </form>
+  <section class="program-selection">
+    <h1 class="program-selection__title">Подбор программы</h1>
+    <p class="program-selection__paragraph">Заполните анкету, и мы подберем
+      программу питания для вашего кота</p>
+    <form class="program-selection__form selection-form" action="https://echo.htmlacademy.ru" method="get" target="_blank">
+      <fieldset class="selection-form__general-fieldset">
+        <legend class="visually-hidden selection-form__general-legend">Общие сведения о питомце</legend>
+        <p class="selection-form__general-paragraph name-paragraph">
+          <label class="name-paragraph__label" for="name">Имя:&ast;</label>
+          <input class="name-paragraph__input" type="text" name="name" id="name" placeholder="Барсик" required>
+        </p>
+        <p class="selection-form__general-paragraph weight-paragraph">
+          <label class="weight-paragraph__label" for="weight">Вес &#40;кг&#41;:&ast;</label>
+          <input class="weight-paragraph__input" type="number" name="weight" id="weight" placeholder="7" required>
+        </p>
+        <p class="selection-form__general-paragraph age-paragraph">
+          <label class="age-paragraph__label" for="age">Возраст &#40;лет&#41;:</label>
+          <input class="age-paragraph__input" type="number" name="age" id="age" placeholder="7">
+        </p>
+      </fieldset>
+      <fieldset class="selection-form__program-fieldset">
+        <legend class="visually-hidden selection-form__program-legend">Выбор программы</legend>
+        <p class="selection-form__program-paragraph slimming-paragraph">
+          <label class="slimming-paragraph__label" for="slimming">Похудение</label>
+          <input class="slimming-paragraph__input" type="radio" name="program" id="slimming" checked>
+        </p>
+        <p class="selection-form__program-paragraph gain-paragraph">
+          <label class="gain-paragraph__label" for="gain">Набор массы</label>
+          <input class="gain-paragraph__input" type="radio" name="program" id="gain">
+        </p>
+        <p class="selection-form__program-paragraph unknown-paragraph">
+          <label class="unknown-paragraph__label" for="unknown">Не знаю &#40;Нужен ваш совет&#41;</label>
+          <input class="unknown-paragraph__input" type="radio" name="program" id="unknown">
+        </p>
+      </fieldset>
+      <fieldset class="selection-form__contacts-fieldset">
+        <legend class="selection-form__contacts-legend">Контактные данные &#40;владельца кота&#41;</legend>
+        <p class="selection-form__contacts-paragraph e-mail-paragraph">
+          <label class="e-mail-paragraph__label" for="email">E-mail:&ast;</label>
+          <input class="e-mail-paragraph__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
+          <!-- // TODO: Потом здесь будет декор в виде svg -->
+          <img src="img/rename-email-icon.svg" width="20" height="15" alt="Иконка в виде конверта">
+        </p>
+        <p class="selection-form__contacts-paragraph phone-paragraph">
+          <label class="phone-paragraph__label" for="phone">Телефон:&ast;</label>
+          <input class="phone-paragraph__input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+          <!-- // TODO: Потом здесь будет декор в виде svg -->
+          <img src="img/rename-phone-icon.svg" width="20" height="21" alt="Иконка в виде телефонной трубки">
+        </p>
+      </fieldset>
+      <fieldset class="selection-form__comments-fieldset">
+        <legend class="selection-form__comments-legend">Комментарий</legend>
+        <label class="visually-hidden selection-form__comments-legend" for="comment">Поле для ввода комментария</label>
+        <textarea class="selection-form__comments-textarea" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+      </fieldset>
+      <fieldset class="selection-form__extra-fieldset">
+        <legend class="selection-form__extra-legend">Дополнительно</legend>
+        <p class="selection-form__extra-paragraph sweetener-paragraph">
+          <input class="sweetener-paragraph__input" type="checkbox" name="sweetener" id="sweetener" checked>
+          <label class="sweetener-paragraph__label" for="sweetener">Cахарозаменитель</label>
+        </p>
+        <p class="selection-form__extra-paragraph water-paragraph">
+          <input class="water-paragraph__input" type="checkbox" name="water" id="water">
+          <label class="water-paragraph__label" for="water">Питьевая вода</label>
+        </p>
+        <p class="selection-form__extra-paragraph milk-paragraph">
+          <input class="milk-paragraph__input" type="checkbox" name="milk" id="milk">
+          <label class="milk-paragraph__label" for="milk">Молоко</label>
+        </p>
+        <p class="selection-form__extra-paragraph vitamins-paragraph">
+          <input class="vitamins-paragraph__input" type="checkbox" name="vitamins" id="vitamins">
+          <label class="vitamins-paragraph__label" for="vitamins">Витамины</label>
+        </p>
+      </fieldset>
+      <button  class="selection-form__button" type="submit" name="send-request" id="send-request"><span>Отправить заявку</span></button>
+      <p class="selection-form__paragraph">&ast; &mdash; Обязательные поля</p>
+    </form>
+  </section>
+  <section class="find-us">
+    <h2 class="visually-hidden">Как нас найти</h2>
+    <div class="find-us__invite-wrapper">
+      <p class="find-us__invite">Приглашаем к сотрудничеству дилеров!</p>
+      <p class="find-us__address">ул. Большая Конюшенная, д. 19&#47;8 Санкт-Петербург</p>
+    </div>
+    <div class="find-us__map-wrapper">
+      <!-- // TODO: Потом здесь будет карта -->
+      <!-- // TODO: Потом здесь будет тег <picture> <img src="img/we-map-max.svg" width="113" height="106" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"> -->
+      <img src="img/we-map-min.svg" width="57" height="53"
+           alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+    </div>
+  </section>
+</main>
+<footer class="page-footer">
+  <div class="footer__wrapper">
+    <a class="footer__cat-energy" href="index.html">
+      <img src="img/footer-cat-energy.svg" width="128" height="24" alt="Текстовый логотип проекта Cat energy">
+    </a>
+    <section class="social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="#!">
+            <img src="img/social-vk-mini-icon.svg" width="23" height="16" alt="Логотип Вконтакте">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#!">
+            <img src="img/social-facebook-mini-icon.svg" width="22" height="22" alt="Логотип Facebook">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="#!">
+            <img src="img/social-vk-mini-icon.svg" width="23" height="16" alt="Логотип Instagram">
+          </a>
+        </li>
+      </ul>
+    </section>
+    <p class="footer__paragraph">
+      <a class="footer__html-academy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+        <img src="img/footer-htmlacademy-icon.svg" width="27" height="34" alt="Логотип HTML Academy">
+      </a>
+    </p>
+  </div>
+</footer>
 </main>
 </body>
 </html>
