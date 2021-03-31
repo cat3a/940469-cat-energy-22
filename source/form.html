@@ -42,103 +42,103 @@
           target="_blank">
       <div class="selection-form__wrapper">
         <div class="selection-form__fieldset-wrapper">
-          <fieldset class="selection-form__general-fieldset">
-            <legend class="visually-hidden selection-form__general-legend">Общие сведения о питомце</legend>
-            <p class="selection-form__general-paragraph name-paragraph">
-              <label class="name-paragraph__label" for="name">Имя:&ast;</label>
-              <input class="name-paragraph__input" type="text" name="name" id="name" placeholder="Барсик" required>
+          <fieldset class="selection-form__fieldset">
+            <legend class="visually-hidden selection-form__legend">Общие сведения о питомце</legend>
+            <p class="selection-form__paragraph">
+              <label class="selection-form__label" for="name">Имя:&ast;</label>
+              <input class="selection-form__input" type="text" name="name" id="name" placeholder="Барсик" required>
             </p>
-            <p class="selection-form__general-paragraph weight-paragraph">
-              <label class="weight-paragraph__label" for="weight">Вес &#40;кг&#41;:&ast;</label>
-              <input class="weight-paragraph__input" type="number" name="weight" id="weight" placeholder="7" required>
+            <p class="selection-form__paragraph">
+              <label class="selection-form__label" for="weight">Вес &#40;кг&#41;:&ast;</label>
+              <input class="selection-form__input" type="number" name="weight" id="weight" placeholder="7" required>
             </p>
-            <p class="selection-form__general-paragraph age-paragraph">
-              <label class="age-paragraph__label" for="age">Возраст &#40;лет&#41;:</label>
-              <input class="age-paragraph__input" type="number" name="age" id="age" placeholder="7">
+            <p class="selection-form__paragraph">
+              <label class="selection-form__label" for="age">Возраст &#40;лет&#41;:</label>
+              <input class="selection-form__input" type="number" name="age" id="age" placeholder="7">
             </p>
           </fieldset>
-          <fieldset class="selection-form__program-fieldset">
-            <legend class="visually-hidden selection-form__program-legend">Выбор программы</legend>
-            <ul class="selection-form__program-list">
-              <li class="selection-form__program-item">
-                <p class="selection-form__program-paragraph slimming-paragraph">
-                  <label class="slimming-paragraph__label" for="slimming">Похудение</label>
-                  <input class="slimming-paragraph__input" type="radio" name="program" id="slimming" checked>
+          <fieldset class="selection-form__fieldset program-selection">
+            <legend class="visually-hidden selection-form__legend">Выбор программы</legend>
+            <ul class="selection-form__list">
+              <li class="selection-form__item">
+                <p class="selection-form__paragraph program-selection__p">
+                  <label class="selection-form__label program-selection__label" for="slimming">Похудение</label>
+                  <input class="selection-form__input program-selection__input" type="radio" name="program" id="slimming" checked>
                 </p>
               </li>
-              <li class="selection-form__program-item">
-                <p class="selection-form__program-paragraph gain-paragraph">
-                  <label class="gain-paragraph__label" for="gain">Набор массы</label>
-                  <input class="gain-paragraph__input" type="radio" name="program" id="gain">
+              <li class="selection-form__item">
+                <p class="selection-form__paragraph program-selection__p">
+                  <label class="selection-form__label program-selection__label" for="gain">Набор массы</label>
+                  <input class="selection-form__input program-selection__input" type="radio" name="program" id="gain">
                 </p>
               </li>
-              <li class="selection-form__program-item">
-                <p class="selection-form__program-paragraph unknown-paragraph">
-                  <label class="unknown-paragraph__label" for="unknown">Не знаю &#40;Нужен ваш совет&#41;</label>
-                  <input class="unknown-paragraph__input" type="radio" name="program" id="unknown">
+              <li class="selection-form__item">
+                <p class="selection-form__paragraph program-selection__p">
+                  <label class="selection-form__label program-selection__label" for="unknown">Не знаю &#40;Нужен ваш совет&#41;</label>
+                  <input class="selection-form__input program-selection__input" type="radio" name="program" id="unknown">
                 </p>
               </li>
             </ul>
           </fieldset>
         </div>
-        <fieldset class="selection-form__contacts-fieldset">
-          <legend class="selection-form__contacts-legend">Контактные данные &#40;владельца кота&#41;</legend>
-          <p class="selection-form__contacts-paragraph e-mail-paragraph e-mail-paragraph--e-mail">
-            <label class="e-mail-paragraph__label" for="email">E-mail:&ast;</label>
-            <input class="e-mail-paragraph__input" type="email" name="email" id="email"
+        <fieldset class="selection-form__fieldset">
+          <legend class="selection-form__legend">Контактные данные &#40;владельца кота&#41;</legend>
+          <p class="selection-form__paragraph">
+            <label class="selection-form__label" for="email">E-mail:&ast;</label>
+            <input class="selection-form__input selection-form__input--email" type="email" name="email" id="email"
                    placeholder="kuklachev@gmail.com" required>
             <!-- // TODO: Потом здесь будет декор в виде svg -->
             <img src="img/rename-email-icon.svg" width="20" height="15" alt="Иконка в виде конверта">
           </p>
-          <p class="selection-form__contacts-paragraph phone-paragraph phone-paragraph--phone">
-            <label class="phone-paragraph__label" for="phone">Телефон:&ast;</label>
-            <input class="phone-paragraph__input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90"
+          <p class="selection-form__paragraph">
+            <label class="selection-form__label" for="phone">Телефон:&ast;</label>
+            <input class="selection-form__input selection-form__input--phone" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90"
                    required>
             <!-- // TODO: Потом здесь будет декор в виде svg -->
             <img src="img/rename-phone-icon.svg" width="20" height="21" alt="Иконка в виде телефонной трубки">
           </p>
         </fieldset>
-        <fieldset class="selection-form__comments-fieldset">
-          <legend class="selection-form__comments-legend">Комментарий</legend>
-          <label class="visually-hidden selection-form__comments-legend" for="comment">Поле для ввода
+        <fieldset class="selection-form__fieldset">
+          <legend class="selection-form__legend">Комментарий</legend>
+          <label class="visually-hidden selection-form__legend" for="comment">Поле для ввода
             комментария</label>
-          <textarea class="selection-form__comments-textarea" name="comment" id="comment"
+          <textarea class="selection-form__textarea" name="comment" id="comment"
                     placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
-        <fieldset class="selection-form__extra-fieldset">
-          <legend class="selection-form__extra-legend">Дополнительно</legend>
-          <ul class="selection-form__extra-list">
-            <li class="selection-form__extra-item">
-              <p class="selection-form__extra-paragraph sweetener-paragraph">
-                <input class="sweetener-paragraph__input" type="checkbox" name="sweetener" id="sweetener" checked>
-                <label class="sweetener-paragraph__label" for="sweetener">Cахарозаменитель</label>
+        <fieldset class="selection-form__fieldset extra">
+          <legend class="selection-form__legend">Дополнительно</legend>
+          <ul class="selection-form__list">
+            <li class="selection-form__item">
+              <p class="selection-form__paragraph extra__paragraph">
+                <input class="selection-form__input extra__input" type="checkbox" name="sweetener" id="sweetener" checked>
+                <label class="selection-form__label extra__label" for="sweetener">Cахарозаменитель</label>
               </p>
             </li>
-            <li class="selection-form__extra-item">
-              <p class="selection-form__extra-paragraph water-paragraph">
-                <input class="water-paragraph__input" type="checkbox" name="water" id="water">
-                <label class="water-paragraph__label" for="water">Питьевая вода</label>
+            <li class="selection-form__item">
+              <p class="selection-form__paragraph extra__paragraph">
+                <input class="selection-form__input extra__input" type="checkbox" name="water" id="water">
+                <label class="selection-form__label extra__label" for="water">Питьевая вода</label>
               </p>
             </li>
-            <li class="selection-form__extra-item">
-              <p class="selection-form__extra-paragraph milk-paragraph">
-                <input class="milk-paragraph__input" type="checkbox" name="milk" id="milk">
-                <label class="milk-paragraph__label" for="milk">Молоко</label>
+            <li class="selection-form__item">
+              <p class="selection-form__paragraph extra__paragraph">
+                <input class="selection-form__input extra__input" type="checkbox" name="milk" id="milk">
+                <label class="selection-form__label extra__label" for="milk">Молоко</label>
               </p>
             </li>
-            <li class="selection-form__extra-item">
-              <p class="selection-form__extra-paragraph vitamins-paragraph">
-                <input class="vitamins-paragraph__input" type="checkbox" name="vitamins" id="vitamins">
-                <label class="vitamins-paragraph__label" for="vitamins">Витамины</label>
+            <li class="selection-form__item">
+              <p class="selection-form__paragraph extra__paragraph">
+                <input class="selection-form__input extra__input" type="checkbox" name="vitamins" id="vitamins">
+                <label class="selection-form__label extra__label" for="vitamins">Витамины</label>
               </p>
             </li>
           </ul>
         </fieldset>
         <div class="selection-form__submit-wrapper">
-          <button class="selection-form__button" type="submit" name="send-request" id="send-request">
+          <button class="selection-form__button button-standard" type="submit" name="send-request" id="send-request">
             <span>Отправить заявку</span>
           </button>
-          <p class="selection-form__paragraph">&ast; &mdash; Обязательные поля</p>
+          <p class="required">&ast; &mdash; Обязательные поля</p>
         </div>
       </div>
     </form>
