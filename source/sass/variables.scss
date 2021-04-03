@@ -2,28 +2,33 @@
 
 /*==** All **==*/
 
-$color-main-blocks: "#f2f2f2";
-$color-background: "#e5e5e5;";
-$color-main-text: "#000000;";
-$color-main-buttons: "#68b738;";
-$color-main-inputs: "#444444;";
-$color-elements-inner: "#cdcdcd;";
-$color-checkbox-text: "#222222;";
+$color-main-blocks: #f2f2f2;
+$color-background: #e5e5e5;
+$color-main-text: #000000;
+$color-main-buttons: #68b738;
+$color-main-inputs: #444444;
+$color-elements-inner: #cdcdcd;
+$color-checkbox-text: #222222;
+$color-text-extra: #111111;
 
 /*==** Index **==*/
 
-$color-index-borders: "#d9d9d9;";
-$color-menu-text: "#ffffff;";
+$color-index-borders: #d9d9d9;
+$color-menu-text: #ffffff;
+
+/*==** Form **==*/
+$color-textarea-border: #e7e7e7;
 
 /*==** Catalog **==*/
-
-$color-text-extra: "#111111;";
-$color-elements-extra: "#d3d3d3;";
+$color-elements-extra: #d3d3d3;
 
 /*==** Styleguide **==*/
 
-$color-input-error: "#ff8282;";
-$color-active-button: "#5eaa2f;";
-$color-checkbox-modified: "#bababa;";
+$color-input-error: #ff8282;
+$color-active-button: #5eaa2f;
+$color-checkbox-modified: #bababa;
 
 /********** Fonts **********/
+
+$font-family-main: "Arial", "Helvetica", sans-serif;
+$font-family-second: "Oswald", "Arial", sans-serif;
