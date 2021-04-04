@@ -1,0 +1,19 @@
+.main-nav {
+  outline: 3px solid rgba(0, 255, 0, 0.8);
+  outline-offset: -3px;
+}
+
+.site-list__item {
+  list-style: none;
+  color: $color-main-text;
+  font-family: $font-family-menu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding-bottom: 24px;
+  padding-top: 22px;
+  border-top: 1px solid $color-menu-borders;
+}
+

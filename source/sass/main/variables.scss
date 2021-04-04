@@ -3,7 +3,7 @@
 /*==** All **==*/
 
 $color-main-blocks: #f2f2f2;
-$color-background: #e5e5e5;
+$color-background: #ffffff;
 $color-main-text: #000000;
 $color-main-buttons: #68b738;
 $color-main-inputs: #444444;
@@ -14,7 +14,7 @@ $color-text-extra: #111111;
 /*==** Index **==*/
 
 $color-index-borders: #d9d9d9;
-$color-menu-text: #ffffff;
+$color-menu-borders: #e6e6e6;
 
 /*==** Form **==*/
 $color-textarea-border: #e7e7e7;
@@ -31,4 +31,5 @@ $color-checkbox-modified: #bababa;
 /********** Fonts **********/
 
 $font-family-main: "Arial", "Helvetica", sans-serif;
-$font-family-second: "Oswald", "Arial", sans-serif;
+$font-family-extra: "Oswald Regular", "Arial", sans-serif;
+$font-family-menu: "Oswald Medium", "Arial", sans-serif;
