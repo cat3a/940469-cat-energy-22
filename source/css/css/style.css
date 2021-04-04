@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /********** Main **********/
 /********** Colors **********/
 /*==** All **==*/
@@ -93,18 +94,165 @@ img {
   text-decoration: none;
   color: #000000; }
 
-.site-list {
+.list-standard {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  list-style: none; }
 
 /*==** Index **==*/
+.example {
+  margin: 0;
+  background-color: #eaeaea;
+  outline: 3px solid rgba(255, 0, 0, 0.8);
+  outline-offset: -3px;
+  padding-left: 20px; }
+
+.example__title {
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  color: "Arial", "Helvetica", sans-serif;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 27px; }
+
+.example__list {
+  position: relative;
+  /* //TODO: flex для того, чтобы было видно блок */
+  display: flex; }
+
+.example__term {
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  border: 1px solid #cdcdcd;
+  border-radius: 5%;
+  width: 124px;
+  height: 64px;
+  text-transform: uppercase; }
+
+.example__definition {
+  position: absolute;
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  z-index: 1;
+  max-width: 80px;
+  margin-top: 58px;
+  margin-left: 23px;
+  background-color: #eaeaea; }
+  .example__definition--time {
+    margin-left: 148px; }
+
+.example__cost {
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000; }
+
+.example__button {
+  border: 0;
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000; }
+
+.features {
+  margin: 0;
+  outline: 3px solid rgba(160, 120, 0, 0.8);
+  outline-offset: -3px; }
+
+.features__list {
+  padding-bottom: 18px; }
+
+.features__title {
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
+  padding-left: 20px;
+  text-align: center; }
+
+.features__paragraph {
+  position: relative;
+  margin-bottom: 24px;
+  min-height: 54px;
+  padding-left: 100px; }
+  .features__paragraph--one::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../img/features-leaf-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #68b738;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 20px; }
+  .features__paragraph--two::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../img/features-tub-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #68b738;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 20px; }
+  .features__paragraph--three::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../img/features-eat-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #68b738;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 20px; }
+  .features__paragraph--four::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../img/features-alarm-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #68b738;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 20px; }
+
 .program {
-  margin: 0; }
+  margin: 0;
+  outline: 3px solid rgba(160, 120, 0, 0.8);
+  outline-offset: -3px; }
 
 .program__article {
   background-color: #f2f2f2;
   margin-left: 20px;
-  margin-right: 20px; }
+  margin-right: 20px;
+  outline: 3px solid rgba(130, 220, 0, 0.8);
+  outline-offset: -3px; }
 
 .program-article__title {
   font-family: "Oswald Regular", "Arial", sans-serif;
@@ -134,7 +282,8 @@ img {
 
 .program-article__paragraph {
   border-bottom: 1px solid #d9d9d9;
-  padding-bottom: 23px; }
+  padding-bottom: 23px;
+  padding-left: 20px; }
 
 .program-article__link {
   font-family: "Oswald Regular", "Arial", sans-serif;

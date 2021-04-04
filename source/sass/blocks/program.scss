@@ -1,10 +1,13 @@
 .program {
   margin: 0;
+  outline: 3px solid rgba(160, 120, 0, 0.8);
+  outline-offset: -3px;
 }
 
 .program__article {
   background-color: $color-main-blocks;
   margin-left: 20px;
   margin-right: 20px;
+  outline: 3px solid rgba(130, 220, 0, 0.8);
+  outline-offset: -3px;
 }
-

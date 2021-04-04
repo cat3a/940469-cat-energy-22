@@ -1,0 +1,82 @@
+.example {
+  margin: 0;
+  background-color: $color-index-example;
+  outline: 3px solid rgba(255, 0, 0, 0.8);
+  outline-offset: -3px;
+  padding-left: 20px;
+}
+
+.example__title {
+  font-family: $font-family-extra;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  color: $font-family-main;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 27px;
+}
+
+.example__list {
+  position: relative;
+  /* //TODO: flex для того, чтобы было видно блок */
+  display: flex;
+}
+
+.example__term {
+  font-family: $font-family-extra;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: $color-main-text;
+  border: 1px solid $color-elements-inner;
+  border-radius: 5%;
+  width: 124px;
+  height: 64px;
+  text-transform: uppercase;
+}
+
+.example__definition {
+  position: absolute;
+  font-family: $font-family-main;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  z-index: 1;
+  max-width: 80px;
+  margin-top: 58px;
+  margin-left: 23px;
+  background-color: $color-index-example;
+
+  &--time {
+    margin-left: 148px;
+  }
+}
+
+.example__cost {
+  font-family: $font-family-extra;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-main-text;
+}
+
+.example__button {
+  border: 0;
+  font-family: $font-family-extra;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-main-text;
+}
