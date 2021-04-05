@@ -5,9 +5,22 @@
 }
 
 .program__article {
+  margin-top: 22px;
   background-color: $color-main-blocks;
   margin-left: 20px;
   margin-right: 20px;
   outline: 3px solid rgba(130, 220, 0, 0.8);
   outline-offset: -3px;
 }
+
+.program__wrapper:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.program__wrapper {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin: 0;
+}
+

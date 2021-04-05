@@ -61,6 +61,20 @@ img {
 .page-main {
   margin: 0; }
 
+.page-footer {
+  margin: 0;
+  background-color: #f2f2f2; }
+
+.page-footer__img-wrapper {
+  margin: 0;
+  padding-top: 39px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #d9d9d9; }
+
+.page-footer__paragraph {
+  padding-top: 22px;
+  padding-bottom: 32px; }
+
 .main-nav {
   outline: 3px solid rgba(0, 255, 0, 0.8);
   outline-offset: -3px; }
@@ -77,6 +91,37 @@ img {
   padding-bottom: 24px;
   padding-top: 22px;
   border-top: 1px solid #e6e6e6; }
+
+.main-nav__toggle {
+  position: absolute;
+  right: 24px;
+  top: 1px;
+  width: 18px;
+  height: 18px;
+  opacity: 1;
+  border: 0;
+  background-color: #ffffff; }
+  .main-nav__toggle:hover {
+    opacity: 1; }
+  .main-nav__toggle::before, .main-nav__toggle::after {
+    position: absolute;
+    left: 8px;
+    content: " ";
+    height: 24px;
+    top: -2px;
+    width: 2px;
+    background-color: #000000; }
+  .main-nav__toggle::before {
+    transform: rotate(45deg); }
+  .main-nav__toggle::after {
+    transform: rotate(-45deg); }
+
+.social {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 21px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #d9d9d9; }
 
 .button-standard {
   font-family: "Oswald Regular", "Arial", sans-serif;
@@ -105,6 +150,10 @@ img {
   background-color: #eaeaea;
   outline: 3px solid rgba(255, 0, 0, 0.8);
   outline-offset: -3px;
+<<<<<<< HEAD
+=======
+  /* //TODO: Это временное явление */
+>>>>>>> 7142e91 (Заканчивает стилизацию главной)
   padding-left: 20px; }
 
 .example__title {
@@ -172,8 +221,39 @@ img {
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+<<<<<<< HEAD
   color: #000000; }
 
+=======
+  background-color: transparent;
+  color: #000000; }
+
+.example__controls {
+  height: 20px;
+  box-sizing: border-box; }
+
+.example__scale {
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+  width: 84px;
+  height: 14px;
+  padding-top: 3px;
+  box-sizing: border-box; }
+
+.example__bar {
+  background-color: #68b738;
+  border: 1px solid gray;
+  width: 35px;
+  height: 6px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-left: 6px; }
+
+.example__slider {
+  padding-bottom: 25px; }
+
+>>>>>>> 7142e91 (Заканчивает стилизацию главной)
 .features {
   margin: 0;
   outline: 3px solid rgba(160, 120, 0, 0.8);
@@ -190,7 +270,13 @@ img {
   line-height: 40px;
   color: #000000;
   padding-left: 20px;
+<<<<<<< HEAD
   text-align: center; }
+=======
+  text-align: center;
+  margin-top: 0;
+  padding-top: 27px; }
+>>>>>>> 7142e91 (Заканчивает стилизацию главной)
 
 .features__paragraph {
   position: relative;
@@ -242,17 +328,68 @@ img {
     top: 0;
     left: 20px; }
 
+<<<<<<< HEAD
+=======
+.find-us {
+  margin: 0;
+  outline: 3px solid rgba(200, 0, 230, 0.8);
+  outline-offset: -3px; }
+
+.find-us__invite {
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #111111;
+  margin-top: 0;
+  padding-top: 28px;
+  padding-left: 19px; }
+
+.find-us__address {
+  line-height: 20px;
+  padding-left: 19px; }
+
+.find-us__map-wrapper {
+  background-image: url("../../img/find-us-map-mini.jpg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 320px;
+  height: 362px;
+  position: relative; }
+
+.find-us__img {
+  position: absolute;
+  top: 139px;
+  left: 134px; }
+
+>>>>>>> 7142e91 (Заканчивает стилизацию главной)
 .program {
   margin: 0;
   outline: 3px solid rgba(160, 120, 0, 0.8);
   outline-offset: -3px; }
 
 .program__article {
+  margin-top: 22px;
   background-color: #f2f2f2;
   margin-left: 20px;
   margin-right: 20px;
   outline: 3px solid rgba(130, 220, 0, 0.8);
   outline-offset: -3px; }
+<<<<<<< HEAD
+=======
+
+.program__wrapper:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0; }
+
+.program__wrapper {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin: 0; }
+>>>>>>> 7142e91 (Заканчивает стилизацию главной)
 
 .program-article__title {
   font-family: "Oswald Regular", "Arial", sans-serif;
@@ -284,6 +421,12 @@ img {
   border-bottom: 1px solid #d9d9d9;
   padding-bottom: 23px;
   padding-left: 20px; }
+<<<<<<< HEAD
+=======
+
+.program-article-link__paragraph:last-of-type {
+  margin-bottom: 0; }
+>>>>>>> 7142e91 (Заканчивает стилизацию главной)
 
 .program-article__link {
   font-family: "Oswald Regular", "Arial", sans-serif;

@@ -3,6 +3,7 @@
   background-color: $color-index-example;
   outline: 3px solid rgba(255, 0, 0, 0.8);
   outline-offset: -3px;
+  /* //TODO: Это временное явление */
   padding-left: 20px;
 }
 
@@ -78,5 +79,36 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+  background-color: transparent;
   color: $color-main-text;
 }
+
+.example__controls {
+  height: 20px;
+  box-sizing: border-box;
+}
+
+.example__scale {
+  background-color: $color-background;
+  border: 1px solid $color-elements-inner;
+  border-radius: 10px;
+  width: 84px;
+  height: 14px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+
+.example__bar {
+  background-color: $color-main-buttons;
+  border: 1px solid gray;
+  width: 35px;
+  height: 6px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-left: 6px;
+}
+
+.example__slider {
+  padding-bottom: 25px;
+}
+

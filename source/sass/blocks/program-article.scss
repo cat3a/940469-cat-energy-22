@@ -33,6 +33,11 @@
   border-bottom: 1px solid $color-index-borders;
   padding-bottom: 23px;
   padding-left: 20px;
+
+}
+
+.program-article-link__paragraph:last-of-type {
+  margin-bottom: 0;
 }
 
 .program-article__link {
