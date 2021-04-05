@@ -150,10 +150,7 @@ img {
   background-color: #eaeaea;
   outline: 3px solid rgba(255, 0, 0, 0.8);
   outline-offset: -3px;
-<<<<<<< HEAD
-=======
   /* //TODO: Это временное явление */
->>>>>>> 7142e91 (Заканчивает стилизацию главной)
   padding-left: 20px; }
 
 .example__title {
@@ -221,10 +218,6 @@ img {
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-<<<<<<< HEAD
-  color: #000000; }
-
-=======
   background-color: transparent;
   color: #000000; }
 
@@ -253,7 +246,6 @@ img {
 .example__slider {
   padding-bottom: 25px; }
 
->>>>>>> 7142e91 (Заканчивает стилизацию главной)
 .features {
   margin: 0;
   outline: 3px solid rgba(160, 120, 0, 0.8);
@@ -270,13 +262,9 @@ img {
   line-height: 40px;
   color: #000000;
   padding-left: 20px;
-<<<<<<< HEAD
-  text-align: center; }
-=======
   text-align: center;
   margin-top: 0;
   padding-top: 27px; }
->>>>>>> 7142e91 (Заканчивает стилизацию главной)
 
 .features__paragraph {
   position: relative;
@@ -328,8 +316,6 @@ img {
     top: 0;
     left: 20px; }
 
-<<<<<<< HEAD
-=======
 .find-us {
   margin: 0;
   outline: 3px solid rgba(200, 0, 230, 0.8);
@@ -365,7 +351,6 @@ img {
   top: 139px;
   left: 134px; }
 
->>>>>>> 7142e91 (Заканчивает стилизацию главной)
 .program {
   margin: 0;
   outline: 3px solid rgba(160, 120, 0, 0.8);
@@ -378,8 +363,6 @@ img {
   margin-right: 20px;
   outline: 3px solid rgba(130, 220, 0, 0.8);
   outline-offset: -3px; }
-<<<<<<< HEAD
-=======
 
 .program__wrapper:last-child {
   padding-bottom: 0;
@@ -389,7 +372,6 @@ img {
   padding-top: 1px;
   padding-bottom: 1px;
   margin: 0; }
->>>>>>> 7142e91 (Заканчивает стилизацию главной)
 
 .program-article__title {
   font-family: "Oswald Regular", "Arial", sans-serif;
@@ -421,12 +403,9 @@ img {
   border-bottom: 1px solid #d9d9d9;
   padding-bottom: 23px;
   padding-left: 20px; }
-<<<<<<< HEAD
-=======
 
 .program-article-link__paragraph:last-of-type {
   margin-bottom: 0; }
->>>>>>> 7142e91 (Заканчивает стилизацию главной)
 
 .program-article__link {
   font-family: "Oswald Regular", "Arial", sans-serif;
