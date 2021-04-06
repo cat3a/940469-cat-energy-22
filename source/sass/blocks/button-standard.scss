@@ -2,7 +2,7 @@
   @include font-font($font-family-extra, normal, normal, 14px, 18px);
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
   color: $color-background;
   background-color: $color-main-buttons;
-  text-decoration: none;
 }

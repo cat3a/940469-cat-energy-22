@@ -1,9 +1,9 @@
 .program-article__title {
   @include font-font($font-family-extra, normal, normal, 24px, 37px);
   text-transform: uppercase;
+  text-align: center;
   color: $color-main-text;
   position: relative;
-  text-align: center;
   padding-top: 30px;
 
   &--down::before {

@@ -9,8 +9,8 @@
 
 .example__title {
   @include font-font($font-family-extra, normal, normal, 36px, 40px);
-  color: $font-family-main;
   text-align: center;
+  color: $font-family-main;
   margin-top: 0;
   padding-top: 27px;
 }
@@ -24,18 +24,18 @@
 .example__term {
   @include font-font($font-family-extra, normal, normal, 24px, 24px);
   text-align: center;
+  text-transform: uppercase;
   color: $color-main-text;
   border: 1px solid $color-elements-inner;
   border-radius: 5%;
   width: 124px;
   height: 64px;
-  text-transform: uppercase;
 }
 
 .example__definition {
   @include font-font($font-family-main, normal, normal, 12px, 12px);
-  position: absolute;
   text-align: center;
+  position: absolute;
   z-index: 1;
   max-width: 80px;
   margin-top: 58px;
@@ -56,11 +56,11 @@
 
 .example__button {
   @include font-font($font-family-extra, normal, normal, 16px, 20px);
-  border: 0;
   text-align: center;
   text-transform: uppercase;
-  background-color: transparent;
   color: $color-main-text;
+  border: 0;
+  background-color: transparent;
 }
 
 .example__controls {

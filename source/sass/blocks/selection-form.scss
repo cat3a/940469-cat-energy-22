@@ -77,20 +77,20 @@
 .selection-form__textarea::-webkit-input-placeholder {
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
   text-transform: uppercase;
-  color: $color-main-inputs;
   text-align: center;
+  color: $color-main-inputs;
 }
 
 .selection-form__textarea:-moz-placeholder {
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
   text-transform: uppercase;
-  color: $color-main-inputs;
   text-align: center;
+  color: $color-main-inputs;
 }
 
 .selection-form__textarea::-moz-placeholder {
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
   text-transform: uppercase;
-  color: $color-main-inputs;
   text-align: center;
+  color: $color-main-inputs;
 }
