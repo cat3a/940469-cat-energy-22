@@ -1,34 +1,35 @@
 /********** Colors **********/
 
-/*==** All **==*/
+/*==** Blocks **==*/
 
 $color-main-blocks: #f2f2f2;
-$color-background: #ffffff;
-$color-main-text: #000000;
-$color-main-buttons: #68b738;
-$color-main-inputs: #444444;
-$color-elements-inner: #cdcdcd;
-$color-checkbox-text: #222222;
-$color-text-extra: #111111;
-$color-index-borders: #d9d9d9;
-
-/*==** Index **==*/
-
-$color-menu-borders: #e6e6e6;
 $color-index-example: #eaeaea;
-
-/*==** Form **==*/
-$color-textarea-border: #e7e7e7;
-
-/*==** Catalog **==*/
 $color-elements-extra: #d3d3d3;
 $color-catalog-article: #ebebeb;
 
-/*==** Styleguide **==*/
+/*==** Borders & Lines **==*/
 
-$color-input-error: #ff8282;
+$color-textarea-border: #e7e7e7;
+$color-menu-borders: #e6e6e6;
+$color-index-borders: #d9d9d9;
+$color-elements-inner: #cdcdcd;
+
+/*==** Buttons & Inputs **==*/
+
 $color-active-button: #5eaa2f;
 $color-checkbox-modified: #bababa;
+$color-input-error: #ff8282;
+$color-main-buttons: #68b738;
+$color-main-inputs: #444444;
+
+/*==** Text **==*/
+
+$color-main-text: #000000;
+$color-checkbox-text: #222222;
+$color-text-extra: #111111;
+
+/*==** Other **==*/
+$color-background: #ffffff;
 
 /********** Fonts **********/
 
