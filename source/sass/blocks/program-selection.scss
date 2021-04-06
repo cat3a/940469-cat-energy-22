@@ -1,0 +1,62 @@
+.program-selection {
+  margin: 0;
+}
+
+.program-selection__title {
+  @include font-font($font-family-extra, normal, normal, 36px, 36px);
+  color: $color-main-text;
+  padding-left: 20px;
+}
+
+.program-selection__paragraph {
+  @include font-font($font-family-extra, normal, normal, 14px, 18px);
+  text-transform: uppercase;
+  color: $color-main-text;
+  padding-left: 20px;
+}
+
+.program-selection__input:not(:checked) + label {
+  &::before {
+    content: "";
+    position: absolute;
+    left: -43px;
+    top: -8px;
+    width: 31px;
+    height: 31px;
+    border: 1px solid $color-elements-inner;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+}
+
+.program-selection__input:checked + label {
+  &::before {
+    content: "";
+    position: absolute;
+    left: -43px;
+    top: -8px;
+    width: 31px;
+    height: 31px;
+    border: 1px solid $color-elements-inner;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 1px;
+    width: 14px;
+    height: 13px;
+    background-color: $color-main-buttons;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+}
+
+.program-selection__p {
+  margin-left: 65px;
+  position: relative;
+  padding-bottom: 10px;
+}

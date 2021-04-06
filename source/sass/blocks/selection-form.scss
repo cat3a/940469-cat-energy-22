@@ -1,0 +1,96 @@
+.selection-form {
+  margin: 0;
+  outline: 3px solid rgba(160, 120, 0, 0.8);
+  outline-offset: -3px;
+}
+
+.selection-form__fieldset {
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.selection-form__input {
+  @include font-font($font-family-extra, normal, normal, 16px, 18px);
+  text-transform: uppercase;
+  color: $color-main-inputs;
+  height: 45px;
+  border: 1px solid $color-elements-inner;
+  box-sizing: border-box;
+}
+
+.selection-form__input::-webkit-input-placeholder {
+  color: $color-main-inputs;
+  padding-left: 16px;
+}
+
+.selection-form__input::-moz-placeholder {
+  color: $color-main-inputs;
+  padding-left: 16px;
+}
+
+.selection-form__input:-moz-placeholder {
+  color: $color-main-inputs;
+  padding-left: 16px;
+}
+
+.selection-form__label {
+  @include font-font($font-family-extra, normal, normal, 16px, 18px);
+  text-transform: uppercase;
+  color: $color-main-inputs;
+}
+
+.selection-form__list {
+  margin: 0;
+  padding-top: 20px;
+
+  &--border {
+    border-top: 1px solid $color-index-borders;
+    border-bottom: 1px solid $color-index-borders;
+  }
+}
+
+.selection-form__fieldset--line {
+  border-top: 2px solid $color-main-buttons;
+  margin-top: 22px;
+
+  &:nth-child(2) {
+    padding-top: 15px;
+  }
+}
+
+.selection-form__legend {
+  @include font-font($font-family-extra, normal, normal, 24px, 26px);
+  color: $color-main-text;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+
+.selection-form__textarea {
+  margin-top: 37px;
+  margin-bottom: 0;
+  min-height: 150px;
+  border: 1px solid $color-textarea-border;
+  box-sizing: border-box;
+}
+
+.selection-form__textarea::-webkit-input-placeholder {
+  @include font-font($font-family-extra, normal, normal, 16px, 18px);
+  text-transform: uppercase;
+  color: $color-main-inputs;
+  text-align: center;
+}
+
+.selection-form__textarea:-moz-placeholder {
+  @include font-font($font-family-extra, normal, normal, 16px, 18px);
+  text-transform: uppercase;
+  color: $color-main-inputs;
+  text-align: center;
+}
+
+.selection-form__textarea::-moz-placeholder {
+  @include font-font($font-family-extra, normal, normal, 16px, 18px);
+  text-transform: uppercase;
+  color: $color-main-inputs;
+  text-align: center;
+}
