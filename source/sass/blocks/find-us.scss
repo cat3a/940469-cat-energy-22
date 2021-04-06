@@ -4,12 +4,12 @@
   outline-offset: -3px;
 }
 
+.find-us--color {
+  background-color: $color-main-blocks;
+}
+
 .find-us__invite {
-  font-family: $font-family-extra;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 18px;
+  @include font-font($font-family-extra, normal, normal, 16px, 18px);
   text-transform: uppercase;
   color: $color-text-extra;
   margin-top: 0;
@@ -37,4 +37,3 @@
   top: 139px;
   left: 134px;
 }
-

@@ -4,13 +4,9 @@
 }
 
 .site-list__item {
+  @include font-font($font-family-menu, normal, 500, 20px, 20px);
   list-style: none;
   color: $color-main-text;
-  font-family: $font-family-menu;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
   text-transform: uppercase;
   padding-bottom: 24px;
   padding-top: 22px;

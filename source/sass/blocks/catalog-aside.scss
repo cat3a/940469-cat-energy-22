@@ -1,0 +1,46 @@
+.catalog-aside {
+  margin: 0;
+  position: relative;
+  min-height: 289px;
+  background-image: url("../../img/get-gift-gift-mini.svg");
+  background-position: 50% 35%;
+  background-repeat: no-repeat;
+}
+
+.catalog-aside__image-main {
+  margin-top: 39px;
+  /* //TODO:display: flex; justify-content: center; */
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 289px;
+  }
+
+  &::after {
+    background-image: url("../../img/get-gift-cat-medium.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  &::before {
+    background-color: $color-main-buttons;
+  }
+}
+
+.catalog-aside__paragraph {
+  @include font-font($font-family-main, normal, normal, 16px, 20px);
+  color: $color-background;
+  margin-top: 186px;
+  position: absolute;
+}
+
+.catalog-aside--margin {
+  margin-bottom: 35px;
+}

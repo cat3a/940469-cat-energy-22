@@ -1,0 +1,28 @@
+.catalog-article {
+  margin: 0;
+}
+
+.catalog-article__button {
+  @include font-font($font-family-extra, normal, normal, 16px, 20px);
+}
+
+.catalog-article__title {
+  @include font-font($font-family-extra, normal, normal, 16px, 20px);
+  align-items: center;
+  text-transform: uppercase;
+  color: $color-checkbox-text;
+}
+
+.catalog-article__table-head {
+  @include font-font($font-family-main, normal, normal, 12px, 16px);
+  text-align: left;
+}
+
+.catalog-article__table-data {
+  @include font-font($font-family-main, normal, normal, 12px, 16px);
+  text-align: center;
+}
+
+.catalog-article__table {
+  margin-bottom: 13px;
+}

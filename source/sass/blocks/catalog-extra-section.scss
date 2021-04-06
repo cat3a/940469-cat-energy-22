@@ -1,0 +1,27 @@
+.catalog-extra-section__list {
+  margin: 0;
+}
+
+.catalog-extra-section__term {
+  @include font-font($font-family-main, normal, normal, 14px, 14px);
+}
+
+.catalog-extra-section__definition {
+  @include font-font($font-family-main, normal, normal, 14px, 14px);
+  text-align: center;
+}
+
+.catalog-extra-section__button {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.catalog-extra-section__title {
+  @include font-font($font-family-extra, normal, normal, 16px, 16px);
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-checkbox-text;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  margin: 0;
+}

@@ -1,9 +1,5 @@
 .program-article__title {
-  font-family: $font-family-extra;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 37px;
+  @include font-font($font-family-extra, normal, normal, 24px, 37px);
   text-transform: uppercase;
   color: $color-main-text;
   position: relative;
@@ -33,23 +29,10 @@
   border-bottom: 1px solid $color-index-borders;
   padding-bottom: 23px;
   padding-left: 20px;
-
-}
-
-.program-article-link__paragraph:last-of-type {
-  margin-bottom: 0;
 }
 
 .program-article__link {
-  font-family: $font-family-extra;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 16px;
+  @include font-font($font-family-extra, normal, normal, 16px, 16px);
   text-align: center;
   text-transform: uppercase;
-}
-
-.program-article-link__paragraph {
-  padding-bottom: 18px;
 }

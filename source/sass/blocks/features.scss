@@ -9,11 +9,7 @@
 }
 
 .features__title {
-  font-family: $font-family-extra;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 40px;
+  @include font-font($font-family-extra, normal, normal, 36px, 40px);
   color: $color-main-text;
   padding-left: 20px;
   text-align: center;

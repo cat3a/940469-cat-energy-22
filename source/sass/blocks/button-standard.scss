@@ -1,13 +1,8 @@
 .button-standard {
-  font-family: $font-family-extra;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  align-items: center;
+  @include font-font($font-family-extra, normal, normal, 14px, 18px);
   text-align: center;
   text-transform: uppercase;
   color: $color-background;
   background-color: $color-main-buttons;
+  text-decoration: none;
 }
-

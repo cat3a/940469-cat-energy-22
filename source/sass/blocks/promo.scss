@@ -36,11 +36,7 @@
 }
 
 .promo__title {
-  font-family: $font-family-extra;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 36px;
+  @include font-font($font-family-extra, normal, normal, 36px, 36px);
   text-align: center;
   color: $color-background;
   margin-top: 0;
@@ -48,11 +44,7 @@
 }
 
 .promo__paragraph {
-  font-family: $font-family-extra;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 14px;
+  @include font-font($font-family-extra, normal, normal, 14px, 14px);
   text-transform: uppercase;
   color: $color-background;
 }
