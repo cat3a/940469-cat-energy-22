@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Кэт энерджи</title>
-  <link rel="stylesheet" href="css/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
 <header class="page-header">
@@ -14,19 +14,19 @@
   <nav class="main-nav">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <div class="main-nav__wrapper">
-      <ul class="main-nav__list list-standard">
+      <ul class="main-nav__list">
         <li class="site-list__item">
-          <a class="link-standard" href="index.html">
+          <a class="main-nav__link" href="index.html">
             Главная
           </a>
         </li>
         <li class="site-list__item">
-          <a class="link-standard" href="catalog.html">
+          <a class="main-nav__link" href="catalog.html">
             Каталог продукции
           </a>
         </li>
         <li class="site-list__item site-list__item--current">
-          <a>
+          <a class="main-nav__link">
             Подбор программы
           </a>
         </li>
@@ -60,7 +60,7 @@
           </fieldset>
           <fieldset class="selection-form__fieldset program-selection">
             <legend class="visually-hidden selection-form__legend">Выбор программы</legend>
-            <ul class="selection-form__list list-standard selection-form__list--border">
+            <ul class="selection-form__list selection-form__list--border">
               <li class="selection-form__item">
                 <p class="selection-form__paragraph program-selection__p">
                   <input class="selection-form__input program-selection__input visually-hidden" type="radio" name="program" id="slimming" checked>
@@ -104,7 +104,7 @@
         </fieldset>
         <fieldset class="selection-form__fieldset extra selection-form__fieldset--line">
           <legend class="selection-form__legend">Дополнительно</legend>
-          <ul class="selection-form__list list-standard extra__list">
+          <ul class="selection-form__list extra__list">
             <li class="selection-form__item">
               <p class="selection-form__paragraph extra__paragraph">
                 <input class="selection-form__input extra__input visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
@@ -132,7 +132,7 @@
           </ul>
         </fieldset>
         <div class="selection-form__submit-wrapper">
-          <button class="selection-form__button button-standard" type="submit" name="send-request" id="send-request">
+          <button class="selection-form__button button" type="submit" name="send-request" id="send-request">
             <span>Отправить заявку</span>
           </button>
           <p class="selection-form__required">&ast; &mdash; Обязательные поля</p>
@@ -162,7 +162,7 @@
     </p>
     <section class="social">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
-      <ul class="social__list list-standard">
+      <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="#!">
             <img src="img/social-vk-mini-icon.svg" width="23" height="16" alt="Логотип Вконтакте">
@@ -181,7 +181,7 @@
       </ul>
     </section>
     <p class="page-footer__paragraph">
-      <a class="page-footer__html-academy link-standard" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+      <a class="page-footer__html-academy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
         <img src="img/footer-htmlacademy-icon.svg" width="27" height="34" alt="Логотип HTML Academy">
       </a>
     </p>

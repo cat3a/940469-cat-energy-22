@@ -5,3 +5,7 @@
   background-color: $color-main-blocks;
   border-bottom: 1px solid $color-index-borders;
 }
+
+.social__list {
+  @include list-standard();
+}

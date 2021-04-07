@@ -1,5 +1,5 @@
 .catalog-main__list {
-  margin-top: 0;
+  @include list-standard();
 }
 
 .catalog-main__item {

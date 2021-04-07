@@ -1,4 +1,4 @@
-/********** Alone & sad mixin **********/
+/********** Mixins **********/
 
 @mixin font-font($font-family: $font-family-main, $style: normal, $weight: normal, $size: 14px, $line-height: 18px) {
   font-family: $font-family;
@@ -6,4 +6,15 @@
   font-weight: $weight;
   font-size: $size;
   line-height: $line-height;
+}
+
+@mixin list-standard() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin link-standard() {
+  text-decoration: none;
+  color: $color-main-text;
 }

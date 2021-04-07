@@ -3,6 +3,14 @@
   outline-offset: -3px;
 }
 
+.main-nav__list {
+  @include list-standard();
+}
+
+.main-nav__link {
+  @include link-standard;
+}
+
 .site-list__item {
   @include font-font($font-family-menu, normal, 500, 20px, 20px);
   text-transform: uppercase;

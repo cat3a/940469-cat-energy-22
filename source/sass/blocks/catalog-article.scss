@@ -26,3 +26,8 @@
 .catalog-article__table {
   margin-bottom: 13px;
 }
+
+.catalog-article__link {
+  @include link-standard();
+  color: $color-checkbox-text;
+}

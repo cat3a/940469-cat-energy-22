@@ -14,3 +14,8 @@
   padding-top: 22px;
   padding-bottom: 32px;
 }
+
+.page-footer__html-academy {
+  @include link-standard();
+  color: $color-main-inputs;
+}

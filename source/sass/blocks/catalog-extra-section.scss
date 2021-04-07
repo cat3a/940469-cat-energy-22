@@ -25,3 +25,8 @@
   padding-bottom: 13px;
   margin: 0;
 }
+
+.catalog-extra-section__link {
+  @include link-standard();
+  color: $color-checkbox-text;
+}

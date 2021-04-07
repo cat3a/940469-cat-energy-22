@@ -2,7 +2,7 @@
   margin: 0;
   position: relative;
   min-height: 289px;
-  background-image: url("../../img/get-gift-gift-mini.svg");
+  background-image: url("../img/get-gift-gift-mini.svg");
   background-position: 50% 35%;
   background-repeat: no-repeat;
 }
@@ -24,7 +24,7 @@
   }
 
   &::after {
-    background-image: url("../../img/get-gift-cat-medium.jpg");
+    background-image: url("../img/get-gift-cat-medium.jpg");
     background-repeat: no-repeat;
     background-position: top center;
   }

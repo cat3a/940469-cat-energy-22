@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.catalog-extra__list {
+  @include list-standard();
+}
+
 .catalog-extra__title {
   @include font-font($font-family-extra, normal, normal, 24px, 34px);
   padding-top: 24px;

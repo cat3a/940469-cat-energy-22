@@ -7,7 +7,7 @@
   padding-top: 30px;
 
   &--down::before {
-    content: url("../../img/program-cat-sitting-mini.svg");
+    content: url("../img/program-cat-sitting-mini.svg");
     position: absolute;
     top: 21px;
     left: 22px;
@@ -16,7 +16,7 @@
   }
 
   &--up::before {
-    content: url("../../img/program-cat-sneak-mini.svg");
+    content: url("../img/program-cat-sneak-mini.svg");
     position: absolute;
     top: 21px;
     left: 13px;

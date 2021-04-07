@@ -1,3 +1,7 @@
+.program-article-link {
+  @include link-standard();
+}
+
 .program-article-link__paragraph:last-of-type {
   margin-bottom: 0;
 }

@@ -5,6 +5,7 @@
 }
 
 .features__list {
+  @include list-standard();
   padding-bottom: 18px;
 }
 
@@ -26,7 +27,7 @@
   &--one::before {
     content: "";
     position: absolute;
-    background-image: url("../../img/features-leaf-icon.svg");
+    background-image: url("../img/features-leaf-icon.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-color: $color-main-buttons;
@@ -39,7 +40,7 @@
   &--two::before {
     content: "";
     position: absolute;
-    background-image: url("../../img/features-tub-icon.svg");
+    background-image: url("../img/features-tub-icon.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-color: $color-main-buttons;
@@ -52,7 +53,7 @@
   &--three::before {
     content: "";
     position: absolute;
-    background-image: url("../../img/features-eat-icon.svg");
+    background-image: url("../img/features-eat-icon.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-color: $color-main-buttons;
@@ -65,7 +66,7 @@
   &--four::before {
     content: "";
     position: absolute;
-    background-image: url("../../img/features-alarm-icon.svg");
+    background-image: url("../img/features-alarm-icon.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-color: $color-main-buttons;

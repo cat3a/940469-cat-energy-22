@@ -41,7 +41,7 @@
 }
 
 .selection-form__list {
-  margin: 0;
+  @include list-standard();
   padding-top: 20px;
 
   &--border {
