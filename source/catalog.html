@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
 <header class="page-header">
@@ -13,19 +14,19 @@
   <nav class="main-nav">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <div class="main-nav__wrapper">
-      <ul class="main-nav__list site-list">
+      <ul class="main-nav__list">
         <li class="site-list__item">
-          <a href="index.html">
+          <a class="main-nav__link" href="index.html">
             Главная
           </a>
         </li>
         <li class="site-list__item site-list__item--current">
-          <a>
+          <a class="main-nav__link">
             Каталог продукции
           </a>
         </li>
         <li class="site-list__item">
-          <a href="form.html">
+          <a class="main-nav__link" href="form.html">
             Подбор программы
           </a>
         </li>
@@ -34,7 +35,7 @@
   </nav>
 </header>
 <main class="page-main">
-  <h1>Каталог продукции</h1>
+  <h1 class="page-main__catalog">Каталог продукции</h1>
   <section class="catalog-main">
     <h2 class="visually-hidden">Основные продукты</h2>
     <ul class="catalog-main__list">
@@ -63,7 +64,7 @@
             </tr>
             </tbody>
           </table>
-          <a class="catalog-article__button button-standard" href="#!">Заказать</a>
+          <a class="catalog-article__button button" href="#!">Заказать</a>
         </article>
       </li>
       <li class="catalog-main__item">
@@ -91,7 +92,7 @@
             </tr>
             </tbody>
           </table>
-          <a class="catalog-article__button button-standard" href="#!">Заказать</a>
+          <a class="catalog-article__button button" href="#!">Заказать</a>
         </article>
       </li>
       <li class="catalog-main__item">
@@ -119,7 +120,7 @@
             </tr>
             </tbody>
           </table>
-          <a class="catalog-article__button button-standard" href="#!">Заказать</a>
+          <a class="catalog-article__button button" href="#!">Заказать</a>
         </article>
       </li>
       <li class="catalog-main__item">
@@ -147,7 +148,7 @@
             </tr>
             </tbody>
           </table>
-          <a class="catalog-article__button button-standard" href="#!">Заказать</a>
+          <a class="catalog-article__button button" href="#!">Заказать</a>
         </article>
       </li>
       <li class="catalog-main__item">
@@ -175,7 +176,7 @@
             </tr>
             </tbody>
           </table>
-          <a class="catalog-article__button button-standard" href="#!">Заказать</a>
+          <a class="catalog-article__button button" href="#!">Заказать</a>
         </article>
       </li>
       <li class="catalog-main__item">
@@ -203,7 +204,7 @@
             </tr>
             </tbody>
           </table>
-          <a class="catalog-article__button button-standard" href="#!">Заказать</a>
+          <a class="catalog-article__button button" href="#!">Заказать</a>
         </article>
       </li>
       <li class="catalog-main__item">
@@ -231,10 +232,10 @@
             </tr>
             </tbody>
           </table>
-          <a class="catalog-article__button button-standard" href="#!">Заказать</a>
+          <a class="catalog-article__button button" href="#!">Заказать</a>
         </article>
       </li>
-      <li>
+      <li class="catalog-main__item">
         <section class="catalog-main__section more-section">
           <!-- // TODO: Потом здесь будет svg -->
           <img src="img/catalog-main-plus-icon.svg" width="30" height="30" alt="Плюс">
@@ -257,7 +258,7 @@
             <dt class="catalog-extra-section__term">1 упаковка (100 г)</dt>
             <dd class="catalog-extra-section__definition">200 Р.</dd>
           </dl>
-          <a class="catalog-extra-section__button button-standard" href="#!">Заказать</a>
+          <a class="catalog-extra-section__button button" href="#!">Заказать</a>
         </section>
       </li>
       <li class="catalog-extra__item">
@@ -269,7 +270,7 @@
             <dt class="catalog-extra-section__term">5 литров</dt>
             <dd class="catalog-extra-section__definition">50 Р.</dd>
           </dl>
-          <a class="catalog-extra-section__button button-standard" href="#!">Заказать</a>
+          <a class="catalog-extra-section__button button" href="#!">Заказать</a>
         </section>
       </li>
       <li class="catalog-extra__item">
@@ -281,7 +282,7 @@
             <dt class="catalog-extra-section__term">1 литр</dt>
             <dd class="catalog-extra-section__definition">100 Р.</dd>
           </dl>
-          <a class="catalog-extra-section__button button-standard" href="#!">Заказать</a>
+          <a class="catalog-extra-section__button button" href="#!">Заказать</a>
         </section>
       </li>
       <li class="catalog-extra__item">
@@ -293,17 +294,18 @@
             <dt class="catalog-extra-section__term">1 упаковка (30 г)</dt>
             <dd class="catalog-extra-section__definition">300 Р.</dd>
           </dl>
-          <a class="catalog-extra-section__button button-standard" href="#!">Заказать</a>
+          <a class="catalog-extra-section__button button" href="#!">Заказать</a>
         </section>
       </li>
     </ul>
   </section>
-  <aside class="catalog-aside">
-    <!-- // TODO: Потом здесь будет svg и <style> я потом уберу -->
-    <img src="img/get-gift-gift-min.svg" style="background-color: red;" width="78" height="80" alt="Изображение коробки с подарком">
-    <p class="catalog-aside__paragraph">Закажите все и получите чехол для кота в подарок!</p>
+  <aside class="catalog-aside npm">
+    <div class="catalog-aside__image-main">
+      <!-- // TODO: Потом здесь будет svg и <style> я потом уберу -->
+      <p class="catalog-aside__paragraph">Закажите все и получите чехол для кота в подарок!</p>
+    </div>
   </aside>
-  <section class="find-us">
+  <section class="find-us find-us--color">
     <h2 class="visually-hidden">Как нас найти</h2>
     <div class="find-us__invite-wrapper">
       <p class="find-us__invite">Приглашаем к сотрудничеству дилеров!</p>
@@ -312,15 +314,17 @@
     <div class="find-us__map-wrapper">
       <!-- // TODO: Потом здесь будет карта -->
       <!-- // TODO: Потом здесь будет тег <picture> <img src="img/we-map-max.png" width="113" height="106" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"> -->
-      <img src="img/we-map-min.png" width="56" height="52" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      <img class="find-us__img" src="img/we-map-min.png" width="56" height="52" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
     </div>
   </section>
 </main>
 <footer class="page-footer">
-  <div class="footer__wrapper">
-    <a class="footer__cat-energy" href="index.html">
-      <img src="img/footer-cat-energy.svg" width="128" height="24" alt="Текстовый логотип проекта Cat energy">
-    </a>
+  <div class="page-footer__wrapper">
+    <p class="page-footer__img-wrapper">
+      <a class="page-footer__cat-energy" href="index.html">
+        <img class="page-footer__img" src="img/footer-cat-energy.svg" width="128" height="24" alt="Текстовый логотип проекта Cat energy">
+      </a>
+    </p>
     <section class="social">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
       <ul class="social__list">
@@ -341,8 +345,8 @@
         </li>
       </ul>
     </section>
-    <p class="footer__paragraph">
-      <a class="footer__html-academy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+    <p class="page-footer__paragraph">
+      <a class="page-footer__html-academy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
         <img src="img/footer-htmlacademy-icon.svg" width="27" height="34" alt="Логотип HTML Academy">
       </a>
     </p>

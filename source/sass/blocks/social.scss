@@ -1,0 +1,11 @@
+.social {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 21px;
+  background-color: $color-main-blocks;
+  border-bottom: 1px solid $color-index-borders;
+}
+
+.social__list {
+  @include list-reset();
+}

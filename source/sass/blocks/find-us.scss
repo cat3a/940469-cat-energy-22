@@ -1,0 +1,39 @@
+.find-us {
+  margin: 0;
+  outline: 3px solid rgba(200, 0, 230, 0.8);
+  outline-offset: -3px;
+}
+
+.find-us--color {
+  background-color: $color-main-blocks;
+}
+
+.find-us__invite {
+  @include font-font($font-family-extra, normal, normal, 16px, 18px);
+  text-transform: uppercase;
+  color: $color-text-extra;
+  margin-top: 0;
+  padding-top: 28px;
+  padding-left: 19px;
+}
+
+.find-us__address {
+  line-height: 20px;
+  padding-left: 19px;
+}
+
+.find-us__map-wrapper {
+  background-image: url("../img/find-us-map-mini.jpg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 320px;
+  height: 362px;
+  position: relative;
+}
+
+.find-us__img {
+  position: absolute;
+  top: 139px;
+  left: 134px;
+}

@@ -1,0 +1,11 @@
+.page {
+  @include font-font($font-family-main, normal, normal, 14px, 18px);
+  height: 100%;
+}
+
+.page__body {
+  color: $color-main-inputs;
+  min-height: 100%;
+  background-color: $color-background;
+  margin: 0;
+}

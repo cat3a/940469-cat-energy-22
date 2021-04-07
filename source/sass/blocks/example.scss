@@ -1,0 +1,93 @@
+.example {
+  margin: 0;
+  background-color: $color-index-example;
+  outline: 3px solid rgba(255, 0, 0, 0.8);
+  outline-offset: -3px;
+  /* //TODO: Это временное явление */
+  padding-left: 20px;
+}
+
+.example__title {
+  @include font-font($font-family-extra, normal, normal, 36px, 40px);
+  text-align: center;
+  color: $font-family-main;
+  margin-top: 0;
+  padding-top: 27px;
+}
+
+.example__list {
+  position: relative;
+  /* //TODO: flex для того, чтобы было видно блок */
+  display: flex;
+}
+
+.example__term {
+  @include font-font($font-family-extra, normal, normal, 24px, 24px);
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-main-text;
+  border: 1px solid $color-elements-inner;
+  border-radius: 5%;
+  width: 124px;
+  height: 64px;
+}
+
+.example__definition {
+  @include font-font($font-family-main, normal, normal, 12px, 12px);
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  max-width: 80px;
+  margin-top: 58px;
+  margin-left: 23px;
+  background-color: $color-index-example;
+
+  &--time {
+    margin-left: 148px;
+  }
+}
+
+.example__cost {
+  @include font-font($font-family-extra, normal, normal, 14px, 20px);
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-main-text;
+}
+
+.example__button {
+  @include font-font($font-family-extra, normal, normal, 16px, 20px);
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-main-text;
+  border: 0;
+  background-color: transparent;
+}
+
+.example__controls {
+  height: 20px;
+  box-sizing: border-box;
+}
+
+.example__scale {
+  background-color: $color-background;
+  border: 1px solid $color-elements-inner;
+  border-radius: 10px;
+  width: 84px;
+  height: 14px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+
+.example__bar {
+  background-color: $color-main-buttons;
+  border: 1px solid gray;
+  width: 35px;
+  height: 6px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-left: 6px;
+}
+
+.example__slider {
+  padding-bottom: 25px;
+}

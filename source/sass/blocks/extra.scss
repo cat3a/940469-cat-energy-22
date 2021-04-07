@@ -1,0 +1,57 @@
+.extra__paragraph {
+  position: relative;
+  margin-left: 62px;
+}
+
+.extra__input:not(:checked) + label {
+  &::before {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: -5px;
+    width: 26px;
+    height: 26px;
+    border: 1px solid $color-elements-inner;
+    box-sizing: border-box;
+  }
+}
+
+.extra__input:checked + label {
+  &::before {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: -5px;
+    width: 26px;
+    height: 26px;
+    border: 1px solid $color-elements-inner;
+    box-sizing: border-box;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: -5px;
+    width: 26px;
+    height: 26px;
+    background-image: url("../img/extra-tick-icon.svg");
+  }
+}
+
+.extra__list:last-child {
+  margin-bottom: 34px;
+}
+
+.selection-form__button {
+  margin-bottom: 21px;
+}
+
+.selection-form__required {
+  margin-bottom: 31px;
+  margin-top: 0;
+}
+
+.selection-form__submit-wrapper {
+  padding-bottom: 1px;
+}

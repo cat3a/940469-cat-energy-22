@@ -1,0 +1,56 @@
+.main-nav {
+  outline: 3px solid rgba(0, 255, 0, 0.8);
+  outline-offset: -3px;
+}
+
+.main-nav__list {
+  @include list-reset();
+}
+
+.main-nav__link {
+  @include link-reset;
+}
+
+.site-list__item {
+  @include font-font($font-family-menu, normal, 500, 20px, 20px);
+  text-transform: uppercase;
+  color: $color-main-text;
+  list-style: none;
+  padding-bottom: 24px;
+  padding-top: 22px;
+  border-top: 1px solid $color-menu-borders;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  right: 24px;
+  top: 1px;
+  width: 18px;
+  height: 18px;
+  opacity: 1;
+  border: 0;
+  background-color: $color-background;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 8px;
+    content: " ";
+    height: 24px;
+    top: -2px;
+    width: 2px;
+    background-color: $color-main-text;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

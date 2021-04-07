@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
 <header class="page-header">
@@ -13,19 +14,19 @@
   <nav class="main-nav">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <div class="main-nav__wrapper">
-      <ul class="main-nav__list site-list">
+      <ul class="main-nav__list">
         <li class="site-list__item">
-          <a href="index.html">
+          <a class="main-nav__link" href="index.html">
             Главная
           </a>
         </li>
         <li class="site-list__item">
-          <a href="catalog.html">
+          <a class="main-nav__link" href="catalog.html">
             Каталог продукции
           </a>
         </li>
         <li class="site-list__item site-list__item--current">
-          <a>
+          <a class="main-nav__link">
             Подбор программы
           </a>
         </li>
@@ -39,10 +40,11 @@
     <p class="program-selection__paragraph">Заполните анкету, и мы подберем
       программу питания для вашего кота</p>
     <form class="program-selection__form selection-form" action="https://echo.htmlacademy.ru" method="get" target="_blank">
+      <!--//TODO: Для полей ввода будет flex-box  flex-grow -->
       <div class="selection-form__wrapper">
         <div class="selection-form__fieldset-wrapper">
           <fieldset class="selection-form__fieldset">
-            <legend class="visually-hidden selection-form__legend">Общие сведения о питомце</legend>
+            <legend class="selection-form__legend visually-hidden">Общие сведения о питомце</legend>
             <p class="selection-form__paragraph">
               <label class="selection-form__label" for="name">Имя:&ast;</label>
               <input class="selection-form__input" type="text" name="name" id="name" placeholder="Барсик" required>
@@ -58,30 +60,29 @@
           </fieldset>
           <fieldset class="selection-form__fieldset program-selection">
             <legend class="visually-hidden selection-form__legend">Выбор программы</legend>
-            <ul class="selection-form__list">
+            <ul class="selection-form__list selection-form__list--border">
               <li class="selection-form__item">
                 <p class="selection-form__paragraph program-selection__p">
+                  <input class="selection-form__input program-selection__input visually-hidden" type="radio" name="program" id="slimming" checked>
                   <label class="selection-form__label program-selection__label" for="slimming">Похудение</label>
-                  <input class="selection-form__input program-selection__input" type="radio" name="program" id="slimming" checked>
                 </p>
               </li>
               <li class="selection-form__item">
                 <p class="selection-form__paragraph program-selection__p">
+                  <input class="selection-form__input program-selection__input visually-hidden" type="radio" name="program" id="gain">
                   <label class="selection-form__label program-selection__label" for="gain">Набор массы</label>
-                  <input class="selection-form__input program-selection__input" type="radio" name="program" id="gain">
                 </p>
               </li>
               <li class="selection-form__item">
                 <p class="selection-form__paragraph program-selection__p">
-                  <label class="selection-form__label program-selection__label" for="unknown">Не знаю &#40;Нужен ваш
-                    совет&#41;</label>
-                  <input class="selection-form__input program-selection__input" type="radio" name="program" id="unknown">
+                  <input class="selection-form__input program-selection__input visually-hidden" type="radio" name="program" id="unknown">
+                  <label class="selection-form__label program-selection__label" for="unknown">Не знаю &#40;Нужен ваш совет&#41;</label>
                 </p>
               </li>
             </ul>
           </fieldset>
         </div>
-        <fieldset class="selection-form__fieldset">
+        <fieldset class="selection-form__fieldset selection-form__fieldset--line">
           <legend class="selection-form__legend">Контактные данные &#40;владельца кота&#41;</legend>
           <p class="selection-form__paragraph">
             <label class="selection-form__label" for="email">E-mail:&ast;</label>
@@ -96,50 +97,50 @@
             <img src="img/form-phone-icon.svg" width="20" height="21" alt="Иконка в виде телефонной трубки">
           </p>
         </fieldset>
-        <fieldset class="selection-form__fieldset">
+        <fieldset class="selection-form__fieldset selection-form__fieldset--line">
           <legend class="selection-form__legend">Комментарий</legend>
           <label class="visually-hidden selection-form__legend" for="comment">Поле для ввода комментария</label>
           <textarea class="selection-form__textarea" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
-        <fieldset class="selection-form__fieldset extra">
+        <fieldset class="selection-form__fieldset extra selection-form__fieldset--line">
           <legend class="selection-form__legend">Дополнительно</legend>
-          <ul class="selection-form__list">
+          <ul class="selection-form__list extra__list">
             <li class="selection-form__item">
               <p class="selection-form__paragraph extra__paragraph">
-                <input class="selection-form__input extra__input" type="checkbox" name="sweetener" id="sweetener" checked>
+                <input class="selection-form__input extra__input visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
                 <label class="selection-form__label extra__label" for="sweetener">Cахарозаменитель</label>
               </p>
             </li>
             <li class="selection-form__item">
               <p class="selection-form__paragraph extra__paragraph">
-                <input class="selection-form__input extra__input" type="checkbox" name="water" id="water">
+                <input class="selection-form__input extra__input visually-hidden" type="checkbox" name="water" id="water">
                 <label class="selection-form__label extra__label" for="water">Питьевая вода</label>
               </p>
             </li>
             <li class="selection-form__item">
               <p class="selection-form__paragraph extra__paragraph">
-                <input class="selection-form__input extra__input" type="checkbox" name="milk" id="milk">
+                <input class="selection-form__input extra__input visually-hidden" type="checkbox" name="milk" id="milk">
                 <label class="selection-form__label extra__label" for="milk">Молоко</label>
               </p>
             </li>
             <li class="selection-form__item">
               <p class="selection-form__paragraph extra__paragraph">
-                <input class="selection-form__input extra__input" type="checkbox" name="vitamins" id="vitamins">
+                <input class="selection-form__input extra__input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
                 <label class="selection-form__label extra__label" for="vitamins">Витамины</label>
               </p>
             </li>
           </ul>
         </fieldset>
         <div class="selection-form__submit-wrapper">
-          <button class="selection-form__button button-standard" type="submit" name="send-request" id="send-request">
+          <button class="selection-form__button button" type="submit" name="send-request" id="send-request">
             <span>Отправить заявку</span>
           </button>
-          <p class="required">&ast; &mdash; Обязательные поля</p>
+          <p class="selection-form__required">&ast; &mdash; Обязательные поля</p>
         </div>
       </div>
     </form>
   </section>
-  <section class="find-us">
+  <section class="find-us find-us--color">
     <h2 class="visually-hidden">Как нас найти</h2>
     <div class="find-us__invite-wrapper">
       <p class="find-us__invite">Приглашаем к сотрудничеству дилеров!</p>
@@ -148,15 +149,17 @@
     <div class="find-us__map-wrapper">
       <!-- // TODO: Потом здесь будет карта -->
       <!-- // TODO: Потом здесь будет тег <picture> <img src="img/we-map-max.png" width="113" height="106" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"> -->
-      <img src="img/we-map-min.png" width="56" height="52" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      <img class="find-us__img" src="img/we-map-min.png" width="56" height="52" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
     </div>
   </section>
 </main>
 <footer class="page-footer">
-  <div class="footer__wrapper">
-    <a class="footer__cat-energy" href="index.html">
-      <img src="img/footer-cat-energy.svg" width="128" height="24" alt="Текстовый логотип проекта Cat energy">
-    </a>
+  <div class="page-footer__wrapper">
+    <p class="page-footer__img-wrapper">
+      <a class="page-footer__cat-energy" href="index.html">
+        <img class="page-footer__img" src="img/footer-cat-energy.svg" width="128" height="24" alt="Текстовый логотип проекта Cat energy">
+      </a>
+    </p>
     <section class="social">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
       <ul class="social__list">
@@ -177,8 +180,8 @@
         </li>
       </ul>
     </section>
-    <p class="footer__paragraph">
-      <a class="footer__html-academy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+    <p class="page-footer__paragraph">
+      <a class="page-footer__html-academy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
         <img src="img/footer-htmlacademy-icon.svg" width="27" height="34" alt="Логотип HTML Academy">
       </a>
     </p>

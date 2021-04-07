@@ -1,0 +1,78 @@
+.features {
+  margin: 0;
+  outline: 3px solid rgba(160, 120, 0, 0.8);
+  outline-offset: -3px;
+}
+
+.features__list {
+  @include list-reset();
+  padding-bottom: 18px;
+}
+
+.features__title {
+  @include font-font($font-family-extra, normal, normal, 36px, 40px);
+  color: $color-main-text;
+  padding-left: 20px;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 27px;
+}
+
+.features__paragraph {
+  position: relative;
+  margin-bottom: 24px;
+  min-height: 54px;
+  padding-left: 100px;
+
+  &--one::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/features-leaf-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $color-main-buttons;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 20px;
+  }
+
+  &--two::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/features-tub-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $color-main-buttons;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 20px;
+  }
+
+  &--three::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/features-eat-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $color-main-buttons;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 20px;
+  }
+
+  &--four::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/features-alarm-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $color-main-buttons;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 20px;
+  }
+}

@@ -1,0 +1,18 @@
+.catalog-main__list {
+  @include list-reset();
+}
+
+.catalog-main__item {
+  border-bottom: 1px solid $color-catalog-article;
+  padding-top: 19px;
+  padding-bottom: 25px;
+
+  &:first-of-type {
+    border-top: 1px solid $color-catalog-article;
+  }
+}
+
+.catalog-main__section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
