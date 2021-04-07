@@ -17,7 +17,7 @@
 
 .more-section__link {
   @include font-font($font-family-extra, normal, normal, 16px, 20px);
-  @include link-standard();
+  @include link-reset();
   text-align: center;
   text-transform: uppercase;
   color: $color-main-inputs;

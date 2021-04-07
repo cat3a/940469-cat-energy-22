@@ -5,7 +5,7 @@
 }
 
 .catalog-extra__list {
-  @include list-standard();
+  @include list-reset();
 }
 
 .catalog-extra__title {

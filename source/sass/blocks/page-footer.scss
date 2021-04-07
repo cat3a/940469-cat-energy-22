@@ -16,6 +16,6 @@
 }
 
 .page-footer__html-academy {
-  @include link-standard();
+  @include link-reset();
   color: $color-main-inputs;
 }

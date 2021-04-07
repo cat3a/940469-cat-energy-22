@@ -28,6 +28,6 @@
 }
 
 .catalog-article__link {
-  @include link-standard();
+  @include link-reset();
   color: $color-checkbox-text;
 }

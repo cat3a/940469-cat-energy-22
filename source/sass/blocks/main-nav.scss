@@ -4,11 +4,11 @@
 }
 
 .main-nav__list {
-  @include list-standard();
+  @include list-reset();
 }
 
 .main-nav__link {
-  @include link-standard;
+  @include link-reset;
 }
 
 .site-list__item {

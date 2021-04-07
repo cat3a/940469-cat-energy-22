@@ -8,13 +8,13 @@
   line-height: $line-height;
 }
 
-@mixin list-standard() {
+@mixin list-reset() {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-@mixin link-standard() {
+@mixin link-reset() {
   text-decoration: none;
   color: $color-main-text;
 }

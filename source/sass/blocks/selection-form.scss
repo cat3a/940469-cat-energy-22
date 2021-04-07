@@ -41,7 +41,7 @@
 }
 
 .selection-form__list {
-  @include list-standard();
+  @include list-reset();
   padding-top: 20px;
 
   &--border {
