@@ -1,12 +1,15 @@
 .page {
-  @include font-font($font-family-main, normal, normal, 14px, 18px);
   height: 100%;
+
+  @include font-font($font-family-main, normal, normal, 14px, 18px);
 }
 
 .page__body {
-  color: $color-main-inputs;
+  min-width: 280px;
   min-height: 100%;
-  background-color: $color-background;
   margin: 0;
-  min-width: 320px;
+
+  color: $color-main-inputs;
+
+  background-color: $color-background;
 }

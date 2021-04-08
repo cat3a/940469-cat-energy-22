@@ -1,10 +1,12 @@
 .catalog-aside {
-  margin: 0;
   position: relative;
+
   min-height: 289px;
+  margin: 0;
+
   background-image: url("../img/get-gift-gift-mini.svg");
-  background-position: 50% 35%;
   background-repeat: no-repeat;
+  background-position: 50% 35%;
 }
 
 .catalog-aside__image-main {
@@ -15,9 +17,10 @@
   &::after {
     content: "";
     position: absolute;
-    z-index: -1;
     top: 0;
     left: 0;
+    z-index: -1;
+
     width: 100%;
     height: 100%;
     max-height: 289px;
@@ -35,10 +38,13 @@
 }
 
 .catalog-aside__paragraph {
-  @include font-font($font-family-main, normal, normal, 16px, 20px);
-  color: $color-background;
-  margin-top: 186px;
   position: absolute;
+
+  margin-top: 186px;
+
+  color: $color-background;
+
+  @include font-font($font-family-main, normal, normal, 16px, 20px);
 }
 
 .catalog-aside--margin {

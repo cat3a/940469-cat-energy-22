@@ -1,25 +1,30 @@
 .more-section {
-  padding-bottom: 0;
   position: relative;
+
+  padding-bottom: 0;
 }
 
 .more-section__title {
-  @include font-font($font-family-extra, normal, normal, 16px, 20px);
   text-align: center;
-  text-transform: uppercase;
   color: $color-text-extra;
+  text-transform: uppercase;
+
+  @include font-font($font-family-extra, normal, normal, 16px, 20px);
 }
 
 .more-section__paragraph {
-  @include font-font($font-family-main, normal, normal, 12px, 16px);
   text-align: center;
+
+  @include font-font($font-family-main, normal, normal, 12px, 16px);
 }
 
 .more-section__link {
+  text-align: center;
+  color: $color-main-inputs;
+  text-transform: uppercase;
+
+  background-color: $color-main-blocks;
+
   @include font-font($font-family-extra, normal, normal, 16px, 20px);
   @include link-reset();
-  text-align: center;
-  text-transform: uppercase;
-  color: $color-main-inputs;
-  background-color: $color-main-blocks;
 }

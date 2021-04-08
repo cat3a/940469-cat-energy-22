@@ -1,5 +1,9 @@
 .page-footer {
+  display: block;
   margin: 0;
+
+  text-align: center;
+
   background-color: $color-main-blocks;
 }
 
@@ -7,6 +11,7 @@
   margin: 0;
   padding-top: 39px;
   padding-bottom: 32px;
+
   border-bottom: 1px solid $color-index-borders;
 }
 
@@ -16,6 +21,11 @@
 }
 
 .page-footer__html-academy {
-  @include link-reset();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   color: $color-main-inputs;
+
+  @include link-reset();
 }

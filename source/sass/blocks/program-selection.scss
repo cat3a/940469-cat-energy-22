@@ -3,29 +3,35 @@
 }
 
 .program-selection__title {
-  @include font-font($font-family-extra, normal, normal, 36px, 36px);
-  color: $color-main-text;
   padding-left: 20px;
+
+  color: $color-main-text;
+
+  @include font-font($font-family-extra, normal, normal, 36px, 36px);
 }
 
 .program-selection__paragraph {
-  @include font-font($font-family-extra, normal, normal, 14px, 18px);
-  text-transform: uppercase;
-  color: $color-main-text;
   padding-left: 20px;
+
+  color: $color-main-text;
+  text-transform: uppercase;
+
+  @include font-font($font-family-extra, normal, normal, 14px, 18px);
 }
 
 .program-selection__input:not(:checked) + label {
   &::before {
     content: "";
     position: absolute;
-    left: -43px;
     top: -8px;
+    left: -43px;
+
+    box-sizing: border-box;
     width: 31px;
     height: 31px;
+
     border: 1px solid $color-elements-inner;
     border-radius: 50%;
-    box-sizing: border-box;
   }
 }
 
@@ -33,30 +39,35 @@
   &::before {
     content: "";
     position: absolute;
-    left: -43px;
     top: -8px;
+    left: -43px;
+
+    box-sizing: border-box;
     width: 31px;
     height: 31px;
+
     border: 1px solid $color-elements-inner;
     border-radius: 50%;
-    box-sizing: border-box;
   }
 
   &::after {
     content: "";
     position: absolute;
-    left: -35px;
     top: 1px;
+    left: -35px;
+
+    box-sizing: border-box;
     width: 14px;
     height: 13px;
+
     background-color: $color-main-buttons;
     border-radius: 50%;
-    box-sizing: border-box;
   }
 }
 
 .program-selection__p {
-  margin-left: 65px;
   position: relative;
+
+  margin-left: 65px;
   padding-bottom: 10px;
 }

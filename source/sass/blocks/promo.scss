@@ -1,16 +1,19 @@
 .promo {
-  margin: 0;
-  outline: 3px solid rgba(160, 120, 0, 0.8);
-  outline-offset: -3px;
   position: relative;
+
+  margin: 0;
+
+  outline: 3px solid $color-background-picture;
+  outline-offset: -3px;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    z-index: -1;
     top: 0;
     left: 0;
+    z-index: -1;
+
     width: 100%;
     height: 100%;
     max-height: 302px;
@@ -23,28 +26,46 @@
   }
 
   &::before {
-    background-color: $color-main-buttons;
+    background-color: $color-background-picture;
   }
 }
 
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .promo__image {
+  height: 302px;
+
+  background-color: $color-main-buttons;
   background-image: url("../img/promo-cat-mini.jpg");
   background-repeat: no-repeat;
   background-position: top left;
-  height: 302px;
-  background-color: $color-main-buttons;
 }
 
 .promo__title {
-  @include font-font($font-family-extra, normal, normal, 36px, 36px);
-  text-align: center;
-  color: $color-background;
   margin-top: 0;
   padding-top: 19px;
+
+  text-align: center;
+  color: $color-background;
+
+  @include font-font($font-family-extra, normal, normal, 36px, 36px);
 }
 
 .promo__paragraph {
-  @include font-font($font-family-extra, normal, normal, 14px, 14px);
-  text-transform: uppercase;
   color: $color-background;
+  text-transform: uppercase;
+
+  @include font-font($font-family-extra, normal, normal, 14px, 14px);
+}
+
+.promo__button {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

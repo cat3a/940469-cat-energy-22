@@ -1,5 +1,6 @@
 .extra__paragraph {
   position: relative;
+
   margin-left: 62px;
 }
 
@@ -7,12 +8,14 @@
   &::before {
     content: "";
     position: absolute;
-    left: -42px;
     top: -5px;
+    left: -42px;
+
+    box-sizing: border-box;
     width: 26px;
     height: 26px;
+
     border: 1px solid $color-elements-inner;
-    box-sizing: border-box;
   }
 }
 
@@ -20,21 +23,25 @@
   &::before {
     content: "";
     position: absolute;
-    left: -42px;
     top: -5px;
+    left: -42px;
+
+    box-sizing: border-box;
     width: 26px;
     height: 26px;
+
     border: 1px solid $color-elements-inner;
-    box-sizing: border-box;
   }
 
   &::after {
     content: "";
     position: absolute;
-    left: -42px;
     top: -5px;
+    left: -42px;
+
     width: 26px;
     height: 26px;
+
     background-image: url("../img/extra-tick-icon.svg");
   }
 }
@@ -48,8 +55,8 @@
 }
 
 .selection-form__required {
-  margin-bottom: 31px;
   margin-top: 0;
+  margin-bottom: 31px;
 }
 
 .selection-form__submit-wrapper {

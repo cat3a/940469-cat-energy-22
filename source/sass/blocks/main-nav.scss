@@ -1,4 +1,8 @@
 .main-nav {
+  display: grid;
+
+  text-align: center;
+
   outline: 3px solid rgba(0, 255, 0, 0.8);
   outline-offset: -3px;
 }
@@ -12,24 +16,29 @@
 }
 
 .site-list__item {
-  @include font-font($font-family-menu, normal, 500, 20px, 20px);
-  text-transform: uppercase;
-  color: $color-main-text;
-  list-style: none;
-  padding-bottom: 24px;
   padding-top: 22px;
+  padding-bottom: 24px;
+
+  list-style: none;
+  color: $color-main-text;
+  text-transform: uppercase;
+
   border-top: 1px solid $color-menu-borders;
+
+  @include font-font($font-family-menu, normal, 500, 20px, 20px);
 }
 
 .main-nav__toggle {
   position: absolute;
-  right: 24px;
-  top: 1px;
+  top: 23px;
+  right: 23px;
+
   width: 18px;
   height: 18px;
-  opacity: 1;
-  border: 0;
+
   background-color: $color-background;
+  border: 0;
+  opacity: 1;
 
   &:hover {
     opacity: 1;
@@ -37,12 +46,14 @@
 
   &::before,
   &::after {
-    position: absolute;
-    left: 8px;
     content: " ";
-    height: 24px;
+    position: absolute;
     top: -2px;
+    left: 8px;
+
     width: 2px;
+    height: 24px;
+
     background-color: $color-main-text;
   }
 

@@ -1,16 +1,24 @@
 .program-article__title {
-  @include font-font($font-family-extra, normal, normal, 24px, 37px);
-  text-transform: uppercase;
+  position: relative;
+
+  padding-top: 30px;
+
   text-align: center;
   color: $color-main-text;
-  position: relative;
-  padding-top: 30px;
+  text-transform: uppercase;
+
+  @include font-font($font-family-extra, normal, normal, 24px, 37px);
+
+  &--up {
+    padding-left: 35px;
+  }
 
   &--down::before {
     content: url("../img/program-cat-sitting-mini.svg");
     position: absolute;
     top: 21px;
     left: 22px;
+
     width: 50px;
     height: 53px;
   }
@@ -20,19 +28,23 @@
     position: absolute;
     top: 21px;
     left: 13px;
+
     width: 67px;
     height: 50px;
   }
 }
 
 .program-article__paragraph {
-  border-bottom: 1px solid $color-index-borders;
+  padding-right: 20px;
   padding-bottom: 23px;
   padding-left: 20px;
+
+  border-bottom: 1px solid $color-index-borders;
 }
 
 .program-article__link {
-  @include font-font($font-family-extra, normal, normal, 16px, 16px);
   text-align: center;
   text-transform: uppercase;
+
+  @include font-font($font-family-extra, normal, normal, 16px, 16px);
 }

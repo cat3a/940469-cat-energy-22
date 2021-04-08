@@ -3,10 +3,12 @@
 }
 
 .page-main__catalog {
-  @include font-font($font-family-extra, normal, normal, 36px, 36px);
-  color: $color-main-text;
   margin-top: 27px;
-  padding-bottom: 41px;
-  margin-left: 20px;
   margin-bottom: 0;
+  margin-left: 20px;
+  padding-bottom: 41px;
+
+  color: $color-main-text;
+
+  @include font-font($font-family-extra, normal, normal, 36px, 36px);
 }

@@ -1,7 +1,17 @@
 .find-us {
   margin: 0;
+
   outline: 3px solid rgba(200, 0, 230, 0.8);
   outline-offset: -3px;
+}
+
+.find-us__wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 
 .find-us--color {
@@ -9,27 +19,31 @@
 }
 
 .find-us__invite {
-  @include font-font($font-family-extra, normal, normal, 16px, 18px);
-  text-transform: uppercase;
   color: $color-text-extra;
-  margin-top: 0;
-  padding-top: 28px;
-  padding-left: 19px;
+  text-transform: uppercase;
+
+  grid-column: 1;
+  grid-row: 1;
+  @include font-font($font-family-extra, normal, normal, 16px, 18px);
 }
 
 .find-us__address {
   line-height: 20px;
-  padding-left: 19px;
+
+  grd-row: 1;
+  grid-column: 2;
 }
 
 .find-us__map-wrapper {
-  background-image: url("../img/find-us-map-mini.jpg");
-  background-position: top left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 320px;
-  height: 362px;
   position: relative;
+
+  width: 100%;
+  height: 362px;
+
+  background-image: url("../img/find-us-map-mini.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
 }
 
 .find-us__img {
