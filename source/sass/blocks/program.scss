@@ -1,6 +1,5 @@
 .program {
   margin: 0;
-
   outline: 3px solid rgba(160, 120, 0, 0.8);
   outline-offset: -3px;
 }
@@ -12,6 +11,13 @@
   background-color: $color-main-blocks;
   outline: 3px solid rgba(130, 220, 0, 0.8);
   outline-offset: -3px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
 }
 
 .program__wrapper:last-child {

@@ -1,32 +1,59 @@
 .promo {
-  position: relative;
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+  }
 
   margin: 0;
 
   outline: 3px solid $color-background-picture;
   outline-offset: -3px;
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+  @media (max-width: $mobile-width-only) {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
 
-    width: 100%;
-    height: 100%;
-    max-height: 302px;
+      width: 100%;
+      height: 100%;
+      max-height: 302px;
+    }
+
+    &::after {
+      background-image: url("../img/promo-cat-mini.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
+
+    &::before {
+      background-color: $color-background-picture;
+    }
   }
 
-  &::after {
-    background-image: url("../img/promo-cat-mini.jpg");
-    background-repeat: no-repeat;
-    background-position: top center;
-  }
+  @media (min-width: $desktop-width) {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      min-height: 121%;
+      width: 50%;
+    }
 
-  &::before {
-    background-color: $color-background-picture;
+    &::after {
+      background-image: url("../img/promo-cat-max.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
+
+    &::before {
+      background-color: $color-background-picture;
+    }
   }
 }
 
@@ -35,6 +62,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 
 .promo__image {
@@ -54,6 +87,16 @@
   color: $color-background;
 
   @include font-font($font-family-extra, normal, normal, 36px, 36px);
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 60px, 60px);
+    color: $color-main-text;
+    max-width: 414px;
+    text-align: left;
+    margin-top: 54px;
+    margin-bottom: 0;
+    margin-left: 85px;
+  }
 }
 
 .promo__paragraph {
@@ -61,11 +104,31 @@
   text-transform: uppercase;
 
   @include font-font($font-family-extra, normal, normal, 14px, 14px);
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 20px, 20px);
+    color: $color-main-text;
+    padding-top: 0;
+    margin-top: 41px;
+    margin-left: 85px;
+  }
 }
 
 .promo__button {
-  display: block;
-  width: 100%;
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+  }
   padding-top: 10px;
   padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 20px, 20px);
+    position: absolute;
+    top: 300px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 26px;
+    padding-right: 26px;
+    margin-left: 85px;
+  }
 }

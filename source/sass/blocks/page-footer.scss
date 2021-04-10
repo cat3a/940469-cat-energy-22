@@ -5,6 +5,12 @@
   text-align: center;
 
   background-color: $color-main-blocks;
+
+  @media(min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .page-footer__img-wrapper {
@@ -13,6 +19,10 @@
   padding-bottom: 32px;
 
   border-bottom: 1px solid $color-index-borders;
+
+  @media(min-width: $tablet-width) {
+    border-bottom: none;
+  }
 }
 
 .page-footer__paragraph {
@@ -28,4 +38,10 @@
   color: $color-main-inputs;
 
   @include link-reset();
+
+  @media(min-width: $tablet-width) {
+    min-width: 163px;
+
+    @include font-font($font-family-main, normal, normal, 16px, 18px);
+  }
 }

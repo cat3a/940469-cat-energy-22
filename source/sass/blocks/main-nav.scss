@@ -5,10 +5,24 @@
 
   outline: 3px solid rgba(0, 255, 0, 0.8);
   outline-offset: -3px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-basis: 440px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin-left: 80px;
+  }
 }
 
 .main-nav__list {
   @include list-reset();
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 10px;
+  }
 }
 
 .main-nav__link {
@@ -26,6 +40,13 @@
   border-top: 1px solid $color-menu-borders;
 
   @include font-font($font-family-menu, normal, 500, 20px, 20px);
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 18px, 24px);
+    padding-top: 42px;
+    padding-bottom: 12px;
+    display: flex;
+  }
 }
 
 .main-nav__toggle {
@@ -63,5 +84,16 @@
 
   &::after {
     transform: rotate(-45deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__wrapper {
+  @media (min-width: $tablet-width) {
+    flex-basis: 440px;
+    flex-grow: 1;
   }
 }

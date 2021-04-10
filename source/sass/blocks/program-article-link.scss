@@ -8,4 +8,11 @@
 
 .program-article-link__paragraph {
   padding-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 53px;
+    padding-left: 52px;
+
+    @include font-font($font-family-extra, normal, normal, 20px, 30px);
+  }
 }

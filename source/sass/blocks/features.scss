@@ -3,14 +3,35 @@
   justify-content: center;
   margin: 0;
 
-  outline: 3px solid rgba(160, 120, 0, 0.8);
-  outline-offset: -3px;
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+
+    border-bottom: 1px solid $color-menu-borders;
+  }
 }
 
 .features__list {
   padding-bottom: 18px;
 
   @include list-reset();
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 33px;
+
+    counter-reset: section;
+  }
+}
+
+.features__item {
+  @media (min-width: $tablet-width) {
+    min-width: 250px;
+    min-height: 280px;
+    margin-right: 100px;
+  }
 }
 
 .features__title {
@@ -21,6 +42,12 @@
   color: $color-main-text;
 
   @include font-font($font-family-extra, normal, normal, 36px, 40px);
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+
+    @include font-font($font-family-extra, normal, normal, 60px, 60px);
+  }
 }
 
 .features__paragraph {
@@ -88,5 +115,103 @@
     background-image: url("../img/features-alarm-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .features__paragraph {
+    max-width: 245px;
+    margin-top: 130px;
+    padding-left: 0;
+
+    @include font-font($font-family-main, normal, normal, 16px, 24px);
+
+    &--one::before {
+      top: -111px;
+      left: 0;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &--one::after {
+      content: counter(section);
+      position: absolute;
+      top: -150px;
+      left: 100px;
+      z-index: -1;
+
+      color: $color-main-blocks;
+
+      counter-increment: section;
+
+      @include font-font($font-family-extra, normal, normal, 280px, 280px);
+    }
+
+    &--two::before {
+      top: -111px;
+      left: 0;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &--two::after {
+      content: counter(section);
+      position: absolute;
+      top: -150px;
+      left: 100px;
+      z-index: -1;
+
+      color: $color-main-blocks;
+
+      counter-increment: section;
+
+      @include font-font($font-family-extra, normal, normal, 280px, 280px);
+    }
+
+    &--three::before {
+      top: -111px;
+      left: 0;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &--three::after {
+      content: counter(section);
+      position: absolute;
+      top: -150px;
+      left: 100px;
+      z-index: -1;
+
+      color: $color-main-blocks;
+
+      counter-increment: section;
+
+      @include font-font($font-family-extra, normal, normal, 280px, 280px);
+    }
+
+    &--four::before {
+      top: -111px;
+      left: 0;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &--four::after {
+      content: counter(section);
+      position: absolute;
+      top: -150px;
+      left: 100px;
+      z-index: -1;
+
+      color: $color-main-blocks;
+
+      counter-increment: section;
+
+      @include font-font($font-family-extra, normal, normal, 280px, 280px);
+    }
   }
 }

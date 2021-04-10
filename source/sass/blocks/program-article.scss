@@ -1,7 +1,6 @@
 .program-article__title {
-  position: relative;
-
-  padding-top: 30px;
+  padding-top: 25px;
+  padding-left: 15px;
 
   text-align: center;
   color: $color-main-text;
@@ -9,37 +8,87 @@
 
   @include font-font($font-family-extra, normal, normal, 24px, 37px);
 
-  &--up {
-    padding-left: 35px;
+  @media (max-width: $mobile-width-only) {
+    &--up {
+      padding-left: 40px;
+    }
   }
 
-  &--down::before {
-    content: url("../img/program-cat-sitting-mini.svg");
-    position: absolute;
-    top: 21px;
-    left: 22px;
+  @media (min-width: $tablet-width) {
+    padding-top: 52px;
+    padding-left: 52px;
 
-    width: 50px;
-    height: 53px;
-  }
+    color: $color-main-text;
 
-  &--up::before {
-    content: url("../img/program-cat-sneak-mini.svg");
-    position: absolute;
-    top: 21px;
-    left: 13px;
-
-    width: 67px;
-    height: 50px;
+    @include font-font($font-family-extra, normal, normal, 36px, 36px);
   }
 }
 
 .program-article__paragraph {
+  position: relative;
+
   padding-right: 20px;
   padding-bottom: 23px;
   padding-left: 20px;
 
   border-bottom: 1px solid $color-index-borders;
+
+  @media (max-width: $mobile-width-only) {
+    &--down::before {
+      content: url("../img/program-cat-sitting-mini.svg");
+      position: absolute;
+      top: -70px;
+      left: 22px;
+
+      width: 50px;
+      height: 53px;
+    }
+
+    &--up::before {
+      content: url("../img/program-cat-sneak-mini.svg");
+      position: absolute;
+      top: -70px;
+      left: 13px;
+
+      width: 67px;
+      height: 50px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    margin-top: 0;
+    margin-right: 315px;
+    margin-left: 35px;
+    padding-top: 0;
+
+    color: $color-main-text;
+
+    border-bottom: none;
+
+    @include font-font($font-family-main, normal, normal, 16px, 24px);
+
+    &--down::after {
+      content: url("../img/program-cat-sitting-max.svg");
+      position: absolute;
+      top: -80px;
+      right: -250px;
+
+      width: 200px;
+      height: 211px;
+    }
+
+    &--up::after {
+      content: url("../img/program-cat-sneak-max.svg");
+      position: absolute;
+      top: -80px;
+      right: -280px;
+
+      width: 268px;
+      height: 200px;
+    }
+  }
 }
 
 .program-article__link {

@@ -12,26 +12,48 @@
 
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-}
+  grid-column-gap: 10px;
 
-.find-us--color {
-  background-color: $color-main-blocks;
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 160px 1fr 160px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
 }
 
 .find-us__invite {
   color: $color-text-extra;
   text-transform: uppercase;
-
   grid-column: 1;
   grid-row: 1;
+
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    @include font-font($font-family-extra, normal, normal, 20px, 21px);
+  }
 }
 
 .find-us__address {
   line-height: 20px;
-
-  grd-row: 1;
+  grid-row: 1;
   grid-column: 2;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+    grid-column: 3;
+
+    @include font-font($font-family-main, normal, normal, 16px, 20px);
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .find-us br {
+    display: none;
+  }
 }
 
 .find-us__map-wrapper {
@@ -44,6 +66,11 @@
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/find-us-map-medium.jpg");
+    height: 400px;
+  }
 }
 
 .find-us__img {

@@ -2,14 +2,22 @@
   margin: 0;
 
   background-color: $color-index-example;
-  outline: 3px solid rgba(255, 0, 0, 0.8);
-  outline-offset: -3px;
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(to bottom, $color-background 63%, $color-index-example 63%);
+  }
 }
 
 .example__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
 }
 
 .example__title {
@@ -20,6 +28,17 @@
   color: $font-family-main;
 
   @include font-font($font-family-extra, normal, normal, 36px, 40px);
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 60px, 60px);
+  }
+}
+
+.example__paragraph {
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-main, normal, normal, 16px, 24px);
+    margin-bottom: 35px;
+  }
 }
 
 .example__list {
@@ -29,6 +48,11 @@
 
   grid-column-gap: 20px;
   grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $tablet-width) {
+    grid-column-gap: 42px;
+    margin-bottom: 61px;
+  }
 }
 
 .example__term {
@@ -45,6 +69,14 @@
   border-radius: 5%;
 
   @include font-font($font-family-extra, normal, normal, 24px, 24px);
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 30px, 37px);
+    width: 162px;
+    height: 77px;
+    padding-top: 15px;
+    border: 2px solid $color-elements-inner;
+  }
 }
 
 .example__term-wrapper {
@@ -64,6 +96,21 @@
   background-color: $color-index-example;
 
   @include font-font($font-family-main, normal, normal, 12px, 12px);
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-main, normal, normal, 14px, 14px);
+    max-width: 165px;
+    background-color: $color-background;
+    margin-left: 25px;
+    padding: 8px;
+    margin-top: -20px;
+  }
+}
+
+.example__definition--time {
+  @media (min-width: $tablet-width) {
+    margin-left: 10px;
+  }
 }
 
 .example__cost {
@@ -72,6 +119,14 @@
   text-transform: uppercase;
 
   @include font-font($font-family-extra, normal, normal, 14px, 20px);
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 20px, 20px);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    text-align: right;
+    grid-row-gap: 10px;
+  }
 }
 
 .example__button {
@@ -83,11 +138,25 @@
   border: 0;
 
   @include font-font($font-family-extra, normal, normal, 16px, 20px);
+
+  @media (min-width: $tablet-width) {
+    padding: 3px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+
+    @include font-font($font-family-extra, normal, normal, 20px, 30px);
+    border-bottom: 1px dotted $color-main-text;
+  }
 }
 
 .example__controls {
   box-sizing: border-box;
   height: 20px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+  }
 }
 
 .example__scale {
@@ -99,6 +168,12 @@
   background-color: $color-background;
   border: 1px solid $color-elements-inner;
   border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    width: 426px;
+    height: 6px;
+    background-color: $color-elements-inner;
+  }
 }
 
 .example__bar {
@@ -110,6 +185,10 @@
   background-color: $color-main-buttons;
   border: 1px solid gray;
   border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .example__slider {
@@ -120,13 +199,45 @@
   padding-bottom: 25px;
 }
 
+/* //TODO: Это временное решение */
+
+.example__slider img {
+  @media (min-width: $tablet-width) {
+    width: 704px;
+    height: 620px;
+  }
+}
+
 .example__range-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .example__range {
   padding-top: 6px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__toggle {
+    width: 8px;
+    height: 8px;
+    /* //TODO: Хм... а это в цвета заводить? */
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    border-radius: 50%;
+    border: 12px solid $color-background;
+    background-color: $color-main-buttons;
+    position: absolute;
+    bottom: 0;
+    left: 196px;
+  }
+}
+
+.example__span {
+  white-space: nowrap;
 }

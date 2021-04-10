@@ -5,10 +5,21 @@
 
   outline: 3px solid rgba(255, 0, 0, 0.8);
   outline-offset: -3px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 24px;
+    padding-left: 30px;
+  }
 }
 
 .page-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

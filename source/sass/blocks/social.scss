@@ -5,6 +5,10 @@
 
   background-color: $color-main-blocks;
   border-bottom: 1px solid $color-index-borders;
+
+  @media(min-width: $tablet-width) {
+    border-bottom: none;
+  }
 }
 
 .social__list {

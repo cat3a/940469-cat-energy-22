@@ -7,4 +7,5 @@
   background-color: $color-main-buttons;
 
   @include font-font($font-family-extra, normal, normal, 14px, 18px);
+  display: block;
 }
