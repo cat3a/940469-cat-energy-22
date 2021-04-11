@@ -6,17 +6,30 @@
   @media (min-width: $tablet-width) {
     background-image: linear-gradient(to bottom, $color-background 63%, $color-index-example 63%);
   }
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(to bottom, $color-background 25%, $color-index-example 25%);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }
 
 .example__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    justify-content: flex-start;
   }
 }
 
@@ -32,6 +45,10 @@
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 60px, 60px);
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 130px;
+  }
 }
 
 .example__paragraph {
@@ -39,7 +56,14 @@
     @include font-font($font-family-main, normal, normal, 16px, 24px);
     margin-bottom: 35px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 30px;
+    margin-top: 30px;
+    max-width: 436px;
+  }
 }
+
 
 .example__list {
   position: relative;
@@ -52,6 +76,11 @@
   @media (min-width: $tablet-width) {
     grid-column-gap: 42px;
     margin-bottom: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 }
 
@@ -105,6 +134,10 @@
     padding: 8px;
     margin-top: -20px;
   }
+
+  @media (min-width: $desktop-width) {
+    background-color: $color-index-example;
+  }
 }
 
 .example__definition--time {
@@ -126,6 +159,11 @@
     grid-template-rows: 1fr 1fr;
     text-align: right;
     grid-row-gap: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-bottom: 75px;
   }
 }
 
@@ -205,6 +243,11 @@
   @media (min-width: $tablet-width) {
     width: 704px;
     height: 620px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 704px;
+    height: 536px;
   }
 }
 

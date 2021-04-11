@@ -34,25 +34,22 @@
   }
 
   @media (min-width: $desktop-width) {
-    &::before,
+    min-height: 550px;
+
     &::after {
       content: "";
       position: absolute;
       top: 0;
       right: 0;
       z-index: -1;
-      min-height: 121%;
-      width: 50%;
-    }
-
-    &::after {
+      max-height: 100%;
+      min-height: 660px;
+      max-width: 50%;
+      min-width: 720px;
       background-image: url("../img/promo-cat-max.jpg");
-      background-repeat: no-repeat;
-      background-position: top center;
-    }
-
-    &::before {
       background-color: $color-background-picture;
+      background-repeat: no-repeat;
+      background-position: top;
     }
   }
 }
@@ -70,6 +67,16 @@
   }
 }
 
+
+@media (min-width: $desktop-width) {
+  .promo__wrapper img {
+    position: absolute;
+    top: 143px;
+    left: 558px;
+  }
+}
+
+/* //TODO: Это я потом уберу
 .promo__image {
   height: 302px;
 
@@ -78,6 +85,7 @@
   background-repeat: no-repeat;
   background-position: top left;
 }
+*/
 
 .promo__title {
   margin-top: 0;
@@ -124,11 +132,15 @@
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 20px, 20px);
     position: absolute;
-    top: 300px;
+    top: 380px;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 26px;
     padding-right: 26px;
     margin-left: 85px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 430px;
   }
 }

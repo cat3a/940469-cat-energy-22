@@ -13,6 +13,13 @@
     flex-grow: 1;
     margin-left: 80px;
   }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 480px;
+    margin-left: 560px;
+    margin-right: 110px;
+    flex-grow: 0;
+  }
 }
 
 .main-nav__list {
@@ -27,6 +34,11 @@
 
 .main-nav__link {
   @include link-reset;
+
+  @media (min-width: $desktop-width) {
+    @include font-font($font-family-extra, normal, normal, 20px, 30px);
+    color: $color-background;
+  }
 }
 
 .site-list__item {
@@ -46,6 +58,10 @@
     padding-top: 42px;
     padding-bottom: 12px;
     display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
   }
 }
 

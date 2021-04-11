@@ -18,6 +18,17 @@
     justify-content: center;
     align-items: flex-start;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 47%;
+    margin-right: 80px;
+    margin-top: 82px;
+    flex-grow: 1;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .program__wrapper:last-child {
@@ -29,4 +40,11 @@
   margin: 0;
   padding-top: 1px;
   padding-bottom: 1px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+  }
 }

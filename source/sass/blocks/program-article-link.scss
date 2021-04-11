@@ -15,4 +15,8 @@
 
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 60px;
+  }
 }

@@ -22,6 +22,12 @@
 
     @include font-font($font-family-extra, normal, normal, 36px, 36px);
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 214px;
+    padding-top: 35px;
+    padding-bottom: 10px;
+  }
 }
 
 .program-article__paragraph {
@@ -31,9 +37,9 @@
   padding-bottom: 23px;
   padding-left: 20px;
 
-  border-bottom: 1px solid $color-index-borders;
-
   @media (max-width: $mobile-width-only) {
+    border-bottom: 1px solid $color-index-borders;
+
     &--down::before {
       content: url("../img/program-cat-sitting-mini.svg");
       position: absolute;
@@ -55,7 +61,7 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
     position: relative;
 
     margin-top: 0;
@@ -87,6 +93,35 @@
 
       width: 268px;
       height: 200px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font-font($font-family-main, normal, normal, 16px, 24px);
+
+    margin-left: 32px;
+    margin-right: 30px;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+
+    &--down::before {
+      content: url("../img/program-cat-sitting-medium.svg");
+      position: absolute;
+      top: -135px;
+      left: 20px;
+
+      width: 100px;
+      height: 106px;
+    }
+
+    &--up::before {
+      content: url("../img/program-cat-sneak-medium.svg");
+      position: absolute;
+      top: -130px;
+      left: 0;
+
+      width: 134px;
+      height: 100px;
     }
   }
 }

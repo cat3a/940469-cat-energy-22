@@ -10,6 +10,11 @@
     padding-top: 24px;
     padding-left: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 53px;
+    padding-left: 110px;
+  }
 }
 
 .page-header {

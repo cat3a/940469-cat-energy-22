@@ -3,6 +3,10 @@
 
   outline: 3px solid rgba(200, 0, 230, 0.8);
   outline-offset: -3px;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
 }
 
 .find-us__wrapper {
@@ -20,6 +24,18 @@
     margin-right: 30px;
     margin-bottom: 40px;
     margin-top: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    z-index: 2;
+    background-color: $color-background;
+    width: 570px;
+    box-sizing: border-box;
+    top: 55px;
+    left: 80px;
+    min-height: 210px;
+    align-content: center;
   }
 }
 
@@ -69,6 +85,11 @@
 
   @media (min-width: $tablet-width) {
     background-image: url("../img/find-us-map-medium.jpg");
+    height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/find-us-map-max.jpg");
     height: 400px;
   }
 }
