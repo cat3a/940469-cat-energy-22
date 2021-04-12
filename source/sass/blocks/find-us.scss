@@ -49,7 +49,6 @@
 
   @media (min-width: $tablet-width) {
     text-align: left;
-
     @include font-font($font-family-extra, normal, normal, 20px, 21px);
   }
 }

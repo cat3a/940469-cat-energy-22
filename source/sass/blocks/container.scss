@@ -16,8 +16,17 @@
   @media (min-width: $desktop-width) {
     width: auto;
     padding-top: 0;
-    padding-right: 60px;
+    padding-right: 110px;
     padding-bottom: 0;
-    padding-left: 60px;
+    padding-left: 110px;
+  }
+}
+
+.wrapper {
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
   }
 }
