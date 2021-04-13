@@ -1,14 +1,15 @@
 .extra__paragraph {
   position: relative;
-
   margin-left: 62px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .extra__input:not(:checked) + label {
   &::before {
     content: "";
     position: absolute;
-    top: -5px;
+    top: 1px;
     left: -42px;
 
     box-sizing: border-box;
@@ -23,7 +24,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -5px;
+    top: 1px;
     left: -42px;
 
     box-sizing: border-box;
@@ -36,7 +37,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: -5px;
+    top: 1px;
     left: -42px;
 
     width: 26px;
@@ -46,8 +47,11 @@
   }
 }
 
-.extra__list:last-child {
-  margin-bottom: 34px;
+.extra__list {
+  &:last-child {
+    margin-bottom: 34px;
+    margin-top: 30px;
+  }
 }
 
 .selection-form__button {
@@ -61,4 +65,12 @@
 
 .selection-form__submit-wrapper {
   padding-bottom: 1px;
+}
+
+.extra__label {
+  text-transform: uppercase;
+
+  @include font-font($font-family-extra, normal, normal, 16px, 18px);
+  margin-right: 13px;
+  color: $color-main-text;
 }

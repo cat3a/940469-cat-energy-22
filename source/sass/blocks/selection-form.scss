@@ -15,6 +15,7 @@
 .selection-form__input {
   box-sizing: border-box;
   height: 45px;
+  padding-left: 15px;
 
   color: $color-main-inputs;
   text-transform: uppercase;
@@ -22,23 +23,26 @@
   border: 1px solid $color-elements-inner;
 
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
+  flex-grow: 1;
+}
+
+.selection-form__input[type="number"] {
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+.selection-form__input::placeholder {
+  opacity: 1;
+  color: $color-main-inputs;
 }
 
 .selection-form__input::-webkit-input-placeholder {
-  padding-left: 16px;
-
+  opacity: 1;
   color: $color-main-inputs;
 }
 
 .selection-form__input::-moz-placeholder {
-  padding-left: 16px;
-
-  color: $color-main-inputs;
-}
-
-.selection-form__input:-moz-placeholder {
-  padding-left: 16px;
-
+  opacity: 1;
   color: $color-main-inputs;
 }
 
@@ -47,21 +51,23 @@
   text-transform: uppercase;
 
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
+  margin-right: 13px;
 }
 
 .selection-form__list {
-  padding-top: 20px;
-
   @include list-reset();
 
   &--border {
     border-top: 1px solid $color-index-borders;
     border-bottom: 1px solid $color-index-borders;
   }
+
+  &:first-child {
+    padding-top: 20px;
+  }
 }
 
 .selection-form__fieldset--line {
-  margin-top: 22px;
 
   border-top: 2px solid $color-main-buttons;
 
@@ -79,19 +85,42 @@
   @include font-font($font-family-extra, normal, normal, 24px, 26px);
 }
 
+.selection-form__legend--size {
+  max-width: 187px;
+  padding-top: 22px;
+}
+
 .selection-form__textarea {
   box-sizing: border-box;
   min-height: 150px;
   margin-top: 37px;
   margin-bottom: 0;
+  padding-top: 10px;
 
   border: 1px solid $color-textarea-border;
+  flex-grow: 1;
+}
+
+
+.selection-form__textarea-wrapper {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.selection-form__textarea::placeholder {
+  text-align: center;
+  color: $color-main-inputs;
+  text-transform: uppercase;
+  opacity: 1;
+
+  @include font-font($font-family-extra, normal, normal, 16px, 18px);
 }
 
 .selection-form__textarea::-webkit-input-placeholder {
   text-align: center;
   color: $color-main-inputs;
   text-transform: uppercase;
+  opacity: 1;
 
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
 }
@@ -100,6 +129,7 @@
   text-align: center;
   color: $color-main-inputs;
   text-transform: uppercase;
+  opacity: 1;
 
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
 }
@@ -107,7 +137,38 @@
 .selection-form__textarea::-moz-placeholder {
   text-align: center;
   color: $color-main-inputs;
+  opacity: 1;
   text-transform: uppercase;
 
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
+}
+
+.selection-form__paragraph {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.program-selection__label {
+  margin-top: 10px;
+}
+
+.selection-form__submit-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selection-form__button {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 100%;
+  border: 0;
+}
+
+.selection-form__required {
+  color: $color-main-text;
+
+  @include font-font($font-family-main, normal, normal, 14px, 16px);
 }

@@ -3,7 +3,6 @@
 }
 
 .program-selection__title {
-  padding-left: 20px;
 
   color: $color-main-text;
 
@@ -11,7 +10,6 @@
 }
 
 .program-selection__paragraph {
-  padding-left: 20px;
 
   color: $color-main-text;
   text-transform: uppercase;
@@ -23,7 +21,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -8px;
+    top: 2px;
     left: -43px;
 
     box-sizing: border-box;
@@ -39,7 +37,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -8px;
+    top: 2px;
     left: -43px;
 
     box-sizing: border-box;
@@ -53,7 +51,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 1px;
+    top: 11px;
     left: -35px;
 
     box-sizing: border-box;
@@ -70,4 +68,12 @@
 
   margin-left: 65px;
   padding-bottom: 10px;
+}
+
+.program-selection__label {
+  text-transform: uppercase;
+
+  @include font-font($font-family-extra, normal, normal, 16px, 18px);
+  margin-right: 13px;
+  color: $color-checkbox-text;
 }

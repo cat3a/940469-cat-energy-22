@@ -33,13 +33,19 @@
 }
 
 .main-nav__link {
-  @include link-reset;
+  @include link-reset();
 
   @media (min-width: $desktop-width) {
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
-    color: $color-background;
+  }
+
+  &--color {
+    @media (min-width: $desktop-width) {
+      color: $color-background;
+    }
   }
 }
+
 
 .site-list__item {
   padding-top: 22px;
