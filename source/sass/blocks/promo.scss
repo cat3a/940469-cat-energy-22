@@ -1,9 +1,8 @@
 .promo {
+
   @media (max-width: $mobile-width-only) {
     position: relative;
   }
-
-  margin: 0;
 
   outline: 3px solid $color-background-picture;
   outline-offset: -3px;
