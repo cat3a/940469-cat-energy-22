@@ -1,5 +1,4 @@
 .example {
-
   background-color: $color-index-example;
 
   @media (min-width: $tablet-width) {
@@ -7,10 +6,18 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-image: linear-gradient(to bottom, $color-background 25%, $color-index-example 25%);
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    background-image: linear-gradient(to bottom, $color-background 25%, $color-index-example 25%);
+  }
+}
+
+.example__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -234,6 +241,7 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 25px;
+  position: relative;
 }
 
 /* //TODO: Это временное решение */

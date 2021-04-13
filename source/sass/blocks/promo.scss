@@ -14,7 +14,6 @@
       top: 0;
       left: 0;
       z-index: -1;
-
       width: 100%;
       height: 100%;
       max-height: 302px;
@@ -32,22 +31,21 @@
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 550px;
+    min-height: 585px;
+    position: relative;
 
-    &::after {
+    &::before {
       content: "";
       position: absolute;
-      top: 0;
+      top: -110px;
       right: 0;
       z-index: -1;
-      max-height: 100%;
-      min-height: 660px;
-      max-width: 50%;
-      min-width: 720px;
-      background-image: url("../img/promo-cat-max.jpg");
+      height: 694px;
+      width: 50%;
       background-color: $color-background-picture;
+      background-image: url("../img/promo-cat-max.jpg");
       background-repeat: no-repeat;
-      background-position: top;
+      background-position-x: right;
     }
   }
 }
@@ -66,7 +64,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .promo__wrapper img {
+    .promo__wrapper img {
     position: absolute;
     top: 143px;
     left: 558px;
@@ -138,6 +136,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 430px;
+    margin-top: -65px;
   }
 }
