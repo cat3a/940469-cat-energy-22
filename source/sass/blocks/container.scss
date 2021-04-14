@@ -18,9 +18,24 @@
     padding-right: 110px;
     padding-bottom: 0;
     padding-left: 110px;
-    width: 1440px;
+    width: 1220px;
     margin-right: auto;
     margin-left: auto;
     position: relative;
+  }
+}
+
+.menu-wrapper {
+  width: auto;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    margin: 0 auto;
   }
 }

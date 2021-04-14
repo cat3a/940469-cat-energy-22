@@ -7,6 +7,10 @@
   color: $color-main-text;
 
   @include font-font($font-family-extra, normal, normal, 36px, 36px);
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 60px, 60px);
+  }
 }
 
 .program-selection__paragraph {
@@ -15,6 +19,10 @@
   text-transform: uppercase;
 
   @include font-font($font-family-extra, normal, normal, 14px, 18px);
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 20px, 30px);
+  }
 }
 
 .program-selection__input:not(:checked) + label {

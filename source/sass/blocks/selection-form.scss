@@ -52,6 +52,10 @@
 
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
   margin-right: 13px;
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 20px, 30px);
+  }
 }
 
 .selection-form__list {
@@ -114,6 +118,10 @@
   opacity: 1;
 
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 20px, 30px);
+  }
 }
 
 .selection-form__textarea::-webkit-input-placeholder {

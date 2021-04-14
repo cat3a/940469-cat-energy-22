@@ -3,13 +3,3 @@
 
   @include font-font($font-family-main, normal, normal, 14px, 18px);
 }
-
-.page__body {
-  min-width: 280px;
-  min-height: 100%;
-  margin: 0;
-
-  color: $color-main-inputs;
-
-  background-color: $color-background;
-}
