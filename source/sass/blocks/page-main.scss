@@ -12,3 +12,7 @@
 
   @include font-font($font-family-extra, normal, normal, 36px, 36px);
 }
+
+.page-main--form {
+  overflow: hidden;
+}
