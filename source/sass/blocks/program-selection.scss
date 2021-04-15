@@ -11,6 +11,7 @@
 
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 60px, 60px);
+    margin-bottom: 54px;
   }
 }
 
@@ -23,8 +24,7 @@
 
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
-    padding-bottom: 0;
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
 }
 

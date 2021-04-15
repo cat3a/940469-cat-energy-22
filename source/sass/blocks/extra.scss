@@ -3,6 +3,10 @@
   margin-left: 42px;
   padding-top: 5px;
   padding-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 57px;
+  }
 }
 
 .extra__input:not(:checked) + label {
@@ -21,6 +25,7 @@
     @media (min-width: $tablet-width) {
       width: 40px;
       height: 40px;
+      left: -57px;
     }
   }
 }
@@ -41,19 +46,25 @@
     @media (min-width: $tablet-width) {
       width: 40px;
       height: 40px;
+      left: -57px;
     }
   }
 
   &::after {
     content: "";
     position: absolute;
-    top: 3px;
+    top: 2px;
     left: -39px;
 
     width: 26px;
     height: 26px;
 
     background-image: url("../img/extra-tick-icon.svg");
+
+    @media (min-width: $tablet-width) {
+      top: 7px;
+      left: -50px;
+    }
   }
 }
 
@@ -63,6 +74,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 65px;
   }
 }
 
@@ -75,19 +87,6 @@
   }
 }
 
-
-.selection-form__button {
-  margin-bottom: 21px;
-}
-
-.selection-form__required {
-  margin-top: 0;
-  margin-bottom: 31px;
-}
-
-.selection-form__submit-wrapper {
-  padding-bottom: 1px;
-}
 
 .extra__label {
   text-transform: uppercase;
