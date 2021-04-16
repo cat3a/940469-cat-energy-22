@@ -25,6 +25,14 @@
   }
 }
 
+.selection-form__fieldset p {
+  @media (min-width: $desktop-width) {
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+}
+
 .selection-form__input {
   box-sizing: border-box;
   height: 45px;
@@ -40,6 +48,7 @@
 
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
+    height: 52px;
   }
 }
 
@@ -95,6 +104,12 @@
   }
 }
 
+.selection-form__list p {
+  @media (min-width: $desktop-width) {
+    margin-left: 85px;
+  }
+}
+
 .selection-form__fieldset--line {
   border-top: 2px solid $color-main-buttons;
   margin-top: 40px;
@@ -123,6 +138,10 @@
     top: -85px;
 
     @include font-font($font-family-extra, normal, normal, 36px, 36px);
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 75px;
   }
 }
 
@@ -158,6 +177,14 @@
 }
 */
 
+.selection-form__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+  }
+}
+
 .selection-form__legend--size {
   @media (max-width: $mobile-width-only) {
     max-width: 187px;
@@ -169,11 +196,15 @@
   box-sizing: border-box;
   min-height: 150px;
   margin-top: 10px;
-  margin-bottom: 0;
+
   padding-top: 0;
 
   border: 1px solid $color-textarea-border;
   flex-grow: 1;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 50px;
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: 45px;
@@ -187,7 +218,6 @@
   padding-top: 15px;
   display: flex;
   margin-bottom: -65px;
-
 }
 
 .selection-form__textarea::placeholder {
@@ -288,6 +318,11 @@
     padding-bottom: 25px;
     margin-right: 50px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 568px;
+    margin-right: 81px;
+  }
 }
 
 .selection-form__required {
@@ -311,6 +346,10 @@
     margin-left: 10px;
     margin-right: 5px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 50px;
+  }
 }
 
 .selection-form__paragraph--margin-bottom {
@@ -318,6 +357,10 @@
     margin-bottom: -5px;
     margin-left: 10px;
     margin-right: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
   }
 }
 
@@ -359,5 +402,13 @@
     width: 215px;
     padding-left: 33px;
     padding-right: 30px;
+  }
+}
+
+.selection-form__fieldset-wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
   }
 }
