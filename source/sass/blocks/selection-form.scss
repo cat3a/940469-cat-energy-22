@@ -148,6 +148,8 @@
 .selection-form__legend-wrapper {
   position: relative;
   padding-right: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /*&::before {
