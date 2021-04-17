@@ -30,7 +30,6 @@
   position: relative;
 
   @media (max-width: $mobile-width-only) {
-
     &::before {
       content: "";
       position: absolute;
@@ -57,7 +56,9 @@
     width: 18%;
     margin-right: 80px;
     flex-grow: 1;
+
     &:nth-child(4n) {
+
       margin-right: 0;
     }
   }
@@ -67,4 +68,3 @@
   padding-top: 25px;
   padding-bottom: 25px;
 }
-
