@@ -9,8 +9,7 @@
     display: flex;
     flex-basis: 440px;
     flex-wrap: wrap;
-    flex-grow: 1;
-    margin-left: 80px;
+    margin-left: 65px;
     margin-right: 30px;
   }
 
@@ -31,8 +30,11 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: space-around;
-    margin-right: 10px;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-end;
   }
 }
 
@@ -67,11 +69,19 @@
     @include font-font($font-family-extra, normal, normal, 18px, 24px);
     padding-top: 42px;
     padding-bottom: 12px;
+    /* //TODO: Это чтобы менюшка не ехала, пока картнка одна на все версии, а должно быть 35*/
+    margin-left: 28px;
     display: flex;
+
+    &:first-child {
+      margin-left: 0;
+      padding-left: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 60px;
+    margin-left: 35px;
   }
 }
 
