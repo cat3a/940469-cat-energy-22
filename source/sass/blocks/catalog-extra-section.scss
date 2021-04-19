@@ -1,32 +1,105 @@
+.catalog-extra-section {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 38px 38px;
+    grid-column-gap: 38px;
+    height: 75px;
+  }
+}
+
 .catalog-extra-section__list {
   margin: 0;
+  display: flex;
+  padding-bottom: 15px;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    align-items: center;
+    padding-top: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    padding: 0;
+  }
 }
+
 
 .catalog-extra-section__term {
   @include font-font($font-family-main, normal, normal, 14px, 14px);
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-main, normal, normal, 16px, 20px);
+  }
 }
 
 .catalog-extra-section__definition {
-  @include font-font($font-family-main, normal, normal, 14px, 14px);
   text-align: center;
+
+  @include font-font($font-family-main, normal, normal, 14px, 14px);
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-main, normal, normal, 16px, 20px);
+  }
 }
 
 .catalog-extra-section__button {
   font-size: 16px;
   line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3/4;
+    grid-row: 1/-1;
+  }
 }
 
 .catalog-extra-section__title {
-  @include font-font($font-family-extra, normal, normal, 16px, 16px);
-  text-align: center;
-  text-transform: uppercase;
-  color: $color-checkbox-text;
+  margin: 0;
   padding-top: 13px;
   padding-bottom: 13px;
-  margin: 0;
+
+  text-align: left;
+  color: $color-checkbox-text;
+  text-transform: uppercase;
+
+  @include font-font($font-family-extra, normal, normal, 16px, 16px);
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 20px, 20px);
+
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    margin-bottom: -40px;
+  }
 }
 
 .catalog-extra-section__link {
-  @include link-reset();
   color: $color-checkbox-text;
+
+  @include link-reset();
 }

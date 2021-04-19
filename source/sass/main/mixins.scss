@@ -1,20 +1,21 @@
 /********** Mixins **********/
 
 @mixin font-font($font-family: $font-family-main, $style: normal, $weight: normal, $size: 14px, $line-height: 18px) {
-  font-family: $font-family;
   font-style: $style;
   font-weight: $weight;
   font-size: $size;
   line-height: $line-height;
+  font-family: $font-family;
 }
 
 @mixin list-reset() {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 @mixin link-reset() {
-  text-decoration: none;
   color: $color-main-text;
+  text-decoration: none;
 }

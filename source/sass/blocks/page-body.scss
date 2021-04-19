@@ -1,0 +1,11 @@
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-width: 280px;
+  margin: 0;
+
+  color: $color-main-inputs;
+
+  background-color: $color-background;
+}

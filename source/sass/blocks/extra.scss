@@ -1,18 +1,32 @@
 .extra__paragraph {
   position: relative;
-  margin-left: 62px;
+  margin-left: 42px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 57px;
+  }
 }
 
 .extra__input:not(:checked) + label {
   &::before {
     content: "";
     position: absolute;
+    top: 1px;
     left: -42px;
-    top: -5px;
-    width: 26px;
-    height: 26px;
-    border: 1px solid $color-elements-inner;
+
     box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid $color-elements-inner;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+      left: -57px;
+    }
   }
 }
 
@@ -20,38 +34,73 @@
   &::before {
     content: "";
     position: absolute;
+    top: 1px;
     left: -42px;
-    top: -5px;
-    width: 26px;
-    height: 26px;
-    border: 1px solid $color-elements-inner;
+
     box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid $color-elements-inner;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+      left: -57px;
+    }
   }
 
   &::after {
     content: "";
     position: absolute;
-    left: -42px;
-    top: -5px;
+    top: 2px;
+    left: -39px;
+
     width: 26px;
     height: 26px;
+
     background-image: url("../img/extra-tick-icon.svg");
+
+    @media (min-width: $tablet-width) {
+      top: 7px;
+      left: -50px;
+    }
+  }
+}
+
+.extra__list {
+  @include list-reset();
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 90px;
   }
 }
 
 .extra__list:last-child {
   margin-bottom: 34px;
+  margin-top: 45px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -25px;
+  }
 }
 
-.selection-form__button {
-  margin-bottom: 21px;
-}
 
-.selection-form__required {
-  margin-bottom: 31px;
-  margin-top: 0;
-}
+.extra__label {
+  text-transform: uppercase;
 
-.selection-form__submit-wrapper {
-  padding-bottom: 1px;
+  @include font-font($font-family-extra, normal, normal, 16px, 18px);
+  margin-right: 13px;
+  color: $color-main-text;
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 20px, 30px);
+  }
 }

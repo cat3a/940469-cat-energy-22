@@ -1,8 +1,11 @@
 .button {
-  @include font-font($font-family-extra, normal, normal, 14px, 18px);
   text-align: center;
+  color: $color-background;
   text-transform: uppercase;
   text-decoration: none;
-  color: $color-background;
+
   background-color: $color-main-buttons;
+
+  @include font-font($font-family-extra, normal, normal, 14px, 18px);
+  display: block;
 }

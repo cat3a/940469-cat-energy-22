@@ -1,0 +1,25 @@
+.form-wrapper {
+  width: auto;
+  padding-top: 0;
+  padding-right: 20px;
+  padding-bottom: 0;
+  padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding-top: 0;
+    padding-right: 65px;
+    padding-bottom: 0;
+    padding-left: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-right: 110px;
+    padding-bottom: 0;
+    padding-left: 110px;
+    width: 1220px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

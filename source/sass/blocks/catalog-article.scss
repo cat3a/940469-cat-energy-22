@@ -1,33 +1,104 @@
 .catalog-article {
   margin: 0;
+
+  display: grid;
+  grid-template-areas: "picture header ."
+    "picture table table"
+    "button button button";
+  grid-template-columns: 50% 2fr 1fr;
+  align-items: center;
+
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to bottom, $color-background 20%, $color-index-example 20%);
+    align-items: stretch;
+    text-align: center;
+    justify-content: center;
+    padding-right: 36px;
+    padding-left: 36px;
+    padding-bottom: 40px;
+  }
 }
 
 .catalog-article__button {
   @include font-font($font-family-extra, normal, normal, 16px, 20px);
+  grid-area: button;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 23px;
+  }
 }
 
 .catalog-article__title {
-  @include font-font($font-family-extra, normal, normal, 16px, 20px);
   align-items: center;
-  text-transform: uppercase;
+
   color: $color-checkbox-text;
+  text-transform: uppercase;
+
+  @include font-font($font-family-extra, normal, normal, 16px, 20px);
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 20px, 24px);
+
+    width: 130px;
+  }
 }
 
 .catalog-article__table-head {
-  @include font-font($font-family-main, normal, normal, 12px, 16px);
   text-align: left;
+
+  @include font-font($font-family-main, normal, normal, 12px, 16px);
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid $color-elements-inner;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+    @include font-font($font-family-main, normal, normal, 16px, 16px);
+  }
 }
 
 .catalog-article__table-data {
+  text-align: right;
+
   @include font-font($font-family-main, normal, normal, 12px, 16px);
-  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid $color-elements-inner;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+    @include font-font($font-family-main, normal, normal, 16px, 16px);
+  }
 }
+
 
 .catalog-article__table {
   margin-bottom: 13px;
+  grid-area: table;
+  border-collapse: collapse;
 }
 
 .catalog-article__link {
-  @include link-reset();
   color: $color-checkbox-text;
+
+  @include link-reset();
+}
+
+.catalog-article__picture {
+  grid-area: picture;
+  align-self: center;
+}
+
+.catalog-article__header {
+  grid-area: header;
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+  }
 }

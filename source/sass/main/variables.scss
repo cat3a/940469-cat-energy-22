@@ -28,9 +28,17 @@ $color-main-text: #000000;
 $color-checkbox-text: #222222;
 $color-text-extra: #111111;
 $color-background: #ffffff;
+$color-background-picture: #64a73c;
 
 /********** Fonts **********/
 
 $font-family-main: "Arial", "Helvetica", sans-serif;
 $font-family-extra: "Oswald Regular", "Arial", sans-serif;
 $font-family-menu: "Oswald Medium", "Arial", sans-serif;
+
+/********** Viewports **********/
+
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$tablet-width-only: 1439px;
+$desktop-width: 1440px;

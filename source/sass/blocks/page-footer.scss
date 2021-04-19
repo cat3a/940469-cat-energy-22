@@ -1,13 +1,32 @@
 .page-footer {
-  margin: 0;
   background-color: $color-main-blocks;
 }
 
-.page-footer__img-wrapper {
-  margin: 0;
-  padding-top: 39px;
-  padding-bottom: 32px;
-  border-bottom: 1px solid $color-index-borders;
+.page-footer__wrapper {
+
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display: block;
+
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer__img-wrapper {
+    margin: 0;
+    padding-top: 39px;
+    padding-bottom: 32px;
+
+    border-bottom: 1px solid $color-index-borders;
+
+    @media (min-width: $tablet-width) {
+      border-bottom: none;
+    }
+  }
 }
 
 .page-footer__paragraph {
@@ -16,6 +35,17 @@
 }
 
 .page-footer__html-academy {
-  @include link-reset();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   color: $color-main-inputs;
+
+  @include link-reset();
+
+  @media (min-width: $tablet-width) {
+    min-width: 163px;
+
+    @include font-font($font-family-main, normal, normal, 16px, 18px);
+  }
 }
