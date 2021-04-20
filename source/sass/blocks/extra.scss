@@ -68,6 +68,13 @@
   }
 }
 
+.extra__input:checked:focus + label,
+.extra__input:not(:checked):focus + label {
+  &::before {
+    @include my-focus();
+  }
+}
+
 .extra__list {
   @include list-reset();
 
