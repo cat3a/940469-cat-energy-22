@@ -31,4 +31,8 @@
   &:focus {
     @include my-focus();
   }
+
+  &:active .social__img {
+    opacity: 0.3;
+  }
 }

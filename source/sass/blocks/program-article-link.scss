@@ -9,6 +9,10 @@
     @include my-focus();
   }
 
+  &:active {
+    color: rgba($color-main-text, 0.3);
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 53px;
     margin-left: 55px;

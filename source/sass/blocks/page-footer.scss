@@ -48,11 +48,25 @@
     @include my-focus();
   }
 
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     min-width: 163px;
   }
 }
 
-.page-footer__cat-energy:focus {
-  @include my-focus();
+.page-footer__cat-energy {
+  &:focus {
+    @include my-focus();
+  }
+
+  &:hover .page-footer__img {
+    opacity: 0.8;
+  }
+
+  &:active .page-footer__img {
+    opacity: 0.6;
+  }
 }

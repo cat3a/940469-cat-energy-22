@@ -36,6 +36,8 @@
 }
 
 .main-nav__link {
+  padding-bottom: 5px;
+
   @include link-reset();
 
   @media (min-width: $desktop-width) {
@@ -51,8 +53,44 @@
   &:focus {
     @include my-focus();
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
+.site-list__item--current {
+  border-bottom: 2px solid $color-main-buttons;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.main-nav__item--current-main {
+
+  border-bottom: 2px solid $color-main-buttons;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-bottom: 2px solid $color-background;
+  }
+}
 
 .site-list__item {
   padding-top: 22px;

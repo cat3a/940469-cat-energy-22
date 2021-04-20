@@ -102,6 +102,30 @@
   }
 }
 
+.program-selection__input:not(:checked):hover + label,
+.program-selection__input:checked:hover + label {
+  &::before {
+    border-color: $color-checkbox-modified;
+  }
+}
+
+.program-selection__input:not(:checked):disabled + label,
+.program-selection__input:checked:disabled + label {
+  opacity: 0.3;
+
+  &::before,
+  &::after {
+    opacity: 1;
+  }
+}
+
+.program-selection__input:not(:checked):disabled:hover + label,
+.program-selection__input:checked:disabled:hover + label {
+  &::before {
+    border-color: $color-elements-inner;
+  }
+}
+
 .program-selection__p {
   position: relative;
 

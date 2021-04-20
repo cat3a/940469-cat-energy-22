@@ -41,7 +41,7 @@
   color: $color-main-inputs;
   text-transform: uppercase;
 
-  border: 1px solid $color-elements-inner;
+  border: 1px solid $color-textarea-border;
 
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
   flex-grow: 1;
@@ -53,6 +53,11 @@
 
   &:focus {
     @include my-focus();
+    border-color: $color-main-inputs;
+  }
+
+  &:hover {
+    border-color: $color-elements-inner;
   }
 }
 

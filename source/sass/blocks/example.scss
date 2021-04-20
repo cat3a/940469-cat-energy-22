@@ -194,7 +194,15 @@
     margin-bottom: 10px;
 
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
-    border-bottom: 1px dotted $color-main-text;
+    border-bottom: 1px dotted rgba($color-main-text, 0.3);
+
+    &:hover {
+      border-bottom: 1px solid rgba($color-main-text, 0.3);
+    }
+
+    &:active {
+      border-bottom: 1px solid transparent;
+    }
   }
 }
 
@@ -291,6 +299,15 @@
   &:focus {
     @include my-focus();
     outline-width: 2px;
+  }
+
+  &:hover {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+  }
+
+  &:active {
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+    box-shadow: 0 0 5px $color-main-buttons;
   }
 }
 
