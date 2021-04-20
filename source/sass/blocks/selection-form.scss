@@ -50,6 +50,10 @@
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
     height: 52px;
   }
+
+  &:focus {
+    @include my-focus();
+  }
 }
 
 .selection-form__input[type="number"] {
@@ -213,6 +217,10 @@
     margin-bottom: 65px;
 
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
+  }
+
+  &:focus {
+    @include my-focus();
   }
 }
 

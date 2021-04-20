@@ -2,9 +2,6 @@
   display: grid;
   text-align: center;
 
-  outline: 3px solid rgba(0, 255, 0, 0.8);
-  outline-offset: -3px;
-
   @media (min-width: $tablet-width) {
     display: flex;
     flex-basis: 440px;
@@ -49,6 +46,10 @@
     @media (min-width: $desktop-width) {
       color: $color-background;
     }
+  }
+
+  &:focus {
+    @include my-focus();
   }
 }
 
@@ -96,6 +97,10 @@
   background-color: $color-background;
   border: 0;
   opacity: 1;
+
+  &:focus {
+    @include my-focus();
+  }
 
   &:hover {
     opacity: 1;

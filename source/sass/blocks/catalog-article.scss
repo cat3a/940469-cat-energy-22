@@ -93,6 +93,11 @@
 .catalog-article__picture {
   grid-area: picture;
   align-self: center;
+  outline: 0;
+
+  &:focus .catalog-article__image {
+    @include my-focus();
+  }
 }
 
 .catalog-article__header {
@@ -100,5 +105,9 @@
 
   @media (min-width: $tablet-width) {
     align-self: center;
+  }
+
+  &:focus {
+    @include my-focus();
   }
 }

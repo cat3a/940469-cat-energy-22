@@ -181,6 +181,10 @@
   background-color: transparent;
   border: 0;
 
+  &:focus {
+    @include my-focus();
+  }
+
   @include font-font($font-family-extra, normal, normal, 16px, 20px);
 
   @media (min-width: $tablet-width) {
@@ -217,21 +221,6 @@
     width: 426px;
     height: 6px;
     background-color: $color-elements-inner;
-  }
-}
-
-.example__bar {
-  box-sizing: border-box;
-  width: 35px;
-  height: 6px;
-  margin-left: 6px;
-
-  background-color: $color-main-buttons;
-  border: 1px solid gray;
-  border-radius: 10px;
-
-  @media (min-width: $tablet-width) {
-    display: none;
   }
 }
 
@@ -273,8 +262,20 @@
   padding-top: 6px;
 }
 
-@media (min-width: $tablet-width) {
-  .example__toggle {
+
+.example__toggle {
+  @media (max-width: $mobile-width-only) {
+    box-sizing: border-box;
+    width: 35px;
+    height: 6px;
+    margin-left: 6px;
+    margin-top: -10px;
+    background-color: $color-main-buttons;
+    border: 1px solid gray;
+    border-radius: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
     width: 8px;
     height: 8px;
     /* //TODO: Хм... а это в цвета заводить? */
@@ -285,6 +286,11 @@
     position: absolute;
     bottom: 0;
     left: 196px;
+  }
+
+  &:focus {
+    @include my-focus();
+    outline-width: 2px;
   }
 }
 

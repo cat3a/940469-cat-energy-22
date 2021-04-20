@@ -1,15 +1,8 @@
-.program {
-  outline: 3px solid rgba(160, 120, 0, 0.8);
-  outline-offset: -3px;
-}
-
 .program__article {
   display: block;
   margin-top: 22px;
 
   background-color: $color-main-blocks;
-  outline: 3px solid rgba(130, 220, 0, 0.8);
-  outline-offset: -3px;
 
   @media (min-width: $tablet-width) {
     display: flex;
