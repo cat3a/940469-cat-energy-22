@@ -8,4 +8,8 @@
 
   @include font-font($font-family-extra, normal, normal, 14px, 18px);
   display: block;
+
+  &:focus {
+    @include my-focus();
+  }
 }

@@ -18,8 +18,8 @@
 
   .page-footer__img-wrapper {
     margin: 0;
-    padding-top: 39px;
-    padding-bottom: 32px;
+    padding-top: 54px;
+    padding-bottom: 62px;
 
     border-bottom: 1px solid $color-index-borders;
 
@@ -30,8 +30,8 @@
 }
 
 .page-footer__paragraph {
-  padding-top: 22px;
-  padding-bottom: 32px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .page-footer__html-academy {
@@ -39,13 +39,20 @@
   justify-content: space-between;
   align-items: center;
 
+  @include font-font($font-family-main, normal, normal, 16px, 18px);
+  @include link-reset();
+
   color: $color-main-inputs;
 
-  @include link-reset();
+  &:focus {
+    @include my-focus();
+  }
 
   @media (min-width: $tablet-width) {
     min-width: 163px;
-
-    @include font-font($font-family-main, normal, normal, 16px, 18px);
   }
+}
+
+.page-footer__cat-energy:focus {
+  @include my-focus();
 }

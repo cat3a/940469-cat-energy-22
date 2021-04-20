@@ -99,7 +99,12 @@
 }
 
 .catalog-extra-section__link {
+  outline: 0;
   color: $color-checkbox-text;
 
   @include link-reset();
+
+  &:focus .catalog-extra-section__title {
+    @include my-focus();
+  }
 }

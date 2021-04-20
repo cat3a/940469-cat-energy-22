@@ -3,9 +3,6 @@
     position: relative;
   }
 
-  outline: 3px solid $color-background-picture;
-  outline-offset: -3px;
-
   @media (max-width: $mobile-width-only) {
     &::before,
     &::after {

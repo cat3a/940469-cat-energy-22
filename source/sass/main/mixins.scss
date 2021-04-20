@@ -19,3 +19,9 @@
   color: $color-main-text;
   text-decoration: none;
 }
+
+@mixin my-focus() {
+  outline-width: 3px;
+  outline-style: dotted;
+  outline-color: $color-focus;
+}

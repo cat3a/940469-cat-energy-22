@@ -26,3 +26,9 @@
     margin-right: 0;
   }
 }
+
+.social__link {
+  &:focus {
+    @include my-focus();
+  }
+}
