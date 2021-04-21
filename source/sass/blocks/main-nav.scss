@@ -132,8 +132,8 @@
   top: 23px;
   right: 20px;
 
-  width: 18px;
-  height: 18px;
+  width: 23px;
+  height: 23px;
 
   background-color: $color-background;
   border: 0;
@@ -151,8 +151,8 @@
   &::after {
     content: " ";
     position: absolute;
-    top: -2px;
-    left: 8px;
+    top: 0;
+    left: 11px;
 
     width: 2px;
     height: 24px;
@@ -176,7 +176,7 @@
 .main-nav--closed .main-nav__toggle {
   position: absolute;
   top: 23px;
-  right: 23px;
+  right: 21px;
   border: 0;
   width: 23px;
   height: 23px;
