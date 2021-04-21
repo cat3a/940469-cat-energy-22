@@ -64,27 +64,30 @@
 }
 
 .site-list__item--current {
-  border-bottom: 2px solid $color-main-buttons;
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px solid $color-main-buttons;
 
-  &:hover {
-    opacity: 1;
-  }
+    &:hover {
+      opacity: 1;
+    }
 
-  &:active {
-    opacity: 1;
+    &:active {
+      opacity: 1;
+    }
   }
 }
 
 .main-nav__item--current-main {
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px solid $color-main-buttons;
 
-  border-bottom: 2px solid $color-main-buttons;
+    &:hover {
+      opacity: 1;
+    }
 
-  &:hover {
-    opacity: 1;
-  }
-
-  &:active {
-    opacity: 1;
+    &:active {
+      opacity: 1;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -124,10 +127,10 @@
   }
 }
 
-.main-nav__toggle {
+.main-nav--opened .main-nav__toggle {
   position: absolute;
   top: 23px;
-  right: 23px;
+  right: 20px;
 
   width: 18px;
   height: 18px;
@@ -170,9 +173,72 @@
   }
 }
 
+.main-nav--closed .main-nav__toggle {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  border: 0;
+  width: 23px;
+  height: 23px;
+  background-color: $color-background;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 2px;
+
+    background-color: $color-main-text;
+    box-shadow: 0 8px 0 0 $color-main-text, 0 16px 0 0 $color-main-text;
+  }
+
+  &:focus {
+    @include my-focus();
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before:active {
+  border: 0;
+  background-color: $color-main-text;
+  box-shadow: 0 8px 0 0 $color-main-text, 0 16px 0 0 $color-main-text;
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+
+  &--active {
+    display: block;
+  }
+
+  .main-nav--no-js .main-nav__toggle {
+    display: none;
+  }
+}
+
 .main-nav__wrapper {
   @media (min-width: $tablet-width) {
     flex-basis: 440px;
     flex-grow: 1;
   }
 }
+
+/*.main-nav--opened .main-nav__wrapper {
+  position: absolute;
+  z-index: 10;
+  background-color: $color-background;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 7px;
+    height: 100%;
+  }
+}
+ */
