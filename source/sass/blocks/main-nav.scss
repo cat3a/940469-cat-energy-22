@@ -63,20 +63,6 @@
   }
 }
 
-.site-list__item--current {
-  @media (min-width: $tablet-width) {
-    border-bottom: 2px solid $color-main-buttons;
-
-    &:hover {
-      opacity: 1;
-    }
-
-    &:active {
-      opacity: 1;
-    }
-  }
-}
-
 .main-nav__item--current-main {
   @media (min-width: $tablet-width) {
     border-bottom: 2px solid $color-main-buttons;
@@ -95,114 +81,89 @@
   }
 }
 
-.site-list__item {
-  padding-top: 22px;
-  padding-bottom: 24px;
-
-  list-style: none;
-  color: $color-main-text;
-  text-transform: uppercase;
-
-  border-top: 1px solid $color-menu-borders;
-
-  @include font-font($font-family-menu, normal, 500, 20px, 20px);
-
-  @media (min-width: $tablet-width) {
-    @include font-font($font-family-extra, normal, normal, 18px, 24px);
-    padding-top: 42px;
-    padding-bottom: 12px;
-    /* //TODO: Это чтобы менюшка не ехала, пока картнка одна на все версии, а должно быть 35*/
-    margin-left: 28px;
-    display: flex;
-
-    &:first-child {
-      margin-left: 0;
-      padding-left: 0;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 60px;
-    margin-left: 35px;
-  }
-}
 
 .main-nav--opened .main-nav__toggle {
-  position: absolute;
-  top: 23px;
-  right: 20px;
-
-  width: 23px;
-  height: 23px;
-
-  background-color: $color-background;
-  border: 0;
-  opacity: 1;
-
-  &:focus {
-    @include my-focus();
-  }
-
-  &:hover {
-    opacity: 1;
-  }
-
-  &::before,
-  &::after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 11px;
-
-    width: 2px;
-    height: 24px;
-
-    background-color: $color-main-text;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-
   @media (min-width: $tablet-width) {
     display: none;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    top: 23px;
+    right: 20px;
+
+    width: 23px;
+    height: 23px;
+
+    background-color: $color-background;
+    border: 0;
+    opacity: 1;
+
+    &:focus {
+      @include my-focus();
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::before,
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 11px;
+
+      width: 2px;
+      height: 24px;
+
+      background-color: $color-main-text;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
   }
 }
 
 .main-nav--closed .main-nav__toggle {
-  position: absolute;
-  top: 23px;
-  right: 21px;
-  border: 0;
-  width: 23px;
-  height: 23px;
-  background-color: $color-background;
-
-  &::before {
-    content: "";
+  @media (max-width: $mobile-width-only) {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 24px;
-    height: 2px;
+    top: 23px;
+    right: 21px;
+    border: 0;
+    width: 23px;
+    height: 23px;
+    background-color: $color-background;
 
-    background-color: $color-main-text;
-    box-shadow: 0 8px 0 0 $color-main-text, 0 16px 0 0 $color-main-text;
-  }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 24px;
+      height: 2px;
 
-  &:focus {
-    @include my-focus();
+      background-color: $color-main-text;
+      box-shadow: 0 8px 0 0 $color-main-text, 0 16px 0 0 $color-main-text;
+    }
+
+    &:focus {
+      @include my-focus();
+    }
   }
 }
 
-.main-nav--closed .main-nav__toggle::before:active {
-  border: 0;
-  background-color: $color-main-text;
-  box-shadow: 0 8px 0 0 $color-main-text, 0 16px 0 0 $color-main-text;
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__toggle::before:active {
+    border: 0;
+    background-color: $color-main-text;
+    box-shadow: 0 8px 0 0 $color-main-text, 0 16px 0 0 $color-main-text;
+  }
 }
 
 @media (max-width: $mobile-width-only) {

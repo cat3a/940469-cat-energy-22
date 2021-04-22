@@ -31,10 +31,10 @@
     min-height: 585px;
     position: relative;
 
-    &::before {
+    &::after {
       content: "";
       position: absolute;
-      top: -110px;
+      top: -140px;
       right: 0;
       z-index: -1;
       height: 694px;
@@ -61,9 +61,9 @@
 }
 
 @media (min-width: $desktop-width) {
-  .promo__wrapper img {
+  .promo__image {
     position: absolute;
-    top: 143px;
+    top: 32px;
     left: 558px;
   }
 }
