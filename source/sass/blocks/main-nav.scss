@@ -64,16 +64,16 @@
 }
 
 .main-nav__item--current-main {
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
   @media (min-width: $tablet-width) {
     border-bottom: 2px solid $color-main-buttons;
-
-    &:hover {
-      opacity: 1;
-    }
-
-    &:active {
-      opacity: 1;
-    }
   }
 
   @media (min-width: $desktop-width) {

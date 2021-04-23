@@ -13,7 +13,7 @@
 </head>
 <body class="page-body">
 <header class="page-header menu-wrapper">
-  <a class="page-header__logo">
+  <a class="page-header__logo page-header__logo--active">
     <picture>
       <source media="(min-width: 1440px)" srcset="img/page-header/logo-max.svg">
       <source media="(min-width: 768px)" srcset="img/page-header/logo-medium.svg">
@@ -126,12 +126,10 @@
         <p class="example__cost">Затраты на питание: <span>15 000 руб.</span></p>
       </div>
       <div class="example__slider example__slider-wrapper">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/example/example-medium.png 1x, img/promo/promo-can-medium@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/example/example-max.png 1x, img/promo/promo-can-max@2x.jpg 2x">
-          <img src="img/example/example-mini.png" alt="Очень толстый кот">
-          <!-- // TODO:Это для слайдера: <img src="img/example-after-mini.png" width="251" height="240" alt="Максимально худой кот">-->
-        </picture>
+        <div class="example__slider-image-wrapper">
+          <div class="example__thin-cat"></div>
+          <div class="example__fat-cat"></div>
+        </div>
         <div class="example__range-wrapper">
           <button class="example__button" type="button">Было</button>
           <div class="example__range">

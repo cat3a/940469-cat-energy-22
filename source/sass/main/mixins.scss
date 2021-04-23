@@ -24,3 +24,8 @@
   outline: 0;
   box-shadow: 0 0 10px $color-my-focus;
 }
+
+@mixin my-active() {
+  outline: 0;
+  box-shadow: none;
+}

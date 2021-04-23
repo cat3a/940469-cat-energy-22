@@ -14,8 +14,11 @@
 <body class="page-body">
 <header class="page-header menu-wrapper">
   <a href="index.html" class="page-header__logo">
-    <!-- // TODO: Потом здесь будет тег <picture>, <img src="img/logo-medium.svg" width="174" height="52" alt="Логотип «Cat energy» с Котом-Бэтменом"> <img src="img/logo-max.svg" width="202" height="59" alt="Логотип «Cat energy» с Котом-Бэтменом"> -->
-    <img class="page-header__image" src="img/page-header/logo-mini.svg" width="191" height="38" alt="Логотип «Cat energy» c Котом-Бэтменом">
+    <picture>
+      <source media="(min-width: 1440px)" srcset="img/page-header/logo-max.svg">
+      <source media="(min-width: 768px)" srcset="img/page-header/logo-medium.svg">
+      <img class="page-header__image" src="img/page-header/logo-mini.svg" width="191" height="38" alt="Логотип «Cat energy» c Котом-Бэтменом">
+    </picture>
   </a>
   <nav class="main-nav main-nav--opened main-nav--no-js">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -42,7 +45,7 @@
 </header>
 <main class="page-main page-main--form">
   <section class="program-selection">
-    <div class="form-wrapper">
+    <div class="form-wrapper form-wrapper--padding">
       <h1 class="program-selection__title">Подбор программы</h1>
       <p class="program-selection__paragraph">Заполните анкету, и мы подберем <br>
         программу питания для вашего кота</p>
@@ -81,7 +84,7 @@
                 </p>
               </li>
               <li class="selection-form__item">
-                <p class="selection-form__paragraph program-selection__p" >
+                <p class="selection-form__paragraph program-selection__p">
                   <input class="selection-form__input program-selection__input visually-hidden" type="radio" name="program" id="unknown">
                   <label class="program-selection__label" for="unknown">Не знаю &#40;Нужен ваш совет&#41;</label>
                 </p>
