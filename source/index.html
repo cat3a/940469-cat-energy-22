@@ -154,9 +154,11 @@
       </div>
     </div>
     <div class="find-us__map-wrapper">
-      <!-- // TODO: Потом здесь будет карта -->
-      <!-- // TODO: Потом здесь будет тег <picture> <img src="img/we-map-max.png" width="113" height="106" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">-->
-      <img class="find-us__img" src="img/we-map-min.png" width="56" height="52" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      <!-- // TODO: Потом здесь будет интерактивная карта сверху над всем со стандартным маркером -->
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/find-us/we-map-max.png 1x, img/find-us/we-map-max@2x.png 2x">
+        <img class="find-us__img" src="img/find-us/we-map-min.png" srcset="img/find-us/we-map-min@2x.png 2x" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      </picture>
     </div>
   </section>
 </main>

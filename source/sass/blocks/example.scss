@@ -182,10 +182,6 @@
   background-color: transparent;
   border: 0;
 
-  &:focus {
-    @include my-focus();
-  }
-
   @include font-font($font-family-extra, normal, normal, 16px, 20px);
 
   @media (min-width: $tablet-width) {
@@ -201,7 +197,13 @@
       border-bottom: 1px solid rgba($color-main-text, 0.3);
     }
 
+    &:focus {
+      @include my-focus();
+    }
+
     &:active {
+      @include my-active();
+
       border-bottom: 1px solid transparent;
     }
   }
@@ -303,13 +305,13 @@
     left: 196px;
   }
 
+  &:hover {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+  }
+
   &:focus {
     @include my-focus();
     outline-width: 2px;
-  }
-
-  &:hover {
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
   }
 
   &:active {

@@ -11,6 +11,8 @@
 
   &:active {
     color: rgba($color-main-text, 0.3);
+
+    @include my-active();
   }
 
   @media (min-width: $tablet-width) {

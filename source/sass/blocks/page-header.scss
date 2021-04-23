@@ -17,12 +17,12 @@
     margin-left: 110px;
   }
 
-  &:focus .page-header__image {
-    @include my-focus();
-  }
-
   &:hover .page-header__image {
     opacity: 0.8;
+  }
+
+  &:focus .page-header__image {
+    @include my-focus();
   }
 
   &:active .page-header__image {

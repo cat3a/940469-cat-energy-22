@@ -95,4 +95,14 @@
   position: absolute;
   top: 139px;
   left: 134px;
+
+  @media (min-width: $tablet-width) {
+    left: 333px;
+    top: 146px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 910px;
+    top: 130px;
+  }
 }

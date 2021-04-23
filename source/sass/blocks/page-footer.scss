@@ -49,6 +49,8 @@
   }
 
   &:active {
+    @include my-active();
+
     opacity: 0.3;
   }
 
@@ -58,15 +60,19 @@
 }
 
 .page-footer__cat-energy {
-  &:focus {
-    @include my-focus();
-  }
+  outline: 0;
 
   &:hover .page-footer__img {
     opacity: 0.8;
   }
 
+  &:focus .page-footer__img {
+    @include my-focus();
+  }
+
   &:active .page-footer__img {
     opacity: 0.6;
+
+    @include my-active();
   }
 }

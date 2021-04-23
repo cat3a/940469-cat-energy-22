@@ -50,16 +50,18 @@
     }
   }
 
-  &:focus {
-    @include my-focus();
-  }
-
   &:hover {
     opacity: 0.6;
   }
 
+  &:focus {
+    @include my-focus();
+  }
+
   &:active {
     opacity: 0.3;
+
+    @include my-active();
   }
 }
 
@@ -80,7 +82,6 @@
     border-bottom: 2px solid $color-background;
   }
 }
-
 
 .main-nav--opened .main-nav__toggle {
   @media (min-width: $tablet-width) {
