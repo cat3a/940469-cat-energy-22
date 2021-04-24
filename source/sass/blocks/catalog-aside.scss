@@ -60,10 +60,11 @@
     @media (min-width: $tablet-width) {
       background-image: url("../img/catalog-aside/get-gift-cat-max.jpg");
       background-position: top center;
+      background-size: cover;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/catalog-aside/get-gift-cat-max@2x.jpg");
-        background-size: 708px auto;
+        background-size: cover;
       }
     }
 
@@ -80,6 +81,10 @@
 
   &::before {
     background-color: $color-main-buttons;
+
+    @media (max-width: $mobile-width-only) {
+      background-color: $color-background;
+    }
   }
 
   @media (min-width: $tablet-width) {

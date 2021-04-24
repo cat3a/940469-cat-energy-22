@@ -1,5 +1,10 @@
 .page-footer {
   background-color: $color-main-blocks;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .page-footer__wrapper {
@@ -18,8 +23,8 @@
 
   .page-footer__img-wrapper {
     margin: 0;
-    padding-top: 54px;
-    padding-bottom: 62px;
+    padding-top: 39px;
+    padding-bottom: 32px;
 
     border-bottom: 1px solid $color-index-borders;
 
@@ -71,8 +76,7 @@
   }
 
   &:active .page-footer__img {
-    opacity: 0.6;
-
     @include my-active();
+    opacity: 0.6;
   }
 }
