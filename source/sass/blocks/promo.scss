@@ -17,9 +17,14 @@
     }
 
     &::after {
-      background-image: url("../img/promo-cat-mini.jpg");
+      background-image: url("../img/promo/promo-cat-mini.jpg");
       background-repeat: no-repeat;
       background-position: top center;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo/promo-cat-mini@2x.jpg");
+        background-size: 320px auto;
+      }
     }
 
     &::before {
@@ -40,9 +45,14 @@
       height: 694px;
       width: 50%;
       background-color: $color-background-picture;
-      background-image: url("../img/promo-cat-max.jpg");
+      background-image: url("../img/promo/promo-cat-max.jpg");
       background-repeat: no-repeat;
       background-position-x: right;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo/promo-cat-max@2x.jpg");
+        background-size: 720px auto;
+      }
     }
   }
 }

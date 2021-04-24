@@ -333,6 +333,11 @@
     width: 100%;
     min-height: 232px;
     background-position: top center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/example/example-after-mini@2x.png");
+      background-size: 251px auto;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -345,6 +350,11 @@
     z-index: 3;
     left: 50%;
     top: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/example/example-after-max@2x.png");
+      background-size: 545px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -355,6 +365,13 @@
     max-height: 600px;
     background-position: top right;
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/example/example-after-max@2x.png"), linear-gradient(to bottom, $color-background 21%, $color-index-example 21%);
+      background-size: 545px auto;
+      background-position: top right;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -368,6 +385,11 @@
     min-height: 232px;
     background-position: top center;
     top: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/example/example-before-mini@2x.png");
+      background-size: 311px auto;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -377,6 +399,11 @@
     min-height: 677px;
     background-position: top left;
     top: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/example/example-before-max@2x.png");
+      background-size: 677px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
