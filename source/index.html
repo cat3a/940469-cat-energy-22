@@ -5,19 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="img/favicon32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/152.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page-body">
 <header class="page-header menu-wrapper">
-  <a class="page-header__logo">
-    <!-- // TODO: Потом здесь будет тег <picture>, <img src="img/logo-medium.svg" width="174" height="52" alt="Логотип «Cat energy» с Котом-Бэтменом"> <img src="img/logo-max.svg" width="202" height="59" alt="Логотип «Cat energy» с Котом-Бэтменом"> -->
-    <img class="page-header__image" src="img/logo-mini.svg" width="191" height="38" alt="Логотип «Cat energy» c Котом-Бэтменом">
+  <a class="page-header__logo page-header__logo--active">
+    <picture>
+      <source media="(min-width: 1440px)" srcset="img/page-header/logo-max.svg">
+      <source media="(min-width: 768px)" srcset="img/page-header/logo-medium.svg">
+      <img class="page-header__image" src="img/page-header/logo-mini.svg" width="191" height="38" alt="Логотип «Cat energy» c Котом-Бэтменом">
+    </picture>
   </a>
-  <nav class="main-nav main-nav--closed main-nav--no-js">
+  <nav class="main-nav main-nav--opened main-nav--no-js">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <div class="main-nav__wrapper">
-      <ul class="main-nav__list">
-        <li class="site-list__item site-list__item--current">
-          <a class="main-nav__link  main-nav__link--color">
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a class="main-nav__link main-nav__link--color main-nav__item--current-main">
             Главная
           </a>
         </li>
@@ -41,8 +49,11 @@
     <div class="promo__wrapper container">
       <h2 class="promo__title">Функциональное питание для котов</h2>
       <p class="promo__paragraph">Занялся собой? Займись котом!</p>
-      <!-- // TODO: Потом здесь будет тег <picture>, <img src="img/promo-can-max" width="709" height="609" alt="Корм «Cat energy PRO» с курицей 500г, 0% natural."> <img src="img/promo-can-medium.png" width="552" height="499" alt="Корм «Cat energy PRO» с курицей 500г, 0% natural."> -->
-      <img src="img/promo-can-mini.png" width="280" height="270" alt="Корм «Cat energy PRO» с курицей 500г, 0% natural.">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/promo/promo-can-medium.png 1x, img/promo/promo-can-medium@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/promo/promo-can-max.jpg 1x, img/promo/promo-can-max@2x.jpg 2x">
+        <img class="promo__image" src="img/promo/promo-can-mini.png" srcset="img/promo/promo-can-mini@2x.png 2x" alt="Корм «Cat energy PRO» с курицей 500г, 0% natural.">
+      </picture>
       <a class="promo__button button" href="form.html">Подобрать программу</a>
     </div>
   </section>
@@ -115,9 +126,10 @@
         <p class="example__cost">Затраты на питание: <span>15 000 руб.</span></p>
       </div>
       <div class="example__slider example__slider-wrapper">
-        <!-- // TODO: Потом здесь будет тег <picture> -->
-        <img src="img/example-before-mini.png" width="311" height="232" alt="Очень толстый кот">
-        <!-- // TODO:Это для слайдера: <img src="img/example-after-mini.png" width="251" height="240" alt="Максимально худой кот"> -->
+        <div class="example__slider-image-wrapper">
+          <div class="example__thin-cat"></div>
+          <div class="example__fat-cat"></div>
+        </div>
         <div class="example__range-wrapper">
           <button class="example__button" type="button">Было</button>
           <div class="example__range">
@@ -142,9 +154,11 @@
       </div>
     </div>
     <div class="find-us__map-wrapper">
-      <!-- // TODO: Потом здесь будет карта -->
-      <!-- // TODO: Потом здесь будет тег <picture> <img src="img/we-map-max.png" width="113" height="106" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">-->
-      <img class="find-us__img" src="img/we-map-min.png" width="56" height="52" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      <!-- // TODO: Потом здесь будет интерактивная карта сверху над всем со стандартным маркером -->
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/find-us/we-map-max.png 1x, img/find-us/we-map-max@2x.png 2x">
+        <img class="find-us__img" src="img/find-us/we-map-min.png" srcset="img/find-us/we-map-min@2x.png 2x" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      </picture>
     </div>
   </section>
 </main>
@@ -160,17 +174,17 @@
       <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="#!">
-            <img src="img/social-vk-mini-icon.svg" width="23" height="16" alt="Логотип Вконтакте">
+            <img class="social__img" src="img/social-vk-mini-icon.svg" width="23" height="16" alt="Логотип Вконтакте">
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--instagram" href="#!">
-            <img src="img/social-instagram-mini-icon.svg" width="16" height="16" alt="Логотип Instagram">
+            <img class="social__img" src="img/social-instagram-mini-icon.svg" width="16" height="16" alt="Логотип Instagram">
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--facebook" href="#!">
-            <img src="img/social-facebook-mini-icon.svg" width="22" height="22" alt="Логотип Facebook">
+            <img class="social__img" src="img/social-facebook-mini-icon.svg" width="22" height="22" alt="Логотип Facebook">
           </a>
         </li>
       </ul>
@@ -182,5 +196,6 @@
     </p>
   </div>
 </footer>
+<script src="js/menu.js"></script>
 </body>
 </html>

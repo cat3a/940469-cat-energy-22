@@ -41,7 +41,7 @@
   color: $color-main-inputs;
   text-transform: uppercase;
 
-  border: 1px solid $color-elements-inner;
+  border: 1px solid $color-textarea-border;
 
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
   flex-grow: 1;
@@ -51,8 +51,16 @@
     height: 52px;
   }
 
+  &:invalid {
+    border: 2px solid $color-input-error;
+  }
+
+  &:hover {
+    border: 1px solid $color-elements-inner;
+  }
+
   &:focus {
-    @include my-focus();
+    border: 2px solid $color-main-inputs;
   }
 }
 
@@ -202,6 +210,7 @@
   box-sizing: border-box;
   min-height: 150px;
   margin-top: 10px;
+  padding-left: 15px;
 
   padding-top: 0;
 
@@ -219,8 +228,12 @@
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
   }
 
+  &:hover {
+    border-color: $color-elements-inner;
+  }
+
   &:focus {
-    @include my-focus();
+    border-color: 2px solid $color-main-inputs;
   }
 }
 
@@ -232,7 +245,6 @@
 
 .selection-form__textarea::placeholder {
   text-align: left;
-  padding-left: 15px;
   color: $color-main-inputs;
   text-transform: uppercase;
   opacity: 1;
@@ -246,7 +258,6 @@
 
 .selection-form__textarea::-webkit-input-placeholder {
   text-align: left;
-  padding-left: 15px;
   color: $color-main-inputs;
   text-transform: uppercase;
   opacity: 1;
@@ -260,7 +271,6 @@
 
 .selection-form__textarea:-moz-placeholder {
   text-align: left;
-  padding-left: 15px;
   color: $color-main-inputs;
   text-transform: uppercase;
   opacity: 1;
@@ -274,7 +284,6 @@
 
 .selection-form__textarea::-moz-placeholder {
   text-align: left;
-  padding-left: 15px;
   color: $color-main-inputs;
   opacity: 1;
   text-transform: uppercase;

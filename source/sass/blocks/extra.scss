@@ -75,6 +75,30 @@
   }
 }
 
+.extra__input:not(:checked):hover + label,
+.extra__input:checked:hover + label {
+  &::before {
+    border-color: $color-checkbox-modified;
+  }
+}
+
+.extra__input:not(:checked):disabled + label,
+.extra__input:checked:disabled + label {
+  opacity: 0.3;
+
+  &::before,
+  &::after {
+    opacity: 1;
+  }
+}
+
+.extra__input:not(:checked):disabled:hover + label,
+.extra__input:checked:disabled:hover + label {
+  &::before {
+    border-color: $color-elements-inner;
+  }
+}
+
 .extra__list {
   @include list-reset();
 

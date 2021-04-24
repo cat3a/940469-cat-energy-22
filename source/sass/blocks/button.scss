@@ -9,7 +9,18 @@
   @include font-font($font-family-extra, normal, normal, 14px, 18px);
   display: block;
 
+  &:hover {
+    background-color: $color-active-button;
+  }
+
   &:focus {
     @include my-focus();
+  }
+
+  &:active {
+    background-color: $color-active-button;
+    color: rgba($color-background, 0.3);
+
+    @include my-active();
   }
 }

@@ -107,4 +107,8 @@
   &:focus .catalog-extra-section__title {
     @include my-focus();
   }
+
+  &:active .catalog-extra-section__title {
+    @include my-active();
+  }
 }

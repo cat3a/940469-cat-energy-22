@@ -3,12 +3,16 @@
 }
 
 .page-main__catalog {
-  margin-top: 27px;
+  padding-top: 27px;
   margin-bottom: 41px;
 
   color: $color-main-text;
 
   @include font-font($font-family-extra, normal, normal, 36px, 36px);
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 0;
+  }
 
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 60px, 60px);

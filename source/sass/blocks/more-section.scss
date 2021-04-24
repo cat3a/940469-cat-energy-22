@@ -62,4 +62,13 @@
 
   @include font-font($font-family-extra, normal, normal, 16px, 20px);
   @include link-reset();
+
+  &:hover {
+    background-color: $color-catalog-article;
+  }
+
+  &:active {
+    color: rgba($color-main-inputs, 0.3);
+    background-color: $color-catalog-article;
+  }
 }

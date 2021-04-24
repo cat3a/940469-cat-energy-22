@@ -5,14 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="img/favicon32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/152.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page-body">
 <header class="page-header menu-wrapper">
   <a href="index.html" class="page-header__logo">
-    <!-- // TODO: Потом здесь будет тег <picture>, <img src="img/logo-medium.svg" width="174" height="52" alt="Логотип «Cat energy» с Котом-Бэтменом"> <img src="img/logo-max.svg" width="202" height="59" alt="Логотип «Cat energy» с Котом-Бэтменом"> -->
-    <img class="page-header__image" src="img/logo-mini.svg" width="191" height="38" alt="Логотип «Cat energy» c Котом-Бэтменом">
+    <picture>
+      <source media="(min-width: 1440px)" srcset="img/page-header/logo-max.svg">
+      <source media="(min-width: 768px)" srcset="img/page-header/logo-medium.svg">
+      <img class="page-header__image" src="img/page-header/logo-mini.svg" width="191" height="38" alt="Логотип «Cat energy» c Котом-Бэтменом">
+    </picture>
   </a>
-  <nav class="main-nav main-nav--closed main-nav--no-js">
+  <nav class="main-nav main-nav--opened main-nav--no-js">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list">
@@ -21,8 +29,8 @@
             Главная
           </a>
         </li>
-        <li class="site-list__item site-list__item--current">
-          <a class="main-nav__link">
+        <li class="site-list__item">
+          <a class="main-nav__link site-list__item--current">
             Каталог продукции
           </a>
         </li>
@@ -36,16 +44,19 @@
   </nav>
 </header>
 <main class="page-main">
-  <h1 class="page-main__catalog container">Каталог продукции</h1>
+  <h1 class="page-main__catalog container container--padding">Каталог продукции</h1>
   <section class="catalog-main">
     <h2 class="visually-hidden">Основные продукты</h2>
     <div class="container">
       <ul class="catalog-main__list">
         <li class="catalog-main__item">
           <article class="catalog-main__article catalog-article">
-            <!-- // TODO: Потом здесь будет тег <picture> -->
             <a class="catalog-article__link catalog-article__picture" href="#!">
-              <img class="catalog-article__image" src="img/catalog-main-chicken-500mini.png" width="140" height="112" alt="Пятисотграммовая упаковка Cat Energy PRO со вкусом курицы">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/catalog-article/catalog-main-chicken-500max.png 1x, img/catalog-article/catalog-main-chicken-500max@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog-article/catalog-main-chicken-500medium.png 1x, img/catalog-article/catalog-main-chicken-500medium@2x.png 2x">
+                <img class="catalog-article__image" src="img/catalog-article/catalog-main-chicken-500mini.png" srcset="img/catalog-article/catalog-main-chicken-500mini@2x.png 2x" alt="Пятисотграммовая упаковка Cat Energy PRO со вкусом курицы">
+              </picture>
             </a>
             <a class="catalog-article__link catalog-article__header" href="#!">
               <h3 class="catalog-article__title">Cat Energy PRO 500 г</h3>
@@ -71,9 +82,12 @@
         </li>
         <li class="catalog-main__item">
           <article class="catalog-main__article catalog-article catalog-article--odd">
-            <!-- // TODO: Потом здесь будет тег <picture> -->
             <a class="catalog-article__link catalog-article__picture" href="#!">
-              <img class="catalog-article__image" src="img/catalog-main-chicken-1000mini.png" width="140" height="112" alt="Килограммовая упаковка Cat Energy PRO со вкусом курицы">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/catalog-article/catalog-main-chicken-1000max.png 1x, img/catalog-article/catalog-main-chicken-1000max@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog-article/catalog-main-chicken-1000medium.png 1x, img/catalog-article/catalog-main-chicken-1000medium@2x.png 2x">
+                <img class="catalog-article__image" src="img/catalog-article/catalog-main-chicken-1000mini.png" srcset="img/catalog-article/catalog-main-chicken-1000mini@2x.png 2x" alt="Килограммовая упаковка Cat Energy PRO со вкусом курицы">
+              </picture>
             </a>
             <a class="catalog-article__link catalog-article__header" href="#!">
               <h3 class="catalog-article__title">Cat Energy PRO 1000 г</h3>
@@ -99,9 +113,12 @@
         </li>
         <li class="catalog-main__item">
           <article class="catalog-main__article catalog-article">
-            <!-- // TODO: Потом здесь будет тег <picture> -->
             <a class="catalog-article__link catalog-article__picture" href="#!">
-              <img class="catalog-article__image" src="img/catalog-main-fish-500mini.png" width="140" height="112" alt="Пятисотграммовая упаковка Cat Energy PRO со вкусом рыбы">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/catalog-article/catalog-main-fish-500max.png 1x, img/catalog-article/catalog-main-fish-500max@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog-article/catalog-main-fish-500medium.png 1x, img/catalog-article/catalog-main-fish-500medium@2x.png 2x">
+                <img class="catalog-article__image" src="img/catalog-article/catalog-main-fish-500mini.png" srcset="img/catalog-article/catalog-main-fish-500mini@2x.png 2x" alt="Пятисотграммовая упаковка Cat Energy PRO со вкусом рыбы">
+              </picture>
             </a>
             <a class="catalog-article__link catalog-article__header" href="#!">
               <h3 class="catalog-article__title">Cat Energy PRO 500 г</h3>
@@ -127,9 +144,12 @@
         </li>
         <li class="catalog-main__item">
           <article class="catalog-main__article catalog-article catalog-article--odd">
-            <!-- // TODO: Потом здесь будет тег <picture> -->
             <a class="catalog-article__link catalog-article__picture" href="#!">
-              <img class="catalog-article__image" src="img/catalog-main-fish-1000mini.png" width="140" height="112" alt="Килограммовая упаковка Cat Energy PRO со вкусом рыбы">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/catalog-article/catalog-main-fish-1000max.png 1x, img/catalog-article/catalog-main-fish-1000max@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog-article/catalog-main-fish-1000medium.png 1x, img/catalog-article/catalog-main-fish-1000medium@2x.png 2x">
+                <img class="catalog-article__image" src="img/catalog-article/catalog-main-fish-1000mini.png" srcset="img/catalog-article/catalog-main-fish-1000mini@2x.png 2x" alt="Килограммовая упаковка Cat Energy PRO со вкусом рыбы">
+              </picture>
             </a>
             <a class="catalog-article__link catalog-article__header" href="#!">
               <h3 class="catalog-article__title">Cat Energy PRO 1000 г</h3>
@@ -155,9 +175,12 @@
         </li>
         <li class="catalog-main__item">
           <article class="catalog-main__article catalog-article">
-            <!-- // TODO: Потом здесь будет тег <picture> -->
             <a class="catalog-article__link catalog-article__picture" href="#!">
-              <img class="catalog-article__image" src="img/catalog-main-buckwheat-500mini.png" width="140" height="112" alt="Пятисотграммовая упаковка Cat Energy Slim со вкусом гречки">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/catalog-article/catalog-main-buckwheat-500max.png 1x, img/catalog-article/catalog-main-buckwheat-500max@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog-article/catalog-main-buckwheat-500medium.png 1x, img/catalog-article/catalog-main-buckwheat-500medium@2x.png 2x">
+                <img class="catalog-article__image" src="img/catalog-article/catalog-main-buckwheat-500mini.png" srcset="img/catalog-article/catalog-main-buckwheat-500mini@2x.png 2x" alt="Пятисотграммовая упаковка Cat Energy Slim со вкусом гречки">
+              </picture>
             </a>
             <a class="catalog-article__link catalog-article__header" href="#!">
               <h3 class="catalog-article__title">Cat Energy Slim 500 г</h3>
@@ -183,9 +206,12 @@
         </li>
         <li class="catalog-main__item">
           <article class="catalog-main__article catalog-article catalog-article--odd">
-            <!-- // TODO: Потом здесь будет тег <picture> -->
             <a class="catalog-article__link catalog-article__picture" href="#!">
-              <img class="catalog-article__image" src="img/catalog-main-buckwheat-1000mini.png" width="140" height="112" alt="Килограммовая упаковка Cat Energy PRO со вкусом гречки">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/catalog-article/catalog-main-buckwheat-1000max.png 1x, img/catalog-article/catalog-main-buckwheat-1000max@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog-article/catalog-main-buckwheat-1000medium.png 1x, img/catalog-article/catalog-main-buckwheat-1000medium@2x.png 2x">
+                <img class="catalog-article__image" src="img/catalog-article/catalog-main-buckwheat-1000mini.png" srcset="img/catalog-article/catalog-main-buckwheat-1000mini@2x.png 2x" alt="Килограммовая упаковка Cat Energy PRO со вкусом гречки">
+              </picture>
             </a>
             <a class="catalog-article__link catalog-article__header" href="#!">
               <h3 class="catalog-article__title">Cat Energy Slim 1000 г</h3>
@@ -211,9 +237,12 @@
         </li>
         <li class="catalog-main__item">
           <article class="catalog-main__article catalog-article">
-            <!-- // TODO: Потом здесь будет тег <picture> -->
             <a class="catalog-article__link catalog-article__picture" href="#!">
-              <img class="catalog-article__image" src="img/catalog-main-rice-500mini.png" width="140" height="112" alt="Пятисотграммовая упаковка Cat Energy PRO со вкусом риса">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/catalog-article/catalog-main-rice-500max.png 1x, img/catalog-article/catalog-main-rice-500max@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog-article/catalog-main-rice-500medium.png 1x, img/catalog-article/catalog-main-rice-500medium@2x.png 2x">
+                <img class="catalog-article__image" src="img/catalog-article/catalog-main-rice-500mini.png" srcset="img/catalog-article/catalog-main-rice-500mini@2x.png 2x" alt="Пятисотграммовая упаковка Cat Energy PRO со вкусом риса">
+              </picture>
             </a>
             <a class="catalog-article__link catalog-article__header" href="#!">
               <h3 class="catalog-article__title">Cat Energy Slim 500 г</h3>
@@ -323,9 +352,11 @@
       </div>
     </div>
     <div class="find-us__map-wrapper">
-      <!-- // TODO: Потом здесь будет карта -->
-      <!-- // TODO: Потом здесь будет тег <picture> <img src="img/we-map-max.png" width="113" height="106" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">-->
-      <img class="find-us__img" src="img/we-map-min.png" width="56" height="52" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      <!-- // TODO: Потом здесь будет интерактивная карта сверху над всем со стандартным маркером -->
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/find-us/we-map-max.png 1x, img/find-us/we-map-max@2x.png 2x">
+        <img class="find-us__img" src="img/find-us/we-map-min.png" srcset="img/find-us/we-map-min@2x.png 2x" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      </picture>
     </div>
   </section>
 </main>
@@ -341,17 +372,17 @@
       <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="#!">
-            <img src="img/social-vk-mini-icon.svg" width="23" height="16" alt="Логотип Вконтакте">
+            <img class="social__img" src="img/social-vk-mini-icon.svg" width="23" height="16" alt="Логотип Вконтакте">
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--instagram" href="#!">
-            <img src="img/social-instagram-mini-icon.svg" width="16" height="16" alt="Логотип Instagram">
+            <img class="social__img" src="img/social-instagram-mini-icon.svg" width="16" height="16" alt="Логотип Instagram">
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--facebook" href="#!">
-            <img src="img/social-facebook-mini-icon.svg" width="22" height="22" alt="Логотип Facebook">
+            <img class="social__img" src="img/social-facebook-mini-icon.svg" width="22" height="22" alt="Логотип Facebook">
           </a>
         </li>
       </ul>
@@ -363,3 +394,6 @@
     </p>
   </div>
 </footer>
+<script src="js/menu.js"></script>
+</body>
+</html>

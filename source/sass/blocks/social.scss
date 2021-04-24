@@ -28,7 +28,13 @@
 }
 
 .social__link {
-  &:focus {
+  &:focus .social__img {
     @include my-focus();
+  }
+
+  &:active .social__img {
+    @include my-active();
+
+    opacity: 0.3;
   }
 }

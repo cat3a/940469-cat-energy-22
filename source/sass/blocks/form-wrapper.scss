@@ -23,3 +23,10 @@
     margin-left: auto;
   }
 }
+
+.form-wrapper--padding {
+  @media (max-width: $mobile-width-only) {
+    padding-top: 27px;
+    border-top: 1px solid $color-menu-borders;
+  }
+}

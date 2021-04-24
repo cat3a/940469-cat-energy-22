@@ -17,8 +17,27 @@
     margin-left: 110px;
   }
 
+  &:hover .page-header__image {
+    opacity: 0.8;
+  }
+
   &:focus .page-header__image {
     @include my-focus();
+  }
+
+  &:active .page-header__image {
+    @include my-active();
+    opacity: 0.6;
+  }
+}
+
+.page-header__logo--active {
+  &:hover .page-header__image {
+    opacity: 1;
+  }
+
+  &:active .page-header__image {
+    opacity: 1;
   }
 }
 
