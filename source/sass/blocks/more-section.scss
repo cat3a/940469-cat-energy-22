@@ -9,13 +9,17 @@
   padding-top: 5px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 80px;
+    margin-top: 97px;
     padding-top: 52px;
     padding-left: 36px;
     padding-right: 36px;
     border: 2px solid $color-main-blocks;
     padding-bottom: 38px;
     margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 47px;
   }
 }
 
@@ -46,7 +50,7 @@
     width: 170px;
 
     @include font-font($font-family-main, normal, normal, 16px, 18px);
-    padding-bottom: 60px;
+    padding-bottom: 52px;
   }
 }
 

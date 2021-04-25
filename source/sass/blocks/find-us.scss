@@ -117,7 +117,22 @@
   }
 
   @media (min-width: $desktop-width) {
-    left: 910px;
-    top: 130px;
+    left: 665px;
+    top: 100px;
   }
+}
+
+.find-us__map {
+  overflow: hidden;
+  max-height: 400px;
+  width: 100%;
+}
+
+.find-us__map iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border: 0;
 }
