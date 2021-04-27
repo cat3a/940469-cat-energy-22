@@ -76,3 +76,12 @@
     background-color: $color-catalog-article;
   }
 }
+
+.more-section__image-plus {
+  stroke: $color-elements-extra;
+
+  @media (min-width: $tablet-width){
+    width: 60px;
+    height: 60px;
+  }
+}

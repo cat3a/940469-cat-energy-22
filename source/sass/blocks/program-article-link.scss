@@ -5,6 +5,10 @@
 
   @include link-reset();
 
+  &:hover .program-article-link__arrow {
+    width: 32px;
+  }
+
   &:focus {
     @include my-focus();
   }
@@ -13,6 +17,10 @@
     color: rgba($color-main-text, 0.3);
 
     @include my-active();
+  }
+
+  &:active .program-article-link__arrow {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
@@ -28,9 +36,24 @@
 .program-article-link__paragraph {
   margin-top: 0;
 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
   @include font-font($font-family-extra, normal, normal, 20px, 30px);
 }
 
 @media (min-width: $desktop-width) {
   padding-bottom: 60px;
+}
+
+.program-article-link__arrow {
+  stroke: $color-main-text;
+  padding-left: 25px;
+  width: 27px;
+  height: 12px;
+  transition: 0.3s;
+  transform: translateX(-5px);
+  /*transition: width 0.5s ease;
+  overflow: visible; */
 }

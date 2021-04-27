@@ -59,9 +59,17 @@
     opacity: 0.3;
   }
 
+  &:hover .page-footer__html-academy-image {
+    fill: $color-main-buttons;
+  }
+
   @media (min-width: $tablet-width) {
     min-width: 163px;
   }
+}
+
+.page-footer__html-academy-image {
+  fill: $color-fill-icons;
 }
 
 .page-footer__cat-energy {

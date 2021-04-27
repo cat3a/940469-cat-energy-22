@@ -38,3 +38,49 @@
     opacity: 0.3;
   }
 }
+
+.social__link--vkontakte .social__img {
+  fill: $color-fill-icons;
+
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 22px;
+  }
+}
+
+.social__link--vkontakte {
+  &:hover .social__img {
+    fill: $color-main-buttons;
+  }
+}
+
+.social__link--instagram {
+  &:hover .social__img {
+    fill: $color-main-buttons;
+  }
+}
+
+.social__link--facebook {
+  &:hover .social__img {
+    stroke: $color-main-buttons;
+  }
+}
+
+.social__link--instagram .social__img {
+  fill: $color-fill-icons;
+
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.social__link--facebook .social__img {
+  fill: transparent;
+  stroke: $color-fill-icons;
+
+  @media (min-width: $tablet-width) {
+    width: 28px;
+    height: 33px;
+  }
+}

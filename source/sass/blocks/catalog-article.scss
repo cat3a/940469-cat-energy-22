@@ -43,6 +43,7 @@
   @include font-font($font-family-extra, normal, normal, 16px, 20px);
 
   @media (min-width: $tablet-width) {
+    padding-top: 30px;
     @include font-font($font-family-extra, normal, normal, 20px, 24px);
 
     width: 130px;
