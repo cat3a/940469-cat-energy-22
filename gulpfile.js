@@ -81,7 +81,7 @@ exports.images = copyImages; //Просто копирует картинки
 //WebP
 
 const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src(["source/img/**/*.{jpg,png}", "!source/img/fav*.{jpg,png}", "!source/img/152.png"])
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"))
 }
@@ -116,6 +116,7 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.svg",
+    "source/*.webmanifest",
     "!source/img/icons/*.svg",
   ], {
     base: "source"
