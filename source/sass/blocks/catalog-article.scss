@@ -90,6 +90,10 @@
   color: $color-checkbox-text;
 
   @include link-reset();
+
+  &:focus-visible {
+    @include my-active();
+  }
 }
 
 .catalog-article__picture {

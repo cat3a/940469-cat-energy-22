@@ -40,8 +40,8 @@
 
   color: $color-main-inputs;
   text-transform: uppercase;
-
-  border: 1px solid $color-textarea-border;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px $color-textarea-border;
 
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
   flex-grow: 1;
@@ -64,7 +64,8 @@
   }
 
   &:hover {
-    border: 1px solid $color-elements-inner;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 1px $color-elements-inner;
   }
 
   &:hover + .selection-form__input--email-image {
@@ -73,6 +74,10 @@
 
   &:hover + .selection-form__input--phone-image {
     fill: $color-checkbox-text;
+  }
+
+  &:focus-visible {
+    @include my-active();
   }
 
   &:focus {
@@ -188,33 +193,6 @@
   margin: 0 auto;
 }
 
-/*&::before {
-  content: "";
-  background-color: $color-main-buttons;
-  height: 2px;
-  width: 100vw;
-  position: absolute;
-  top: 15px;
-  z-index: -1;
-}
-
-&::after {
-  content: "";
-  background-color: $color-main-buttons;
-  height: 2px;
-  width: 100vw;
-  position: absolute;
-  top: 15px;
-  z-index: -1;
-
-
-@media (min-width: $tablet-width) {
-  padding-right: 35px;
-  padding-left: 25px;
-}
-}
-*/
-
 .selection-form__container {
   @media (min-width: $desktop-width) {
     display: grid;
@@ -237,9 +215,9 @@
   padding-left: 15px;
 
   padding-top: 0;
-
-  border: 1px solid $color-textarea-border;
   flex-grow: 1;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px $color-textarea-border;
 
   @media (max-width: $mobile-width-only) {
     margin-bottom: 50px;
@@ -252,12 +230,18 @@
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
   }
 
+  &:focus-visible {
+    @include my-active();
+  }
+
   &:hover {
-    border-color: $color-elements-inner;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 1px $color-elements-inner;
   }
 
   &:focus {
-    border-color: 2px solid $color-main-inputs;
+    border: 2px solid $color-main-inputs;
+    box-shadow: none;
   }
 }
 

@@ -8,6 +8,23 @@
   align-items: center;
   padding-top: 5px;
 
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/catalog-main-plus-icon.svg");
+    top: 7%;
+    width: 30px;
+    height: 30px;
+
+    @media (min-width: $tablet-width) {
+      top: 11%;
+      width: 60px;
+      height: 60px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     margin-top: 97px;
     padding-top: 52px;
@@ -24,6 +41,7 @@
 }
 
 .more-section__title {
+  margin-top: 55px;
   padding-top: 5px;
   margin-bottom: 0;
   text-align: center;
@@ -33,7 +51,7 @@
   @include font-font($font-family-extra, normal, normal, 16px, 20px);
 
   @media (min-width: $tablet-width) {
-    padding-top: 22px;
+    padding-top: 40px;
     width: 134px;
     padding-bottom: 13px;
 

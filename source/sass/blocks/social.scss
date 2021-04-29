@@ -11,33 +11,6 @@
   }
 }
 
-.social__list {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-
-  @include list-reset();
-}
-
-.social__item {
-  margin-right: 33px;
-
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-.social__link {
-  &:focus .social__img {
-    @include my-focus();
-  }
-
-  &:active .social__img {
-    @include my-active();
-
-    opacity: 0.3;
-  }
-}
 
 .social__link--vkontakte .social__img {
   fill: $color-fill-icons;
@@ -83,5 +56,37 @@
   @media (min-width: $tablet-width) {
     width: 28px;
     height: 33px;
+  }
+}
+
+.social__list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  @include list-reset();
+}
+
+.social__item {
+  margin-right: 33px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  &:focus-visible {
+    @include my-active();
+  }
+
+  &:focus .social__img {
+    @include my-focus();
+  }
+
+  &:active .social__img {
+    @include my-active();
+
+    opacity: 0.3;
   }
 }
