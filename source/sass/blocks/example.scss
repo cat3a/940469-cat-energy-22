@@ -13,6 +13,18 @@
   }
 }
 
+.example--fat-cat {
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(to bottom, $color-background 25%, $color-main-blocks 25%);
+  }
+}
+
+.example--thin-cat {
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(to bottom, $color-background 25%, $color-index-example 25%);
+  }
+}
+
 .example__container {
   @media (min-width: $desktop-width) {
     display: flex;
@@ -150,6 +162,12 @@
 .example__definition--time {
   @media (min-width: $tablet-width) {
     margin-left: 10px;
+  }
+}
+
+.example__definition--thin-cat {
+  @media (min-width: $desktop-width) {
+    background-color: $color-index-example;
   }
 }
 
@@ -410,6 +428,51 @@
   @media (min-width: $desktop-width) {
     width: 56%;
     height: 600px;
+  }
+}
+
+.example__thin-cat--show {
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    width: 100%;
+    left: 15%;
+    background-position: top left;
+  }
+}
+
+.example__thin-cat--hide {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+    background-position: top right;
+  }
+}
+
+.example__fat-cat--hide {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.example__fat-cat--show {
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    width: 100%;
   }
 }
 

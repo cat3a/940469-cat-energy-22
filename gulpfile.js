@@ -14,6 +14,7 @@ const svgstore = require("gulp-svgstore");
 const del = require("del");
 const cheerio = require("gulp-cheerio");
 const replace = require("gulp-replace");
+const concat = require("gulp-concat");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -47,8 +48,16 @@ exports.htmlMake = htmlMake;
 
 //JS
 
-const scripts = () => {
+const concatScripts = () => {
   return gulp.src("source/js/*.js")
+    .pipe(concat("scripts.js"))
+    .pipe(gulp.dest("source/js/"))
+}
+
+exports.concatScripts = concatScripts;
+
+const scripts = () => {
+  return gulp.src("source/js/scripts.js")
     .pipe(terser())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
@@ -156,14 +165,20 @@ const reload = (done) => {
 // Clean
 
 const clean = () => {
-  return del("build");
+  return del(["build", "source/js/scripts.js"]);
 };
+
+const cleanJS  = () => {
+  return del("source/js/scripts.js");
+};
+
+exports.cleanJS = cleanJS ;
 
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/js/*.js", gulp.series(cleanJS, concatScripts, scripts, reload));
   gulp.watch("source/*.html", gulp.series(htmlMake, reload));
   // gulp.watch("source/*.html").on("change", sync.reload);
 }
@@ -178,6 +193,7 @@ const build = gulp.series(
   clean,
   copy,
   optimizeImages,
+  concatScripts,
   gulp.parallel(
     styles,
     htmlMake,
@@ -195,6 +211,7 @@ exports.default = gulp.series(
   clean,
   copy,
   copyImages,
+  concatScripts,
   gulp.parallel(
     styles,
     htmlMake,
