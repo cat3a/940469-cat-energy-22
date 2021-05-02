@@ -12,12 +12,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 47%;
+    width: 570px;
     margin-right: 80px;
     margin-top: 82px;
-    flex-grow: 1;
 
-    &:last-child {
+    &:nth-child(2n) {
       margin-right: 0;
     }
   }
@@ -35,7 +34,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }

@@ -178,7 +178,7 @@ exports.cleanJS = cleanJS ;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-  gulp.watch("source/js/*.js", gulp.series(cleanJS, concatScripts, scripts, reload));
+  gulp.watch(["source/js/*.js", "!source/js/scripts.js"], gulp.series(cleanJS, concatScripts, scripts, reload));
   gulp.watch("source/*.html", gulp.series(htmlMake, reload));
   // gulp.watch("source/*.html").on("change", sync.reload);
 }

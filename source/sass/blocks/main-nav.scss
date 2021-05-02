@@ -12,6 +12,7 @@
 
   @media (min-width: $desktop-width) {
     flex-basis: 480px;
+    flex-wrap: wrap;
     margin-right: 110px;
     flex-grow: 0;
   }
@@ -28,10 +29,13 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
+    padding-top: 30px;
   }
 
   @media (min-width: $desktop-width) {
     justify-content: flex-end;
+    padding-top: 48px;
   }
 }
 

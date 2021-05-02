@@ -51,15 +51,15 @@
     height: 52px;
   }
 
-  &:invalid {
+  &:required:focus:invalid {
     border: 2px solid $color-input-error;
   }
 
-  &:invalid + .selection-form__input--email-image {
+  &:required:focus:invalid + .selection-form__input--email-image {
     stroke: $color-input-error;
   }
 
-  &:invalid + .selection-form__input--phone-image {
+  &:required:focus:invalid + .selection-form__input--phone-image {
     fill: $color-input-error;
   }
 
@@ -95,6 +95,12 @@
 
 .selection-form__input[type="number"] {
   appearance: textfield;
+  margin: 0;
+}
+
+.selection-form__input[type="number"]::-webkit-outer-spin-button,
+.selection-form__input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
   margin: 0;
 }
 

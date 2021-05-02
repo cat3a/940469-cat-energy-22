@@ -10,38 +10,42 @@
   <link rel="icon" href="img/favicon32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" sizes="152x152" href="img/152.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin="anonymous">
 </head>
-<body class="page-body">
+<body class="page-body page-body--index">
 <header class="page-header menu-wrapper">
-  <a class="page-header__logo page-header__logo--active">
-    <picture>
-      <source media="(min-width: 1440px)" srcset="img/page-header/logo-max.svg">
-      <source media="(min-width: 768px)" srcset="img/page-header/logo-medium.svg">
-      <img class="page-header__image" src="img/page-header/logo-mini.svg" width="191" height="38" alt="Логотип «Cat energy» c Котом-Бэтменом">
-    </picture>
-  </a>
-  <nav class="main-nav main-nav--opened main-nav--no-js">
-    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item">
-          <a class="main-nav__link main-nav__link--color main-nav__item--current-main">
-            Главная
-          </a>
-        </li>
-        <li class="site-list__item">
-          <a class="main-nav__link main-nav__link--color" href="catalog.html">
-            Каталог продукции
-          </a>
-        </li>
-        <li class="site-list__item">
-          <a class="main-nav__link main-nav__link--color" href="form.html">
-            Подбор программы
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+    <a class="page-header__logo page-header__logo--active">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/page-header/logo-max.svg">
+        <source media="(min-width: 768px)" srcset="img/page-header/logo-medium.svg">
+        <img class="page-header__image" src="img/page-header/logo-mini.svg" width="191" height="38" alt="Логотип «Cat energy» c Котом-Бэтменом">
+      </picture>
+    </a>
+    <nav class="main-nav main-nav--opened main-nav--no-js">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="main-nav__link main-nav__link--color main-nav__item--current-main">
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="main-nav__link main-nav__link--color" href="catalog.html">
+              Каталог продукции
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="main-nav__link main-nav__link--color" href="form.html">
+              Подбор программы
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 </header>
 <main class="page-main">
   <h1 class="visually-hidden">Магазин Функционального питание для котов &laquo;Cat energy&raquo;.</h1>
@@ -93,7 +97,6 @@
   <section class="features container">
     <div class="features__wrapper">
       <h2 class="features__title">Как это работает</h2>
-      <!-- // TODO: Потом в списке будут адаптивные псевдоэлементы ::before и ::after -->
       <ol class="features__list">
         <li class="features__item">
           <p class="features__paragraph features__paragraph--one">Функциональное питание содержит только полезные
@@ -108,14 +111,13 @@
             функциональное питание.</p>
         </li>
         <li class="features__item">
-          <p class="features__paragraph features__paragraph--four">Уже через месяц наслаждайтесь изменениями к лучшему
-            вашего питомца!</p>
+          <p class="features__paragraph features__paragraph--four">Уже через месяц наслаждайтесь изменениями к лучшему&nbsp; <br> вашего питомца!</p>
         </li>
       </ol>
     </div>
   </section>
   <section class="example">
-    <div class="container example__container">
+    <div class="container example__container example__container--color">
       <div class="example__wrapper">
         <h2 class="example__title">Живой пример</h2>
         <p class="example__paragraph">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.

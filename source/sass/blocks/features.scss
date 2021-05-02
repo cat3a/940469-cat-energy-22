@@ -29,7 +29,7 @@
   @media (min-width: $desktop-width) {
     margin-right: 71px;
 
-    &:last-child {
+    &:nth-child(4n) {
       margin-right: 0;
     }
   }
@@ -52,6 +52,7 @@
 
   @media (min-width: $desktop-width) {
     padding-bottom: 20px;
+    justify-content: flex-start;
   }
 }
 
@@ -142,6 +143,7 @@
     background-position: center;
   }
 }
+
 
 @media (min-width: $tablet-width) {
   .features__paragraph {
@@ -238,5 +240,11 @@
 
       @include font-font($font-family-extra, normal, normal, 280px, 280px);
     }
+  }
+}
+
+.features__paragraph--four br {
+  @media (max-width: $mobile-width-only) {
+    display: none;
   }
 }

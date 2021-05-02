@@ -40,6 +40,8 @@
   text-transform: uppercase;
   grid-column: 1;
   grid-row: 1;
+  padding-top: 11px;
+  padding-bottom: 11px;
 
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
 
@@ -56,6 +58,8 @@
   grid-column: 2;
 
   @media (min-width: $tablet-width) {
+    padding-top: 11px;
+    padding-bottom: 11px;
     text-align: right;
     grid-column: 3;
 

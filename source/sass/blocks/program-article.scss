@@ -1,22 +1,21 @@
 .program-article__title {
   padding-top: 25px;
   padding-left: 15px;
-
-  text-align: center;
   color: $color-main-text;
   text-transform: uppercase;
 
   @include font-font($font-family-extra, normal, normal, 24px, 37px);
 
   @media (max-width: $mobile-width-only) {
-    &--up {
-      padding-left: 40px;
-    }
+    padding-left: 90px;
+    padding-right: 20px;
   }
 
   @media (min-width: $tablet-width) {
+    padding-right: 30px;
     padding-top: 52px;
     padding-left: 52px;
+    max-width: 400px;
 
     color: $color-main-text;
 
@@ -65,7 +64,6 @@
     position: relative;
 
     margin-top: 0;
-    margin-right: 315px;
     margin-left: 35px;
     padding-top: 0;
 
@@ -75,21 +73,29 @@
 
     @include font-font($font-family-main, normal, normal, 16px, 24px);
 
+    &--down {
+      margin-right: 260px;
+    }
+
     &--down::after {
       content: url("../img/program-cat-sitting-max.svg");
       position: absolute;
       top: -80px;
-      right: -250px;
+      right: -200px;
 
       width: 200px;
       height: 211px;
+    }
+
+    &--up {
+      margin-right: 290px;
     }
 
     &--up::after {
       content: url("../img/program-cat-sneak-max.svg");
       position: absolute;
       top: -80px;
-      right: -280px;
+      right: -260px;
 
       width: 268px;
       height: 200px;

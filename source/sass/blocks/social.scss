@@ -1,8 +1,5 @@
 .social {
   margin: 0;
-  padding-top: 20px;
-  padding-bottom: 21px;
-
   background-color: $color-main-blocks;
   border-bottom: 1px solid $color-index-borders;
 
@@ -63,12 +60,15 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  flex-wrap: wrap;
 
   @include list-reset();
 }
 
 .social__item {
   margin-right: 33px;
+  margin-top: 20px;
+  margin-bottom: 21px;
 
   &:last-child {
     margin-right: 0;
