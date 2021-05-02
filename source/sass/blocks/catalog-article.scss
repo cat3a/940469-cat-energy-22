@@ -26,6 +26,7 @@
 .catalog-article__button {
   @include font-font($font-family-extra, normal, normal, 16px, 20px);
   grid-area: button;
+  max-width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -111,6 +112,15 @@
 }
 
 .catalog-article__image {
+  object-fit: contain;
+  width: 140px;
+  height: 112px;
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    height: 200px;
+  }
+
   @media (min-width: $desktop-width) {
     width: 172px;
     height: 196px;

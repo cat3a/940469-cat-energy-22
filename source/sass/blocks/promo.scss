@@ -42,28 +42,24 @@
 }
 
 .promo__image {
+  object-fit: contain;
+  width: 280px;
+  height: 270px;
+
   @media (min-width: $tablet-width) {
     z-index: -1;
+    width: 709px;
+    height: 609px;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
     top: 32px;
     left: 558px;
-    max-width: 650px;
+    width: 552px;
+    height: 499px;
   }
 }
-
-/* //TODO: Это я потом уберу
-.promo__image {
-  height: 302px;
-
-  background-color: $color-main-buttons;
-  background-image: url("../img/promo-cat-mini.jpg");
-  background-repeat: no-repeat;
-  background-position: top left;
-}
-*/
 
 .promo__title {
   margin-top: 0;

@@ -49,16 +49,23 @@
     &:nth-child(odd) {
       margin-right: 60px;
     }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
 
   @media (min-width: $desktop-width) {
-    width: 18%;
+    max-width: 20%;
     margin-right: 80px;
     flex-grow: 1;
 
     &:nth-child(4n) {
+      margin-right: 0;
+    }
 
+    &:last-child {
       margin-right: 0;
     }
   }
