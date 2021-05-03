@@ -133,8 +133,30 @@
 }
 
 .program-article__link {
-  text-align: center;
-  text-transform: uppercase;
+  display: inline-block;
+  margin-left: 20px;
+  margin-bottom: 18px;
 
-  @include font-font($font-family-extra, normal, normal, 16px, 16px);
+  &:hover .program-article-link__arrow {
+    width: 32px;
+  }
+
+  &:focus {
+    @include my-focus();
+  }
+
+  &:active {
+    color: rgba($color-main-text, 0.3);
+
+    @include my-active();
+  }
+
+  &:active .program-article-link__arrow {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 53px;
+    margin-left: 55px;
+  }
 }

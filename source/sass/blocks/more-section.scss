@@ -1,12 +1,31 @@
 .more-section {
-  position: relative;
-
   padding-bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 5px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 52px;
+    padding-left: 36px;
+    padding-right: 36px;
+    border: 2px solid $color-main-blocks;
+    padding-bottom: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 47px;
+  }
+}
+
+.more-section--pseudo {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+    margin-top: 97px;
+  }
 
   &::after {
     position: absolute;
@@ -23,20 +42,6 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
-  }
-
-  @media (min-width: $tablet-width) {
-    margin-top: 97px;
-    padding-top: 52px;
-    padding-left: 36px;
-    padding-right: 36px;
-    border: 2px solid $color-main-blocks;
-    padding-bottom: 38px;
-    margin-bottom: 20px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 47px;
   }
 }
 

@@ -8,11 +8,9 @@
 }
 
 .page-footer__wrapper {
-
   grid-row-start: 3;
   grid-row-end: 4;
   display: block;
-
   text-align: center;
 
   @media (min-width: $tablet-width) {

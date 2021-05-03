@@ -9,7 +9,7 @@
   }
 }
 
-.extra__input:not(:checked) + label {
+.extra__input:not(:checked) + .extra__label {
   &::before {
     content: "";
     position: absolute;
@@ -29,7 +29,7 @@
   }
 }
 
-.extra__input:checked + label {
+.extra__input:checked + .extra__label {
   &::before {
     content: "";
     position: absolute;
@@ -66,22 +66,22 @@
   }
 }
 
-.extra__input:checked:focus + label,
-.extra__input:not(:checked):focus + label {
+.extra__input:checked:focus + .extra__label,
+.extra__input:not(:checked):focus + .extra__label {
   &::before {
     @include my-focus();
   }
 }
 
-.extra__input:not(:checked):hover + label,
-.extra__input:checked:hover + label {
+.extra__input:not(:checked):hover + .extra__label,
+.extra__input:checked:hover + .extra__label {
   &::before {
     border-color: $color-checkbox-modified;
   }
 }
 
-.extra__input:not(:checked):disabled + label,
-.extra__input:checked:disabled + label {
+.extra__input:not(:checked):disabled + .extra__label,
+.extra__input:checked:disabled + .extra__label {
   opacity: 0.3;
 
   &::before,
@@ -90,8 +90,8 @@
   }
 }
 
-.extra__input:not(:checked):disabled:hover + label,
-.extra__input:checked:disabled:hover + label {
+.extra__input:not(:checked):disabled:hover + .extra__label,
+.extra__input:checked:disabled:hover + .extra__label {
   &::before {
     border-color: $color-elements-inner;
   }

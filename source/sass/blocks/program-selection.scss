@@ -32,7 +32,7 @@
   }
 }
 
-.program-selection__input:not(:checked) + label {
+.program-selection__input:not(:checked) + .program-selection__label {
   &::before {
     content: "";
     position: absolute;
@@ -55,7 +55,7 @@
   }
 }
 
-.program-selection__input:checked + label {
+.program-selection__input:checked + .program-selection__label {
   &::before {
     content: "";
     position: absolute;
@@ -99,22 +99,22 @@
   }
 }
 
-.program-selection__input:not(:checked):focus + label,
-.program-selection__input:checked:focus + label {
+.program-selection__input:not(:checked):focus + .program-selection__label,
+.program-selection__input:checked:focus + .program-selection__label {
   &::before {
     @include my-focus();
   }
 }
 
-.program-selection__input:not(:checked):hover + label,
-.program-selection__input:checked:hover + label {
+.program-selection__input:not(:checked):hover + .program-selection__label,
+.program-selection__input:checked:hover + .program-selection__label {
   &::before {
     border-color: $color-checkbox-modified;
   }
 }
 
-.program-selection__input:not(:checked):disabled + label,
-.program-selection__input:checked:disabled + label {
+.program-selection__input:not(:checked):disabled + .program-selection__label,
+.program-selection__input:checked:disabled + .program-selection__label {
   opacity: 0.3;
 
   &::before,
@@ -123,8 +123,8 @@
   }
 }
 
-.program-selection__input:not(:checked):disabled:hover + label,
-.program-selection__input:checked:disabled:hover + label {
+.program-selection__input:not(:checked):disabled:hover + .program-selection__label,
+.program-selection__input:checked:disabled:hover + .program-selection__label {
   &::before {
     border-color: $color-elements-inner;
   }

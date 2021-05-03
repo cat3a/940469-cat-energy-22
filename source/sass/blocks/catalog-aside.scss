@@ -1,23 +1,31 @@
 .catalog-aside {
-  position: relative;
-  min-height: 289px;
   margin: 0;
-
   background-image: url("../img/get-gift-gift-mini.svg");
   background-repeat: no-repeat;
   background-position: 50% 23%;
   padding-bottom: 35px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 69px;
-    margin-bottom: 0;
     background-position: 80px 35%;
     padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 140px;
     background-position: 50% 23%;
+  }
+}
+
+.catalog-aside--position {
+  position: relative;
+  min-height: 289px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 69px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 140px;
   }
 }
 

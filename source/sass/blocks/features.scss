@@ -1,20 +1,16 @@
 .features {
   @media (max-width: $mobile-width-only) {
     display: grid;
+    justify-content: center;
   }
-
-  justify-content: center;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-start;
-
     border-bottom: 1px solid $color-menu-borders;
   }
 
   @media (min-width: $desktop-width) {
-
     justify-content: flex-start;
-
     border-bottom: none;
   }
 }
@@ -243,7 +239,7 @@
   }
 }
 
-.features__paragraph--four br {
+.features__paragraph-br {
   @media (max-width: $mobile-width-only) {
     display: none;
   }

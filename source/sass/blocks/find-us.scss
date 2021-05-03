@@ -67,8 +67,8 @@
   }
 }
 
-@media (max-width: $mobile-width-only) {
-  .find-us br {
+.find-us__br {
+  @media (max-width: $mobile-width-only) {
     display: none;
   }
 }
@@ -132,7 +132,7 @@
   width: 100%;
 }
 
-.find-us__map iframe {
+.find-us__iframe {
   left: 0;
   top: 0;
   height: 100%;

@@ -1,4 +1,8 @@
 .promo {
+  margin: 0;
+}
+
+.promo--pseudo {
   position: relative;
 
   @media (max-width: $mobile-width-only) {
