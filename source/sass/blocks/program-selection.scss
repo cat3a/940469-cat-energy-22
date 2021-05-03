@@ -37,7 +37,7 @@
     content: "";
     position: absolute;
     top: 2px;
-    left: -43px;
+    left: -30px;
 
     box-sizing: border-box;
     width: 31px;
@@ -49,7 +49,7 @@
     @media (min-width: $tablet-width) {
       width: 41px;
       height: 41px;
-      left: -63px;
+      left: -40px;
       top: 5px;
     }
   }
@@ -60,7 +60,7 @@
     content: "";
     position: absolute;
     top: 2px;
-    left: -43px;
+    left: -30px;
 
     box-sizing: border-box;
     width: 31px;
@@ -71,7 +71,7 @@
 
     @media (min-width: $tablet-width) {
       width: 41px;
-      left: -63px;
+      left: -40px;
       height: 41px;
       top: 5px;
     }
@@ -81,7 +81,7 @@
     content: "";
     position: absolute;
     top: 11px;
-    left: -35px;
+    left: -21px;
 
     box-sizing: border-box;
     width: 14px;
@@ -93,7 +93,7 @@
     @media (min-width: $tablet-width) {
       width: 19px;
       height: 18px;
-      left: -52px;
+      left: -29px;
       top: 17px;
     }
   }
@@ -133,17 +133,17 @@
 .program-selection__p {
   position: relative;
 
-  margin-left: 65px;
+  margin-left: 50px;
   margin-right: 20px;
   padding-bottom: 5px;
 
   @media (min-width: $tablet-width) {
-    margin-left: 86px;
+    margin-left: 66px;
     margin-right: 35px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 155px;
+    margin-left: 70px;
     margin-right: 110px;
   }
 }
@@ -154,8 +154,10 @@
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
   margin-right: 13px;
   color: $color-checkbox-text;
+  padding-left: 15px;
 
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
+    padding-left: 25px;
   }
 }
