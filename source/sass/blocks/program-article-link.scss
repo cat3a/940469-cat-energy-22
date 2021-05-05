@@ -20,24 +20,35 @@
 
   @media (max-width: $mobile-width-only) {
     padding-right: 20px;
+    padding-top: 19px;
+    padding-bottom: 21px;
   }
 
   @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 20px, 30px);
     padding-right: 70px;
+    margin-top: 27px;
+    margin-left: -3px;
   }
 
   @media (min-width: $desktop-width) {
     padding-right: 50px;
   }
-
-  @include font-font($font-family-extra, normal, normal, 20px, 30px);
 }
 
 .program-article-link__arrow {
   stroke: $color-main-text;
-  padding-left: 25px;
-  width: 27px;
+  padding-left: 20px;
+  width: 23px;
   height: 12px;
   transition: 0.3s;
   transform: translateX(-5px);
+
+  @media (min-width: $tablet-width) {
+    padding-left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 33px;
+  }
 }

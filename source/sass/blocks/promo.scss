@@ -42,6 +42,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-bottom: -2px;
   }
 }
 
@@ -49,16 +50,18 @@
   object-fit: contain;
   width: 280px;
   height: 270px;
+  margin-top: 16px;
 
   @media (min-width: $tablet-width) {
     z-index: -1;
     width: 709px;
     height: 609px;
+    margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 32px;
+    top: 10px;
     left: 558px;
     width: 552px;
     height: 499px;
@@ -67,7 +70,8 @@
 
 .promo__title {
   margin-top: 0;
-  padding-top: 19px;
+  padding-top: 25px;
+  margin-bottom: 13px;
 
   text-align: center;
   color: $color-background;
@@ -79,9 +83,14 @@
     color: $color-main-text;
     max-width: 414px;
     text-align: left;
-    margin-top: 54px;
+    margin-top: 23px;
     margin-bottom: 0;
-    margin-left: 85px;
+    margin-left: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 70px;
+    margin-left: 80px;
   }
 }
 
@@ -96,7 +105,12 @@
     color: $color-main-text;
     padding-top: 0;
     margin-top: 41px;
-    margin-left: 85px;
+    margin-left: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 40px;
+    margin-left: 80px;
   }
 }
 
@@ -104,12 +118,14 @@
   @media (max-width: $mobile-width-only) {
     width: 100%;
   }
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  margin-top: -2px;
 
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 20px, 20px);
-    top: 380px;
+    top: 280px;
+    left: 27px;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 26px;
@@ -120,6 +136,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: -65px;
+    margin-top: 47px;
+    margin-left: 163px;
   }
 }

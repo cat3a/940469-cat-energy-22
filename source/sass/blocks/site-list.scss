@@ -1,3 +1,12 @@
+@media (max-width: $mobile-width-only) {
+  .site-list--js {
+    position: absolute;
+    background-color: $color-background;
+    z-index: 100;
+    min-width: 100%;
+  }
+}
+
 .site-list__item {
   padding-top: 22px;
   padding-bottom: 24px;
@@ -21,6 +30,10 @@
     &:first-child {
       margin-left: 0;
       padding-left: 0;
+    }
+
+    &:nth-child(4) {
+      margin-left: 0;
     }
   }
 

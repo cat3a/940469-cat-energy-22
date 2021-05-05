@@ -17,13 +17,13 @@ was.addEventListener('click', function () {
 
   if (example.classList.contains("example--thin-cat")) {
     example.classList.remove("example--thin-cat");
-    exampleContainer.classList.remove("example--thin-cat");
+    exampleContainer.classList.remove("example__container--thin-cat");
   }
 
   thin.classList.add("example__thin-cat--hide");
   fat.classList.add("example__fat-cat--show");
   example.classList.add("example--fat-cat");
-  exampleContainer.classList.add("example--fat-cat");
+  exampleContainer.classList.add("example__container--fat-cat");
   exampleContainer.classList.remove("example__container--color");
 
   for (let def of definition) {
@@ -42,7 +42,7 @@ became.addEventListener('click', function () {
 
   if (example.classList.contains("example--fat-cat")) {
     example.classList.remove("example--fat-cat");
-    exampleContainer.classList.remove("example--fat-cat");
+    exampleContainer.classList.remove("example__container--fat-cat");
   }
 
   for (let def of definition) {
@@ -52,6 +52,6 @@ became.addEventListener('click', function () {
 thin.classList.add("example__thin-cat--show");
 fat.classList.add("example__fat-cat--hide");
 example.classList.add("example--thin-cat");
-exampleContainer.classList.add("example--thin-cat");
+exampleContainer.classList.add("example__container--thin-cat");
 exampleContainer.classList.remove("example__container--color");
 });

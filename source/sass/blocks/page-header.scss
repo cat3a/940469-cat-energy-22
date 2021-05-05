@@ -1,6 +1,6 @@
 .page-header__logo {
-  margin-top: 12px;
-  margin-bottom: 17px;
+  margin-top: 10px;
+  margin-bottom: 13px;
   margin-right: 20px;
   margin-left: 20px;
   outline: 0;
@@ -38,6 +38,18 @@
 
   &:active .page-header__image {
     opacity: 1;
+  }
+}
+
+.page-header__image {
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
   }
 }
 
