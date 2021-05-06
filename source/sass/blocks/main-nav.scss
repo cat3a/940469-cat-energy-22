@@ -203,3 +203,9 @@
     flex-grow: 1;
   }
 }
+
+.main-nav__link--margin {
+  @media (max-width: $tablet-width-only) {
+    margin-left: -5px;
+  }
+}

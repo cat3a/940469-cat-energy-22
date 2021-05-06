@@ -1,5 +1,5 @@
 .more-section {
-  padding-bottom: 0;
+  padding-bottom: 19px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,19 +24,19 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
-    margin-top: 97px;
+    margin-top: 80px;
   }
 
   &::after {
     position: absolute;
     content: "";
+    top: 10%;
     background-image: url("../img/catalog-main-plus-icon.svg");
-    top: 7%;
     width: 30px;
     height: 30px;
 
     @media (min-width: $tablet-width) {
-      top: 11%;
+      margin-top: 10px;
       width: 60px;
       height: 60px;
       background-repeat: no-repeat;
@@ -47,8 +47,8 @@
 
 .more-section__title {
   margin-top: 55px;
-  padding-top: 5px;
-  margin-bottom: 0;
+  padding-top: 14px;
+  margin-bottom: -4px;
   text-align: center;
   color: $color-text-extra;
   text-transform: uppercase;
@@ -56,11 +56,15 @@
   @include font-font($font-family-extra, normal, normal, 16px, 20px);
 
   @media (min-width: $tablet-width) {
-    padding-top: 40px;
+    padding-top: 53px;
     width: 134px;
     padding-bottom: 13px;
 
     @include font-font($font-family-extra, normal, normal, 20px, 22px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 58px;
   }
 }
 
@@ -82,13 +86,21 @@
   color: $color-main-inputs;
   text-transform: uppercase;
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   margin-top: 10px;
   background-color: $color-main-blocks;
 
   @include font-font($font-family-extra, normal, normal, 16px, 20px);
   @include link-reset();
+
+  @media (min-width: $tablet-width) {
+    margin-top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 19px;
+  }
 
   &:hover {
     background-color: $color-catalog-article;
