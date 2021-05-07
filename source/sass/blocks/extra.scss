@@ -112,8 +112,18 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 90px;
+    grid-template-columns: repeat(4, 325px);
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+  }
+}
+
+.extra__item {
+  @media (min-width: $desktop-width) {
+    margin-left: -5px;
+    margin-right: -5px;
   }
 }
 
