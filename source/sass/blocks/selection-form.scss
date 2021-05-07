@@ -60,19 +60,6 @@
     }
   }
 
-  &--email-image {
-    margin-right: 1px;
-  }
-
-  &--phone-image {
-    margin-right: 1px;
-
-    @media (min-width: $tablet-width) {
-      margin-right: 2px;
-    }
-  }
-
-
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
     height: 50px;
@@ -562,6 +549,7 @@
   stroke-width: 2px;
   position: absolute;
   right: 19px;
+  margin-right: 1px;
 
   @media (max-width: $mobile-width-only) {
     right: 15px;
@@ -572,9 +560,14 @@
   fill: $color-checkbox-text;
   position: absolute;
   right: 15px;
+  margin-right: 1px;
 
   @media (max-width: $mobile-width-only) {
     right: 11px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 2px;
   }
 }
 
