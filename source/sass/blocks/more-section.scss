@@ -1,7 +1,5 @@
 .more-section {
-  position: relative;
-
-  padding-bottom: 0;
+  padding-bottom: 19px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,19 +7,48 @@
   padding-top: 5px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 80px;
     padding-top: 52px;
     padding-left: 36px;
     padding-right: 36px;
     border: 2px solid $color-main-blocks;
     padding-bottom: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 47px;
+  }
+}
+
+.more-section--pseudo {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
     margin-bottom: 20px;
+    margin-top: 80px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 10%;
+    background-image: url("../img/catalog-main-plus-icon.svg");
+    width: 30px;
+    height: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 10px;
+      width: 60px;
+      height: 60px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }
 
 .more-section__title {
-  padding-top: 5px;
-  margin-bottom: 0;
+  margin-top: 55px;
+  padding-top: 14px;
+  margin-bottom: -4px;
   text-align: center;
   color: $color-text-extra;
   text-transform: uppercase;
@@ -29,11 +56,15 @@
   @include font-font($font-family-extra, normal, normal, 16px, 20px);
 
   @media (min-width: $tablet-width) {
-    padding-top: 22px;
+    padding-top: 53px;
     width: 134px;
     padding-bottom: 13px;
 
     @include font-font($font-family-extra, normal, normal, 20px, 22px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 58px;
   }
 }
 
@@ -46,7 +77,7 @@
     width: 170px;
 
     @include font-font($font-family-main, normal, normal, 16px, 18px);
-    padding-bottom: 60px;
+    padding-bottom: 52px;
   }
 }
 
@@ -55,13 +86,21 @@
   color: $color-main-inputs;
   text-transform: uppercase;
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   margin-top: 10px;
   background-color: $color-main-blocks;
 
   @include font-font($font-family-extra, normal, normal, 16px, 20px);
   @include link-reset();
+
+  @media (min-width: $tablet-width) {
+    margin-top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 19px;
+  }
 
   &:hover {
     background-color: $color-catalog-article;
@@ -70,5 +109,14 @@
   &:active {
     color: rgba($color-main-inputs, 0.3);
     background-color: $color-catalog-article;
+  }
+}
+
+.more-section__image-plus {
+  stroke: $color-elements-extra;
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
   }
 }

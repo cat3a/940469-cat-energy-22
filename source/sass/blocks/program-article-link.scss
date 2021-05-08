@@ -1,24 +1,9 @@
 .program-article-link {
-  display: inline-block;
-  margin-left: 20px;
-  margin-bottom: 18px;
+  text-align: center;
+  text-transform: uppercase;
 
+  @include font-font($font-family-extra, normal, normal, 16px, 16px);
   @include link-reset();
-
-  &:focus {
-    @include my-focus();
-  }
-
-  &:active {
-    color: rgba($color-main-text, 0.3);
-
-    @include my-active();
-  }
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 53px;
-    margin-left: 55px;
-  }
 }
 
 .program-article-link__paragraph:last-of-type {
@@ -28,9 +13,42 @@
 .program-article-link__paragraph {
   margin-top: 0;
 
-  @include font-font($font-family-extra, normal, normal, 20px, 30px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+
+  @media (max-width: $mobile-width-only) {
+    padding-right: 20px;
+    padding-top: 19px;
+    padding-bottom: 21px;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font-font($font-family-extra, normal, normal, 20px, 30px);
+    padding-right: 70px;
+    margin-top: 27px;
+    margin-left: -3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 50px;
+  }
 }
 
-@media (min-width: $desktop-width) {
-  padding-bottom: 60px;
+.program-article-link__arrow {
+  stroke: $color-main-text;
+  padding-left: 20px;
+  width: 23px;
+  height: 12px;
+  transition: 0.3s;
+  transform: translateX(-5px);
+
+  @media (min-width: $tablet-width) {
+    padding-left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 33px;
+  }
 }

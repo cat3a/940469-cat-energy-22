@@ -1,22 +1,23 @@
 .program-article__title {
   padding-top: 25px;
   padding-left: 15px;
-
-  text-align: center;
   color: $color-main-text;
   text-transform: uppercase;
 
   @include font-font($font-family-extra, normal, normal, 24px, 37px);
 
   @media (max-width: $mobile-width-only) {
-    &--up {
-      padding-left: 40px;
-    }
+    padding-left: 90px;
+    padding-right: 20px;
+    padding-top: 28px;
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 52px;
+    padding-right: 30px;
+    padding-top: 40px;
     padding-left: 52px;
+    max-width: 400px;
+    margin-bottom: 25px;
 
     color: $color-main-text;
 
@@ -25,7 +26,7 @@
 
   @media (min-width: $desktop-width) {
     padding-left: 214px;
-    padding-top: 35px;
+    padding-top: 42px;
     padding-bottom: 10px;
   }
 }
@@ -34,12 +35,11 @@
   position: relative;
 
   padding-right: 20px;
-  padding-bottom: 23px;
+  padding-bottom: 9px;
   padding-left: 20px;
+  padding-top: 6px;
 
   @media (max-width: $mobile-width-only) {
-    border-bottom: 1px solid $color-index-borders;
-
     &--down::before {
       content: url("../img/program-cat-sitting-mini.svg");
       position: absolute;
@@ -53,7 +53,7 @@
     &--up::before {
       content: url("../img/program-cat-sneak-mini.svg");
       position: absolute;
-      top: -70px;
+      top: -67px;
       left: 13px;
 
       width: 67px;
@@ -65,8 +65,7 @@
     position: relative;
 
     margin-top: 0;
-    margin-right: 315px;
-    margin-left: 35px;
+    margin-left: 32px;
     padding-top: 0;
 
     color: $color-main-text;
@@ -75,21 +74,29 @@
 
     @include font-font($font-family-main, normal, normal, 16px, 24px);
 
+    &--down {
+      margin-right: 260px;
+    }
+
     &--down::after {
       content: url("../img/program-cat-sitting-max.svg");
       position: absolute;
-      top: -80px;
-      right: -250px;
+      top: -56px;
+      right: -198px;
 
       width: 200px;
       height: 211px;
     }
 
+    &--up {
+      margin-right: 290px;
+    }
+
     &--up::after {
       content: url("../img/program-cat-sneak-max.svg");
       position: absolute;
-      top: -80px;
-      right: -280px;
+      top: -47px;
+      right: -263px;
 
       width: 268px;
       height: 200px;
@@ -103,11 +110,12 @@
     margin-right: 30px;
     margin-bottom: 0;
     padding-bottom: 15px;
+    padding-top: 24px;
 
     &--down::before {
       content: url("../img/program-cat-sitting-medium.svg");
       position: absolute;
-      top: -135px;
+      top: -125px;
       left: 20px;
 
       width: 100px;
@@ -117,7 +125,7 @@
     &--up::before {
       content: url("../img/program-cat-sneak-medium.svg");
       position: absolute;
-      top: -130px;
+      top: -116px;
       left: 0;
 
       width: 134px;
@@ -127,8 +135,54 @@
 }
 
 .program-article__link {
-  text-align: center;
-  text-transform: uppercase;
+  display: block;
+  margin-bottom: 18px;
+  border-top: 1px solid $color-index-borders;
 
-  @include font-font($font-family-extra, normal, normal, 16px, 16px);
+  &:hover .program-article-link__arrow {
+    width: 32px;
+  }
+
+  &:focus {
+    @include my-focus();
+  }
+
+  &:active {
+    color: rgba($color-main-text, 0.3);
+
+    @include my-active();
+  }
+
+  &:active .program-article-link__arrow {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 53px;
+    margin-left: 55px;
+    border-top: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -17px;
+    margin-bottom: 60px;
+  }
+}
+
+.program-article__container {
+  @media (max-width: $mobile-width-only) {
+    padding-left: 20px;
+    margin: 0 auto;
+    padding-right: 20px;
+  }
+}
+
+.program-article__br {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }

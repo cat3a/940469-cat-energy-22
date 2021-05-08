@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page" lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
   <link rel="icon" href="img/favicon32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" sizes="152x152" href="img/152.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin="anonymous">
 </head>
 <body class="page-body">
 <header class="page-header menu-wrapper">
@@ -20,17 +24,17 @@
       <img class="page-header__image" src="img/page-header/logo-mini.svg" width="191" height="38" alt="Логотип «Cat energy» c Котом-Бэтменом">
     </picture>
   </a>
-  <nav class="main-nav main-nav--opened main-nav--no-js">
+  <nav class="main-nav main-nav--position main-nav--opened main-nav--no-js">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <div class="main-nav__wrapper">
-      <ul class="main-nav__list">
+      <ul class="main-nav__list site-list">
         <li class="site-list__item">
           <a class="main-nav__link" href="index.html">
             Главная
           </a>
         </li>
         <li class="site-list__item">
-          <a class="main-nav__link" href="catalog.html">
+          <a class="main-nav__link main-nav__link--margin" href="catalog.html">
             Каталог продукции
           </a>
         </li>
@@ -56,16 +60,16 @@
           <fieldset class="selection-form__fieldset">
             <legend class="selection-form__legend visually-hidden">Общие сведения о питомце</legend>
             <p class="selection-form__paragraph">
-              <label class="selection-form__label" for="name">Имя:&ast;</label>
-              <input class="selection-form__input" type="text" name="name" id="name" placeholder="Барсик" required>
+              <label class="selection-form__label selection-form__label--main" for="name">Имя:&ast;</label>
+              <input class="selection-form__input" type="text" name="name" id="name" placeholder="Барсик" pattern="[А-Яа-я]{1,30}" title="Данное поле может содержать только русские буквы. Введите настоящую кличку кота. Поле обязательно для заполнения." required>
             </p>
             <p class="selection-form__paragraph">
-              <label class="selection-form__label" for="weight">Вес &#40;кг&#41;:&ast;</label>
-              <input class="selection-form__input" type="number" name="weight" id="weight" placeholder="7" required>
+              <label class="selection-form__label selection-form__label--padding selection-form__label--main" for="weight">Вес &#40;кг&#41;:&ast;</label>
+              <input class="selection-form__input selection-form__input--weight" type="number" name="weight" id="weight" min="1" max="50" step="1" placeholder="7" title="Данное поле может содержать только цифры, максимальное значение 50 кг. Введите вес кота. Поле обязательно для заполнения." required>
             </p>
             <p class="selection-form__paragraph">
-              <label class="selection-form__label" for="age">Возраст &#40;лет&#41;:</label>
-              <input class="selection-form__input" type="number" name="age" id="age" placeholder="7">
+              <label class="selection-form__label selection-form__label--padding selection-form__label--main" for="age">Возраст &#40;лет&#41;:</label>
+              <input class="selection-form__input" type="number" name="age" id="age" min="1" max="50" step="1" placeholder="7">
             </p>
           </fieldset>
           <fieldset class="selection-form__fieldset selection-form__fieldset--border">
@@ -101,18 +105,22 @@
             <div class="form-wrapper selection-form__container">
               <p class="selection-form__paragraph selection-form__paragraph--margin-top">
                 <label class="selection-form__label" for="email">E-mail:&ast;</label>
-                <input class="selection-form__input selection-form__input--email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
-                <!-- // TODO: Потом здесь будет декор в виде svg <img src="img/form-email-icon.svg" width="20" height="15" alt="Иконка в виде конверта">-->
+                <input class="selection-form__input selection-form__input--email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" title="Пожалуста введите действительный e-mail адрес, чтобы мы смогли Вам ответить. Данное поле обязательно для заполнения." required>
+                <svg class="selection-form__input--email-image" width="18" height="13">
+                  <use xlink:href="img/sprite.svg#form-email-icon"></use>
+                </svg>
               </p>
               <p class="selection-form__paragraph selection-form__paragraph--margin-bottom">
-                <label class="selection-form__label" for="phone">Телефон:&ast;</label>
-                <input class="selection-form__input selection-form__input--phone" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
-                <!-- // TODO: Потом здесь будет декор в виде svg <img src="img/form-phone-icon.svg" width="20" height="21" alt="Иконка в виде телефонной трубки">-->
+                <label class="selection-form__label selection-form__label--margin" for="phone">Телефон:&ast;</label>
+                <input class="selection-form__input selection-form__input--phone" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" pattern="\+?[0-9\s\-\(\)]+" title="Пожалуста введите номер телефона для связи. Данное поле обязательно для заполнения." required>
+                <svg class="selection-form__input--phone-image" width="20" height="21">
+                  <use xlink:href="img/sprite.svg#form-phone-icon"></use>
+                </svg>
               </p>
             </div>
           </div>
         </fieldset>
-        <fieldset class="selection-form__fieldset selection-form__fieldset--line">
+        <fieldset class="selection-form__fieldset selection-form__fieldset--line selection-form__fieldset--margin">
           <legend class="selection-form__legend visually-hidden">Комментарий</legend>
           <div class="selection-form__legend-wrapper">
             <p class="selection-form__title-fieldset selection-form__title-fieldset--comment">Комментарий</p>
@@ -130,25 +138,25 @@
             <p class="selection-form__title-fieldset selection-form__title-fieldset--extra">Дополнительно</p>
             <div class="form-wrapper">
               <ul class="extra__list">
-                <li class="selection-form__item">
+                <li class="selection-form__item extra__item">
                   <p class="selection-form__paragraph extra__paragraph">
                     <input class="selection-form__input extra__input visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
                     <label class="extra__label" for="sweetener">Cахарозаменитель</label>
                   </p>
                 </li>
-                <li class="selection-form__item">
+                <li class="selection-form__item extra__item">
                   <p class="selection-form__paragraph extra__paragraph">
                     <input class="selection-form__input extra__input visually-hidden" type="checkbox" name="water" id="water">
                     <label class="extra__label" for="water">Питьевая вода</label>
                   </p>
                 </li>
-                <li class="selection-form__item">
+                <li class="selection-form__item extra__item">
                   <p class="selection-form__paragraph extra__paragraph">
                     <input class="selection-form__input extra__input visually-hidden" type="checkbox" name="milk" id="milk">
                     <label class="extra__label" for="milk">Молоко</label>
                   </p>
                 </li>
-                <li class="selection-form__item">
+                <li class="selection-form__item extra__item">
                   <p class="selection-form__paragraph extra__paragraph">
                     <input class="selection-form__input extra__input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
                     <label class="extra__label" for="vitamins">Витамины</label>
@@ -162,7 +170,7 @@
       <div class="form-wrapper">
         <div class="selection-form__submit-wrapper">
           <button class="selection-form__button button" type="submit" name="send-request" id="send-request">
-            <span>Отправить заявку</span>
+            <span class="selection-form__span">Отправить заявку</span>
           </button>
           <p class="selection-form__required">&ast; &mdash; Обязательные поля</p>
         </div>
@@ -172,17 +180,15 @@
   <section class="find-us find-us--color">
     <h2 class="visually-hidden">Как нас найти</h2>
     <div class="container">
-      <div class="find-us__wrapper container">
-        <p class="find-us__invite">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="find-us__address">ул. Большая Конюшенная, д. 19&#47;8 <br> <br> Санкт-Петербург</p>
+      <div class="find-us__wrapper">
+        <p class="find-us__invite">Приглашаем <br class="find-us__br-invite">к сотрудничеству дилеров!</p>
+        <p class="find-us__address">ул. Большая<br class="find-us__br">Конюшенная, д. 19&#47;8 <span class="find-us__span">Санкт-Петербург</span></p>
       </div>
     </div>
     <div class="find-us__map-wrapper">
-      <!-- // TODO: Потом здесь будет интерактивная карта сверху над всем со стандартным маркером -->
-      <picture>
-        <source media="(min-width: 768px)" srcset="img/find-us/we-map-max.png 1x, img/find-us/we-map-max@2x.png 2x">
-        <img class="find-us__img" src="img/find-us/we-map-min.png" srcset="img/find-us/we-map-min@2x.png 2x" alt="Указатель на карте c Котом-Бэтменом. Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
-      </picture>
+      <div class="find-us__map">
+        <iframe class="find-us__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.747598731282!2d30.317973480065817!3d59.93880361675147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1619354135422!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
+      </div>
     </div>
   </section>
 </main>
@@ -198,28 +204,36 @@
       <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="#!">
-            <img class="social__img" src="img/social-vk-mini-icon.svg" width="23" height="16" alt="Логотип Вконтакте">
+            <svg class="social__img social__img--vkontakte" role="img" aria-label="Логотип Вконтакте" width="23" height="16">
+              <use xlink:href="img/sprite.svg#social-vk-mini-icon"></use>
+            </svg>
           </a>
         </li>
-        <li class="social__item">
+        <li class="social__item social__item--instagram">
           <a class="social__link social__link--instagram" href="#!">
-            <img class="social__img" src="img/social-instagram-mini-icon.svg" width="16" height="16" alt="Логотип Instagram">
+            <svg class="social__img" role="img" aria-label="Логотип Instagram" width="16" height="16">
+              <use xlink:href="img/sprite.svg#social-instagram-mini-icon"></use>
+            </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--facebook" href="#!">
-            <img class="social__img" src="img/social-facebook-mini-icon.svg" width="22" height="22" alt="Логотип Facebook">
+            <svg class="social__img" role="img" aria-label="Логотип Facebook" width="22" height="22">
+              <use xlink:href="img/sprite.svg#social-facebook-mini-icon"></use>
+            </svg>
           </a>
         </li>
       </ul>
     </section>
     <p class="page-footer__paragraph">
       <a class="page-footer__html-academy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-        <img src="img/footer-htmlacademy-icon.svg" width="27" height="34" alt="Логотип HTML Academy">
+        <svg class="page-footer__html-academy-image" role="img" aria-label="Логотип HTML Academy" width="27" height="34">
+          <use xlink:href="img/sprite.svg#footer-htmlacademy-icon"></use>
+        </svg>
       </a>
     </p>
   </div>
 </footer>
-<script src="js/menu.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

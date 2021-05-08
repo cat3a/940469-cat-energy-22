@@ -7,10 +7,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 38px 38px;
-    grid-column-gap: 38px;
-    height: 75px;
+    grid-template-columns: 1fr 1fr 244px;
+    /*grid-column-gap: 38px;*/
+    padding-top: 15px;
+    padding-bottom: 15px;
+    grid-template-rows: 1fr;
   }
 }
 
@@ -21,10 +22,11 @@
   justify-content: space-between;
 
   @media (min-width: $tablet-width) {
-    grid-column: 3/4;
+    grid-column: 2/4;
     grid-row: 1/2;
     align-items: center;
-    padding-top: 5px;
+    padding-top: 15px;
+    justify-content: flex-end;
   }
 
   @media (min-width: $desktop-width) {
@@ -33,15 +35,17 @@
     grid-column: 2/3;
     grid-row: 1/-1;
     padding: 0;
+    padding-top: 8px;
   }
 }
-
 
 .catalog-extra-section__term {
   @include font-font($font-family-main, normal, normal, 14px, 14px);
 
   @media (min-width: $tablet-width) {
     @include font-font($font-family-main, normal, normal, 16px, 20px);
+
+    margin-right: 14px;
   }
 }
 
@@ -52,6 +56,13 @@
 
   @media (min-width: $tablet-width) {
     @include font-font($font-family-main, normal, normal, 16px, 20px);
+
+    min-width: 45px;
+    margin-left: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 40px;
   }
 }
 
@@ -75,7 +86,8 @@
 .catalog-extra-section__title {
   margin: 0;
   padding-top: 13px;
-  padding-bottom: 13px;
+  padding-bottom: 11px;
+  padding-left: 2px;
 
   text-align: left;
   color: $color-checkbox-text;
@@ -86,15 +98,19 @@
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 20px, 20px);
 
+    margin-left: -2px;
+    margin-top: -11px;
+    padding-top: 0;
+    padding-bottom: 0;
     grid-column: 1/2;
     grid-row: 1/2;
-    padding-bottom: 20px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 22px;
+    padding-bottom: 10px;
     grid-column: 1/2;
     grid-row: 1/-1;
-    margin-bottom: -40px;
   }
 }
 

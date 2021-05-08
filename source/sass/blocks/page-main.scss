@@ -17,7 +17,12 @@
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 60px, 60px);
 
-    margin-bottom: 42px;
+    margin-bottom: 65px;
+    margin-top: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 60px;
   }
 }
 
@@ -68,6 +73,6 @@
     display: grid;
     grid-template-columns: 1fr 245px;
     grid-column-gap: 79px;
-    margin-bottom: 20px;
+    padding-bottom: 89px;
   }
 }

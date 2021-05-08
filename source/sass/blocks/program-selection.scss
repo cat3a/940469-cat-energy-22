@@ -16,6 +16,13 @@
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 60px, 60px);
     margin-bottom: 54px;
+    margin-top: 47px;
+    margin-left: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    margin-top: 58px;
   }
 }
 
@@ -23,21 +30,28 @@
 
   color: $color-main-text;
   text-transform: uppercase;
+  padding-bottom: 11px;
 
   @include font-font($font-family-extra, normal, normal, 14px, 18px);
 
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
-    margin-bottom: 30px;
+    margin-bottom: 27px;
+    padding-left: 5px;
+    margin-top: -3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
   }
 }
 
-.program-selection__input:not(:checked) + label {
+.program-selection__input:not(:checked) + .program-selection__label {
   &::before {
     content: "";
     position: absolute;
-    top: 2px;
-    left: -43px;
+    top: -1px;
+    left: -30px;
 
     box-sizing: border-box;
     width: 31px;
@@ -49,18 +63,18 @@
     @media (min-width: $tablet-width) {
       width: 41px;
       height: 41px;
-      left: -63px;
-      top: 5px;
+      left: -40px;
+      top: 10px;
     }
   }
 }
 
-.program-selection__input:checked + label {
+.program-selection__input:checked + .program-selection__label {
   &::before {
     content: "";
     position: absolute;
-    top: 2px;
-    left: -43px;
+    top: -1px;
+    left: -30px;
 
     box-sizing: border-box;
     width: 31px;
@@ -71,50 +85,50 @@
 
     @media (min-width: $tablet-width) {
       width: 41px;
-      left: -63px;
+      left: -40px;
       height: 41px;
-      top: 5px;
+      top: 10px;
     }
   }
 
   &::after {
     content: "";
     position: absolute;
-    top: 11px;
-    left: -35px;
+    top: 8px;
+    left: -21px;
 
     box-sizing: border-box;
     width: 14px;
-    height: 13px;
+    height: 14px;
 
     background-color: $color-main-buttons;
     border-radius: 50%;
 
     @media (min-width: $tablet-width) {
-      width: 19px;
+      width: 18px;
       height: 18px;
-      left: -52px;
-      top: 17px;
+      left: -28px;
+      top: 22px;
     }
   }
 }
 
-.program-selection__input:not(:checked):focus + label,
-.program-selection__input:checked:focus + label {
+.program-selection__input:not(:checked):focus + .program-selection__label,
+.program-selection__input:checked:focus + .program-selection__label {
   &::before {
     @include my-focus();
   }
 }
 
-.program-selection__input:not(:checked):hover + label,
-.program-selection__input:checked:hover + label {
+.program-selection__input:not(:checked):hover + .program-selection__label,
+.program-selection__input:checked:hover + .program-selection__label {
   &::before {
     border-color: $color-checkbox-modified;
   }
 }
 
-.program-selection__input:not(:checked):disabled + label,
-.program-selection__input:checked:disabled + label {
+.program-selection__input:not(:checked):disabled + .program-selection__label,
+.program-selection__input:checked:disabled + .program-selection__label {
   opacity: 0.3;
 
   &::before,
@@ -123,8 +137,8 @@
   }
 }
 
-.program-selection__input:not(:checked):disabled:hover + label,
-.program-selection__input:checked:disabled:hover + label {
+.program-selection__input:not(:checked):disabled:hover + .program-selection__label,
+.program-selection__input:checked:disabled:hover + .program-selection__label {
   &::before {
     border-color: $color-elements-inner;
   }
@@ -132,19 +146,20 @@
 
 .program-selection__p {
   position: relative;
-
-  margin-left: 65px;
+  margin-left: 50px;
   margin-right: 20px;
   padding-bottom: 5px;
 
   @media (min-width: $tablet-width) {
-    margin-left: 86px;
+    margin-left: 66px;
     margin-right: 35px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 155px;
+    margin-left: 66px;
     margin-right: 110px;
+    margin-top: 16px;
+    margin-bottom: 28px;
   }
 }
 
@@ -154,8 +169,19 @@
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
   margin-right: 13px;
   color: $color-checkbox-text;
+  padding-left: 15px;
 
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
+    padding-left: 22px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 22px;
+    margin-bottom: -29px;
+    margin-top: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: -36px;
   }
 }

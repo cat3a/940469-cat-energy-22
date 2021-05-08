@@ -1,23 +1,31 @@
 .catalog-aside {
-  position: relative;
-  min-height: 289px;
   margin: 0;
-
   background-image: url("../img/get-gift-gift-mini.svg");
   background-repeat: no-repeat;
   background-position: 50% 23%;
   padding-bottom: 35px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 69px;
-    margin-bottom: 0;
-    background-position: 80px 35%;
+    background-position: 80px 28%;
     padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 140px;
-    background-position: 50% 23%;
+    background-position: 50% 25%;
+  }
+}
+
+.catalog-aside--position {
+  position: relative;
+  min-height: 289px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 69px;
+    margin-bottom: -14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 135px;
   }
 }
 
@@ -60,10 +68,11 @@
     @media (min-width: $tablet-width) {
       background-image: url("../img/catalog-aside/get-gift-cat-max.jpg");
       background-position: top center;
+      background-size: cover;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/catalog-aside/get-gift-cat-max@2x.jpg");
-        background-size: 708px auto;
+        background-size: cover;
       }
     }
 
@@ -80,6 +89,10 @@
 
   &::before {
     background-color: $color-main-buttons;
+
+    @media (max-width: $mobile-width-only) {
+      background-color: $color-background;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -97,7 +110,7 @@
   position: absolute;
   width: 165px;
   text-align: center;
-  margin-top: 186px;
+  margin-top: 187px;
 
   color: $color-background;
 
@@ -106,14 +119,15 @@
   @media (min-width: $tablet-width) {
     width: 175px;
     text-align: left;
-    margin-right: 70px;
-    padding-top: 51px;
+    margin-right: 110px;
+    padding-top: 37px;
   }
 
   @media (min-width: $desktop-width) {
     width: 165px;
     text-align: center;
-    margin-top: 250px;
+    margin-top: 315px;
+    margin-bottom: 0;
     margin-right: 0;
   }
 }

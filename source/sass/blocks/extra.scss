@@ -1,21 +1,20 @@
 .extra__paragraph {
   position: relative;
-  margin-left: 42px;
+  margin-left: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
 
   @media (min-width: $tablet-width) {
-    margin-left: 57px;
+    margin-left: 40px;
   }
 }
 
-.extra__input:not(:checked) + label {
+.extra__input:not(:checked) + .extra__label {
   &::before {
     content: "";
     position: absolute;
     top: 1px;
-    left: -42px;
-
+    left: -30px;
     box-sizing: border-box;
     width: 30px;
     height: 30px;
@@ -25,28 +24,27 @@
     @media (min-width: $tablet-width) {
       width: 40px;
       height: 40px;
-      left: -57px;
+      left: -40px;
     }
   }
 }
 
-.extra__input:checked + label {
+.extra__input:checked + .extra__label {
   &::before {
     content: "";
     position: absolute;
     top: 1px;
-    left: -42px;
 
     box-sizing: border-box;
     width: 30px;
     height: 30px;
-
+    left: -30px;
     border: 1px solid $color-elements-inner;
 
     @media (min-width: $tablet-width) {
       width: 40px;
       height: 40px;
-      left: -57px;
+      left: -40px;
     }
   }
 
@@ -54,36 +52,36 @@
     content: "";
     position: absolute;
     top: 2px;
-    left: -39px;
 
     width: 26px;
     height: 26px;
+    left: -27px;
 
     background-image: url("../img/extra-tick-icon.svg");
 
     @media (min-width: $tablet-width) {
       top: 7px;
-      left: -50px;
+      left: -32px;
     }
   }
 }
 
-.extra__input:checked:focus + label,
-.extra__input:not(:checked):focus + label {
+.extra__input:checked:focus + .extra__label,
+.extra__input:not(:checked):focus + .extra__label {
   &::before {
     @include my-focus();
   }
 }
 
-.extra__input:not(:checked):hover + label,
-.extra__input:checked:hover + label {
+.extra__input:not(:checked):hover + .extra__label,
+.extra__input:checked:hover + .extra__label {
   &::before {
     border-color: $color-checkbox-modified;
   }
 }
 
-.extra__input:not(:checked):disabled + label,
-.extra__input:checked:disabled + label {
+.extra__input:not(:checked):disabled + .extra__label,
+.extra__input:checked:disabled + .extra__label {
   opacity: 0.3;
 
   &::before,
@@ -92,8 +90,8 @@
   }
 }
 
-.extra__input:not(:checked):disabled:hover + label,
-.extra__input:checked:disabled:hover + label {
+.extra__input:not(:checked):disabled:hover + .extra__label,
+.extra__input:checked:disabled:hover + .extra__label {
   &::before {
     border-color: $color-elements-inner;
   }
@@ -105,24 +103,38 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 65px;
+    padding-top: 63px;
+    padding-left: 5px;
+
+    &:nth-child(odd) {
+      margin-right: -52px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 90px;
+    grid-template-columns: repeat(4, 325px);
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+  }
+}
+
+.extra__item {
+  @media (min-width: $desktop-width) {
+    margin-left: -5px;
+    margin-right: -5px;
   }
 }
 
 .extra__list:last-child {
-  margin-bottom: 34px;
-  margin-top: 45px;
+  margin-bottom: 36px;
+  margin-top: 44px;
 
   @media (min-width: $tablet-width) {
     margin-top: -25px;
   }
 }
-
 
 .extra__label {
   text-transform: uppercase;
@@ -130,8 +142,18 @@
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
   margin-right: 13px;
   color: $color-main-text;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  margin-bottom: -5px;
 
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: -10px;
+    margin-top: -10px;
   }
 }
