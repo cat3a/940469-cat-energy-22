@@ -6,7 +6,7 @@ const example = document.querySelector(".example");
 const exampleContainer = document.querySelector(".example__container");
 const definition = document.querySelectorAll(".example__definition");
 
-was.addEventListener('click', function () {
+was.addEventListener("click", function () {
   if (thin.classList.contains("example__thin-cat--show")) {
     thin.classList.remove("example__thin-cat--show");
   }
@@ -31,7 +31,7 @@ was.addEventListener('click', function () {
   }
 });
 
-became.addEventListener('click', function () {
+became.addEventListener("click", function () {
   if (thin.classList.contains("example__thin-cat--hide")) {
     thin.classList.remove("example__thin-cat--hide");
   }

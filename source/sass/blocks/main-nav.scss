@@ -75,7 +75,7 @@
   }
 }
 
-.main-nav__item--current-main {
+.main-nav__link--current-main {
   &:hover {
     opacity: 1;
   }
@@ -207,5 +207,19 @@
 .main-nav__link--margin {
   @media (max-width: $tablet-width-only) {
     margin-left: -5px;
+  }
+}
+
+.main-nav__link--current {
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px solid $color-main-buttons;
   }
 }

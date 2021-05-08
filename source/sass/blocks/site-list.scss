@@ -48,17 +48,3 @@
     display: none;
   }
 }
-
-.site-list__item--current {
-  &:hover {
-    opacity: 1;
-  }
-
-  &:active {
-    opacity: 1;
-  }
-
-  @media (min-width: $tablet-width) {
-    border-bottom: 2px solid $color-main-buttons;
-  }
-}

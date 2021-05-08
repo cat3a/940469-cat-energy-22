@@ -577,7 +577,7 @@
   overflow: hidden;
 }
 
-.selection-form__input--email-image {
+.selection-form__input-email-image {
   fill: transparent;
   stroke: $color-checkbox-text;
   stroke-width: 2px;
@@ -590,7 +590,7 @@
   }
 }
 
-.selection-form__input--phone-image {
+.selection-form__input-phone-image {
   fill: $color-checkbox-text;
   position: absolute;
   right: 15px;

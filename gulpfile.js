@@ -15,6 +15,7 @@ const del = require("del");
 const cheerio = require("gulp-cheerio");
 const replace = require("gulp-replace");
 const concat = require("gulp-concat");
+const sourcemaps = require("gulp-sourcemaps");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -24,7 +25,7 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(gulp.dest("build/css")) // нужно или нет?
+    .pipe(gulp.dest("build/css"))
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -104,8 +105,8 @@ const createSprite = () => {
   return gulp.src("source/img/icons/*.svg")
     .pipe(cheerio({
       run: function ($) {
-        $('[fill]').removeAttr("fill");
-        $('[stroke]').removeAttr("stroke");
+        $("[fill]").removeAttr("fill");
+        $("[stroke]").removeAttr("stroke");
       },
       parserOptions: {xmlMode: true}
     }))
