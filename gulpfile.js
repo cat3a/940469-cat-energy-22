@@ -24,6 +24,7 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
+    .pipe(gulp.dest("build/css")) // нужно или нет?
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -103,15 +104,15 @@ const createSprite = () => {
   return gulp.src("source/img/icons/*.svg")
     .pipe(cheerio({
       run: function ($) {
-        $('[fill]').removeAttr('fill');
-        $('[stroke]').removeAttr('stroke');
+        $('[fill]').removeAttr("fill");
+        $('[stroke]').removeAttr("stroke");
       },
       parserOptions: {xmlMode: true}
     }))
     .pipe(svgstore({
       inlineSvg: true
     }))
-    .pipe(replace('&gt;', '>'))
+    .pipe(replace("&gt;", ">"))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
 }
@@ -141,7 +142,7 @@ exports.copy = copy;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build' //Замена каталога на пользовательский
+      baseDir: "build" //Замена каталога на пользовательский
     },
     cors: true,
     notify: false,
@@ -178,7 +179,6 @@ const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch(["source/js/*.js", "!source/js/scripts.js"], gulp.series(cleanJS, concatScripts, scripts, reload));
   gulp.watch("source/*.html", gulp.series(htmlMake, reload));
-  // gulp.watch("source/*.html").on("change", sync.reload);
 }
 
 exports.default = gulp.series(
