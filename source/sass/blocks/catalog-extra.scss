@@ -5,7 +5,7 @@
   margin-top: 3px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 50px;
+    margin-top: 52px;
     border: 1px solid $color-elements-inner;
   }
 
@@ -41,6 +41,7 @@
     @include font-font($font-family-extra, normal, normal, 36px, 36px);
     padding-right: 36px;
     padding-left: 36px;
+    margin-top: -2px;
   }
 
   @media (min-width: $desktop-width) {

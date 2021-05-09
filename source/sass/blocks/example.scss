@@ -82,7 +82,7 @@
   padding-top: 27px;
 
   text-align: left;
-  color: $font-family-main;
+  color: $color-main-text;
 
   @include font-font($font-family-extra, normal, normal, 36px, 40px);
 
@@ -101,11 +101,15 @@
 
 .example__paragraph {
   margin-top: 3px;
+  margin-right: -4px;
 
   @media (min-width: $tablet-width) {
+    letter-spacing: normal;
+
     @include font-font($font-family-main, normal, normal, 16px, 24px);
     margin-bottom: 35px;
     padding-top: 10px;
+    margin-right: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -114,7 +118,6 @@
     max-width: 436px;
   }
 }
-
 
 .example__list {
   position: relative;

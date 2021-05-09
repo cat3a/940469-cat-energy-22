@@ -15,7 +15,7 @@ const del = require("del");
 const cheerio = require("gulp-cheerio");
 const replace = require("gulp-replace");
 const concat = require("gulp-concat");
-const sourcemaps = require("gulp-sourcemaps");
+const filter = require("gulp-filter");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -25,7 +25,9 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
+    .pipe(filter(["style.css", "!style.css.map"]))
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -193,8 +195,8 @@ const build = gulp.series(
   copy,
   optimizeImages,
   concatScripts,
+  styles,
   gulp.parallel(
-    styles,
     htmlMake,
     scripts,
     createSprite,
@@ -211,8 +213,8 @@ exports.default = gulp.series(
   copy,
   copyImages,
   concatScripts,
+  styles,
   gulp.parallel(
-    styles,
     htmlMake,
     scripts,
     createSprite,

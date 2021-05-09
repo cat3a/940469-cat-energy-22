@@ -37,6 +37,7 @@
   box-sizing: border-box;
   height: 45px;
   padding-left: 14px;
+  min-width: 100px;
 
   color: $color-main-inputs;
   text-transform: uppercase;
@@ -155,6 +156,7 @@
 
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
   margin-right: 13px;
+  flex-shrink: 0;
 
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
