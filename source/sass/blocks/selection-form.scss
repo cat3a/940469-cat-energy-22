@@ -157,7 +157,7 @@
 }
 
 .selection-form__label--padding {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     padding-right: 3px;
   }
 
@@ -224,7 +224,7 @@
   top: -60px;
   position: absolute;
 
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     padding-top: 2px;
   }
 
@@ -260,7 +260,7 @@
 }
 
 .selection-form__legend--size {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     max-width: 187px;
     padding-top: 22px;
   }
@@ -276,7 +276,7 @@
   border: 2px solid transparent;
   box-shadow: 0 0 0 1px $color-textarea-border;
 
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     margin-bottom: 62px;
   }
 
@@ -492,7 +492,7 @@
 }
 
 .selection-form__paragraph--margin-bottom {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     margin-bottom: -2px;
   }
 
@@ -555,7 +555,7 @@
 }
 
 .selection-form__fieldset-wrapper {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     margin-bottom: 4px;
   }
 
@@ -579,7 +579,7 @@
   right: 19px;
   margin-right: 1px;
 
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     right: 15px;
   }
 }
@@ -590,7 +590,7 @@
   right: 15px;
   margin-right: 1px;
 
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     right: 11px;
   }
 
@@ -600,7 +600,7 @@
 }
 
 .selection-form__label--margin {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     margin-right: 9px;
   }
 }

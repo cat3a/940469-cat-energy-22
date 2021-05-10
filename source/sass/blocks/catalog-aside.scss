@@ -88,10 +88,10 @@
   }
 
   &::before {
-    background-color: $color-main-buttons;
+    background-color: $color-background;
 
-    @media (max-width: $mobile-width-only) {
-      background-color: $color-background;
+    @media (min-width: $tablet-width) {
+      background-color: $color-main-buttons;
     }
   }
 

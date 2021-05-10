@@ -9,7 +9,7 @@
   @include font-font($font-family-extra, normal, normal, 36px, 36px);
   padding-bottom: 5px;
 
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     margin-top: 0;
   }
 

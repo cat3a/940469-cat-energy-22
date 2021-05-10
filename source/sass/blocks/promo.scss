@@ -5,7 +5,7 @@
 .promo--pseudo {
   position: relative;
 
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     &::after {
       content: "";
       position: absolute;
@@ -115,7 +115,7 @@
 }
 
 .promo__button {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     width: 100%;
   }
   padding-top: 11px;

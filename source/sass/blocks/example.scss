@@ -338,7 +338,7 @@
 }
 
 .example__toggle {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     box-sizing: border-box;
     width: 35px;
     height: 6px;
@@ -394,7 +394,7 @@
   background-repeat: no-repeat;
   position: absolute;
 
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     padding-left: 2px;
     display: none;
     background-image: url("../img/example/example-after-mini.png");
@@ -447,7 +447,7 @@
   background-repeat: no-repeat;
   position: absolute;
 
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     margin-left: -5px;
     background-image: url("../img/example/example-before-mini.png");
     width: 100%;
@@ -483,7 +483,7 @@
 }
 
 .example__thin-cat--show {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     display: block;
   }
 
@@ -496,7 +496,7 @@
 }
 
 .example__thin-cat--hide {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     display: none;
   }
 
@@ -507,7 +507,7 @@
 }
 
 .example__fat-cat--hide {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     display: none;
   }
 
@@ -517,7 +517,7 @@
 }
 
 .example__fat-cat--show {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     display: block;
   }
 
