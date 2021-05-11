@@ -1,5 +1,5 @@
 .features {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     display: grid;
     justify-content: center;
   }
@@ -251,7 +251,7 @@
 }
 
 .features__paragraph-br {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     display: none;
   }
 }

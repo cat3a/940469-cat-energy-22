@@ -8,8 +8,7 @@
     margin-bottom: 4px;
   }
 
-  @media (max-width: $mobile-width-only) {
-
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     position: relative;
 
     &::before {
@@ -34,7 +33,7 @@
   padding-bottom: 25px;
   position: relative;
 
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     padding-top: 5px;
     padding-bottom: 7px;
 

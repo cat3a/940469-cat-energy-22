@@ -1,4 +1,4 @@
-@media (max-width: $mobile-width-only) {
+@media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
   .site-list--js {
     position: absolute;
     background-color: $color-background;
@@ -46,19 +46,5 @@
 .main-nav__toggle {
   @media (min-width: $tablet-width) {
     display: none;
-  }
-}
-
-.site-list__item--current {
-  &:hover {
-    opacity: 1;
-  }
-
-  &:active {
-    opacity: 1;
-  }
-
-  @media (min-width: $tablet-width) {
-    border-bottom: 2px solid $color-main-buttons;
   }
 }

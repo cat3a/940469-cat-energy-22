@@ -25,18 +25,11 @@
   }
 }
 
-/*.selection-form__fieldset p {
-  @media (min-width: $desktop-width) {
-    &:last-of-type {
-      padding-bottom: 0;
-    }
-  }
-} */
-
 .selection-form__input {
   box-sizing: border-box;
   height: 45px;
   padding-left: 14px;
+  min-width: 100px;
 
   color: $color-main-inputs;
   text-transform: uppercase;
@@ -155,6 +148,7 @@
 
   @include font-font($font-family-extra, normal, normal, 16px, 18px);
   margin-right: 13px;
+  flex-shrink: 0;
 
   @media (min-width: $tablet-width) {
     @include font-font($font-family-extra, normal, normal, 20px, 30px);
@@ -163,7 +157,7 @@
 }
 
 .selection-form__label--padding {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     padding-right: 3px;
   }
 
@@ -230,7 +224,7 @@
   top: -60px;
   position: absolute;
 
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     padding-top: 2px;
   }
 
@@ -266,7 +260,7 @@
 }
 
 .selection-form__legend--size {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     max-width: 187px;
     padding-top: 22px;
   }
@@ -282,7 +276,7 @@
   border: 2px solid transparent;
   box-shadow: 0 0 0 1px $color-textarea-border;
 
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     margin-bottom: 62px;
   }
 
@@ -498,7 +492,7 @@
 }
 
 .selection-form__paragraph--margin-bottom {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     margin-bottom: -2px;
   }
 
@@ -561,7 +555,7 @@
 }
 
 .selection-form__fieldset-wrapper {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     margin-bottom: 4px;
   }
 
@@ -577,7 +571,7 @@
   overflow: hidden;
 }
 
-.selection-form__input--email-image {
+.selection-form__input-email-image {
   fill: transparent;
   stroke: $color-checkbox-text;
   stroke-width: 2px;
@@ -585,18 +579,18 @@
   right: 19px;
   margin-right: 1px;
 
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     right: 15px;
   }
 }
 
-.selection-form__input--phone-image {
+.selection-form__input-phone-image {
   fill: $color-checkbox-text;
   position: absolute;
   right: 15px;
   margin-right: 1px;
 
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     right: 11px;
   }
 
@@ -606,7 +600,7 @@
 }
 
 .selection-form__label--margin {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
     margin-right: 9px;
   }
 }

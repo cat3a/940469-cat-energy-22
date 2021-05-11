@@ -21,7 +21,7 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 69px;
-    margin-bottom: -14px;
+    margin-bottom: -15px;
   }
 
   @media (min-width: $desktop-width) {
@@ -88,10 +88,10 @@
   }
 
   &::before {
-    background-color: $color-main-buttons;
+    background-color: $color-background;
 
-    @media (max-width: $mobile-width-only) {
-      background-color: $color-background;
+    @media (min-width: $tablet-width) {
+      background-color: $color-main-buttons;
     }
   }
 
