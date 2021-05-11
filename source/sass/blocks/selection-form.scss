@@ -60,11 +60,11 @@
     border: 2px solid $color-input-error;
   }
 
-  &:required:focus:invalid + .selection-form__input--email-image {
+  &:required:focus:invalid + .selection-form__input-email-image {
     stroke: $color-input-error;
   }
 
-  &:required:focus:invalid + .selection-form__input--phone-image {
+  &:required:focus:invalid + .selection-form__input-phone-image {
     fill: $color-input-error;
   }
 
@@ -73,11 +73,11 @@
     box-shadow: 0 0 0 1px $color-elements-inner;
   }
 
-  &:hover + .selection-form__input--email-image {
+  &:hover + .selection-form__input-email-image {
     stroke: $color-checkbox-text;
   }
 
-  &:hover + .selection-form__input--phone-image {
+  &:hover + .selection-form__input-phone-image {
     fill: $color-checkbox-text;
   }
 
@@ -89,11 +89,11 @@
     border: 2px solid $color-main-inputs;
   }
 
-  &:focus + .selection-form__input--email-image {
+  &:focus + .selection-form__input-email-image {
     stroke: $color-main-buttons;
   }
 
-  &:focus + .selection-form__input--phone-image {
+  &:focus + .selection-form__input-phone-image {
     fill: $color-main-buttons;
   }
 }
